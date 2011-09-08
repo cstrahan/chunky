@@ -1,0 +1,9 @@
+if (true) {
+  0 + a = 1 + b = 2 + 3;
+} else if (false) {
+	1 + 1;
+} else {
+ 2 + 2;
+};
+
+print(foo);
