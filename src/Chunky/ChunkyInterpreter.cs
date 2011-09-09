@@ -60,6 +60,18 @@ namespace Chunky
             return null;
         }
 
+        private object LhsOperand(CommonTree opTree)
+        {
+            var operand = Exec((CommonTree)opTree.Children[0]);
+            return operand;
+        }
+
+        private object RhsOperand(CommonTree opTree)
+        {
+            var operand = Exec((CommonTree)opTree.Children[1]);
+            return operand;
+        }
+
         private object Block(CommonTree tree)
         {
             object result = null;
@@ -73,24 +85,24 @@ namespace Chunky
 
         private object Add(CommonTree tree)
         {
-            var lhs = Convert.ToDouble(Exec((CommonTree)tree.Children[0]));
-            var rhs = Convert.ToDouble(Exec((CommonTree)tree.Children[1]));
+            var lhs = (int)LhsOperand(tree);
+            var rhs = (int)RhsOperand(tree);
 
             return lhs + rhs;
         }
 
         private object Sub(CommonTree tree)
         {
-            var lhs = Convert.ToDouble(Exec((CommonTree)tree.Children[0]));
-            var rhs = Convert.ToDouble(Exec((CommonTree)tree.Children[1]));
+            var lhs = (int)LhsOperand(tree);
+            var rhs = (int)RhsOperand(tree);
 
             return lhs - rhs;
         }
 
         private object Mult(CommonTree tree)
         {
-            var lhs = Convert.ToDouble(Exec((CommonTree)tree.Children[0]));
-            var rhs = Convert.ToDouble(Exec((CommonTree)tree.Children[1]));
+            var lhs = (int)LhsOperand(tree);
+            var rhs = (int)RhsOperand(tree);
 
             return lhs * rhs;
         }
