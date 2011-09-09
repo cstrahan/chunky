@@ -14,6 +14,11 @@ namespace Chunky.Tests
         [SetUp]
         public void Before_each()
         {
+            Reset();
+        }
+
+        private void Reset()
+        {
             interpreter = new ChunkyInterpreter();
         }
 
@@ -32,6 +37,12 @@ namespace Chunky.Tests
         public void Two_plus_three()
         {
             Interpret("2 + 3;").ShouldEqual(5);
+        }
+
+        [Test]
+        public void Three_minus_two()
+        {
+            Interpret("3 - 2;").ShouldEqual(1);
         }
     }
 }

@@ -49,6 +49,7 @@ namespace Chunky
             {
                 case ChunkyParser.BLOCK: return Block(tree);
                 case ChunkyParser.PLUS: return Add(tree);
+                case ChunkyParser.MINUS: return Sub(tree);
                 case ChunkyParser.INT: return Int(tree); 
                 default:
                     Console.WriteLine("Tree type \"" + ChunkyParser.tokenNames[tree.Type] + "\" not yet stupported.");
@@ -75,6 +76,14 @@ namespace Chunky
             var rhs = Convert.ToDouble(Exec((CommonTree)tree.Children[1]));
             
             return lhs + rhs;
+        }
+
+        private object Sub(CommonTree tree)
+        {
+            var lhs = Convert.ToDouble(Exec((CommonTree)tree.Children[0]));
+            var rhs = Convert.ToDouble(Exec((CommonTree)tree.Children[1]));
+
+            return lhs - rhs;
         }
 
         private object Int(CommonTree tree)
