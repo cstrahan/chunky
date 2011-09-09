@@ -1,7 +1,7 @@
 grammar Chunky;
 
 options {
-	//language = Java;
+//	language = Java;
 	language = CSharp3;
 	output = AST;
 	ASTLabelType = CommonTree; 
@@ -30,11 +30,11 @@ func_expr
 	;
 
 if_expr
-	:	IF '(' cond=expr ')' if_body=block
-		( 'else' (	a=if_expr	-> ^(IF $cond $if_body $a)
-				 |	b=block		-> ^(IF $cond $if_body $b)
+	:	IF '(' cond=expr ')' '{' (cons_exps+=expr? ';')* '}'
+		( 'else' ( alt_if=if_expr						-> ^(IF $cond ^(BLOCK $cons_exps*) $alt_if)
+				 | '{' (alt_exps+=expr? ';')* '}'		-> ^(IF $cond ^(BLOCK $cons_exps*) ^(BLOCK $alt_exps*))
 				 )
-		|						-> ^(IF $cond $if_body)
+		|												-> ^(IF $cond $cons_exps*)
 		)
 	;
 
@@ -42,6 +42,8 @@ term:	ID
 	|	'('! expr ')'!
 	|	INT
 	|	FLOAT
+	|	TRUE
+	|	FALSE
 	|	STRING
 	|	if_expr
 	|	func_expr
@@ -92,6 +94,10 @@ block
 
 
 //   T O K E N S
+
+TRUE	:	'true' ;
+
+FALSE	:	'false' ;
 
 IF	:	'if' ;
 

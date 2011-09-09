@@ -6,6 +6,15 @@ namespace Chunky.Tests
     public class OperatorTests
     {
         [Test]
+        public void ToBool()
+        {
+            Operator.ToBool(true).ShouldEqual(true);
+            Operator.ToBool("").ShouldEqual(true);
+            Operator.ToBool(false).ShouldEqual(false);
+            Operator.ToBool(null).ShouldEqual(false);
+        }
+
+        [Test]
         public void Add()
         {
             Operator.Add(.5, .5).ShouldEqual(1.0).ShouldBeOfType<double>();
@@ -31,7 +40,7 @@ namespace Chunky.Tests
             Operator.Multiply(.5, 1).ShouldEqual(0.5).ShouldBeOfType<double>();
             Operator.Multiply(1, 1).ShouldEqual(1).ShouldBeOfType<int>();
         }
-        
+
         [Test]
         public void Divide()
         {

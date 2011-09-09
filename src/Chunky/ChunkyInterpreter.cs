@@ -48,10 +48,13 @@ namespace Chunky
             switch (tree.Type)
             {
                 case ChunkyParser.BLOCK: return Block(tree);
+                case ChunkyParser.IF: return If(tree);
                 case ChunkyParser.PLUS: return Add(tree);
                 case ChunkyParser.MINUS: return Sub(tree);
                 case ChunkyParser.STAR: return Mult(tree);
                 case ChunkyParser.SLASH: return Div(tree);
+                case ChunkyParser.TRUE: return true;
+                case ChunkyParser.FALSE: return false;
                 case ChunkyParser.INT: return Int(tree);
                 default:
                     Console.WriteLine("Tree type \"" + ChunkyParser.tokenNames[tree.Type] + "\" not yet stupported.");
@@ -76,12 +79,29 @@ namespace Chunky
         private object Block(CommonTree tree)
         {
             object result = null;
-            foreach (var child in tree.Children)
+
+            if (tree.ChildCount > 0)
+                foreach (var child in tree.Children)
+                    result = Exec((CommonTree)child);
+        
+            return result;
+        }
+
+        private object If(CommonTree tree)
+        {
+            var predicate = Exec((CommonTree)tree.Children[0]);
+            if (Operator.ToBool(predicate))
             {
-                result = Exec((CommonTree)child);
+                var consequent = Exec((CommonTree)tree.Children[1]);
+                return consequent;
+            }
+            else if (tree.ChildCount == 3)
+            {
+                var alternative = Exec((CommonTree)tree.Children[2]);
+                return alternative;
             }
 
-            return result;
+            return null;
         }
 
         private object Add(CommonTree tree)

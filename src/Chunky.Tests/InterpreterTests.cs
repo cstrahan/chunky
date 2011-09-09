@@ -68,5 +68,29 @@ namespace Chunky.Tests
         {
             Interpret("(1 + 3) * 2;").ShouldEqual(8);
         }
+
+        [Test]
+        public void If_then_truthy_condition()
+        {
+            Interpret("if (true) { 42; };").ShouldEqual(42);
+        }
+
+        [Test]
+        public void If_then_falsy_condition()
+        {
+            Interpret("if (false) { 42; };").ShouldEqual(null);
+        }
+
+        [Test]
+        public void If_then_else()
+        {
+            Interpret("if (false) { } else { 42; };").ShouldEqual(42);
+        }
+
+        [Test]
+        public void If_then_else_empty()
+        {
+            Interpret("if (true) { } else { };").ShouldEqual(null);
+        }
     }
 }

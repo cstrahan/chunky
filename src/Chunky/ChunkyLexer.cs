@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.3.1.7705 Chunky.g 2011-09-08 18:57:25
+// $ANTLR 3.3.1.7705 Chunky.g 2011-09-08 22:02:00
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -37,33 +37,35 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	public const int DOT=12;
 	public const int DPIPE=13;
 	public const int EQUAL=14;
-	public const int FLOAT=15;
-	public const int FUNC=16;
-	public const int GREATER=17;
-	public const int GREATEREQUAL=18;
-	public const int ID=19;
-	public const int IF=20;
-	public const int INT=21;
-	public const int LCURLY=22;
-	public const int LESS=23;
-	public const int LESSEQUAL=24;
-	public const int LETTER=25;
-	public const int LPAREN=26;
-	public const int MINUS=27;
-	public const int NOTEQUAL=28;
-	public const int PARAMS=29;
-	public const int PERCENT=30;
-	public const int PIPE=31;
-	public const int PLUS=32;
-	public const int RCURLY=33;
-	public const int RPAREN=34;
-	public const int SEMI=35;
-	public const int SLASH=36;
-	public const int STAR=37;
-	public const int STRING=38;
-	public const int WS=39;
-	public const int T__40=40;
-	public const int T__41=41;
+	public const int FALSE=15;
+	public const int FLOAT=16;
+	public const int FUNC=17;
+	public const int GREATER=18;
+	public const int GREATEREQUAL=19;
+	public const int ID=20;
+	public const int IF=21;
+	public const int INT=22;
+	public const int LCURLY=23;
+	public const int LESS=24;
+	public const int LESSEQUAL=25;
+	public const int LETTER=26;
+	public const int LPAREN=27;
+	public const int MINUS=28;
+	public const int NOTEQUAL=29;
+	public const int PARAMS=30;
+	public const int PERCENT=31;
+	public const int PIPE=32;
+	public const int PLUS=33;
+	public const int RCURLY=34;
+	public const int RPAREN=35;
+	public const int SEMI=36;
+	public const int SLASH=37;
+	public const int STAR=38;
+	public const int STRING=39;
+	public const int TRUE=40;
+	public const int WS=41;
+	public const int T__42=42;
+	public const int T__43=43;
 
     // delegates
     // delegators
@@ -92,19 +94,19 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	partial void EnterRule(string ruleName, int ruleIndex);
 	partial void LeaveRule(string ruleName, int ruleIndex);
 
-	partial void EnterRule_T__40();
-	partial void LeaveRule_T__40();
+	partial void EnterRule_T__42();
+	partial void LeaveRule_T__42();
 
-	// $ANTLR start "T__40"
-	[GrammarRule("T__40")]
-	private void mT__40()
+	// $ANTLR start "T__42"
+	[GrammarRule("T__42")]
+	private void mT__42()
 	{
-		EnterRule_T__40();
-		EnterRule("T__40", 1);
-		TraceIn("T__40", 1);
+		EnterRule_T__42();
+		EnterRule("T__42", 1);
+		TraceIn("T__42", 1);
 		try
 		{
-			int _type = T__40;
+			int _type = T__42;
 			int _channel = DefaultTokenChannel;
 			// Chunky.g:9:7: ( '!' )
 			DebugEnterAlt(1);
@@ -120,26 +122,26 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__40", 1);
-			LeaveRule("T__40", 1);
-			LeaveRule_T__40();
+			TraceOut("T__42", 1);
+			LeaveRule("T__42", 1);
+			LeaveRule_T__42();
 		}
 	}
-	// $ANTLR end "T__40"
+	// $ANTLR end "T__42"
 
-	partial void EnterRule_T__41();
-	partial void LeaveRule_T__41();
+	partial void EnterRule_T__43();
+	partial void LeaveRule_T__43();
 
-	// $ANTLR start "T__41"
-	[GrammarRule("T__41")]
-	private void mT__41()
+	// $ANTLR start "T__43"
+	[GrammarRule("T__43")]
+	private void mT__43()
 	{
-		EnterRule_T__41();
-		EnterRule("T__41", 2);
-		TraceIn("T__41", 2);
+		EnterRule_T__43();
+		EnterRule("T__43", 2);
+		TraceIn("T__43", 2);
 		try
 		{
-			int _type = T__41;
+			int _type = T__43;
 			int _channel = DefaultTokenChannel;
 			// Chunky.g:10:7: ( 'else' )
 			DebugEnterAlt(1);
@@ -156,12 +158,84 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__41", 2);
-			LeaveRule("T__41", 2);
-			LeaveRule_T__41();
+			TraceOut("T__43", 2);
+			LeaveRule("T__43", 2);
+			LeaveRule_T__43();
 		}
 	}
-	// $ANTLR end "T__41"
+	// $ANTLR end "T__43"
+
+	partial void EnterRule_TRUE();
+	partial void LeaveRule_TRUE();
+
+	// $ANTLR start "TRUE"
+	[GrammarRule("TRUE")]
+	private void mTRUE()
+	{
+		EnterRule_TRUE();
+		EnterRule("TRUE", 3);
+		TraceIn("TRUE", 3);
+		try
+		{
+			int _type = TRUE;
+			int _channel = DefaultTokenChannel;
+			// Chunky.g:98:6: ( 'true' )
+			DebugEnterAlt(1);
+			// Chunky.g:98:8: 'true'
+			{
+			DebugLocation(98, 8);
+			Match("true"); if (state.failed) return;
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("TRUE", 3);
+			LeaveRule("TRUE", 3);
+			LeaveRule_TRUE();
+		}
+	}
+	// $ANTLR end "TRUE"
+
+	partial void EnterRule_FALSE();
+	partial void LeaveRule_FALSE();
+
+	// $ANTLR start "FALSE"
+	[GrammarRule("FALSE")]
+	private void mFALSE()
+	{
+		EnterRule_FALSE();
+		EnterRule("FALSE", 4);
+		TraceIn("FALSE", 4);
+		try
+		{
+			int _type = FALSE;
+			int _channel = DefaultTokenChannel;
+			// Chunky.g:100:7: ( 'false' )
+			DebugEnterAlt(1);
+			// Chunky.g:100:9: 'false'
+			{
+			DebugLocation(100, 9);
+			Match("false"); if (state.failed) return;
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("FALSE", 4);
+			LeaveRule("FALSE", 4);
+			LeaveRule_FALSE();
+		}
+	}
+	// $ANTLR end "FALSE"
 
 	partial void EnterRule_IF();
 	partial void LeaveRule_IF();
@@ -171,17 +245,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mIF()
 	{
 		EnterRule_IF();
-		EnterRule("IF", 3);
-		TraceIn("IF", 3);
+		EnterRule("IF", 5);
+		TraceIn("IF", 5);
 		try
 		{
 			int _type = IF;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:96:4: ( 'if' )
+			// Chunky.g:102:4: ( 'if' )
 			DebugEnterAlt(1);
-			// Chunky.g:96:6: 'if'
+			// Chunky.g:102:6: 'if'
 			{
-			DebugLocation(96, 6);
+			DebugLocation(102, 6);
 			Match("if"); if (state.failed) return;
 
 
@@ -192,8 +266,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("IF", 3);
-			LeaveRule("IF", 3);
+			TraceOut("IF", 5);
+			LeaveRule("IF", 5);
 			LeaveRule_IF();
 		}
 	}
@@ -207,17 +281,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mFUNC()
 	{
 		EnterRule_FUNC();
-		EnterRule("FUNC", 4);
-		TraceIn("FUNC", 4);
+		EnterRule("FUNC", 6);
+		TraceIn("FUNC", 6);
 		try
 		{
 			int _type = FUNC;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:98:5: ( 'func' )
+			// Chunky.g:104:5: ( 'func' )
 			DebugEnterAlt(1);
-			// Chunky.g:98:7: 'func'
+			// Chunky.g:104:7: 'func'
 			{
-			DebugLocation(98, 7);
+			DebugLocation(104, 7);
 			Match("func"); if (state.failed) return;
 
 
@@ -228,8 +302,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("FUNC", 4);
-			LeaveRule("FUNC", 4);
+			TraceOut("FUNC", 6);
+			LeaveRule("FUNC", 6);
 			LeaveRule_FUNC();
 		}
 	}
@@ -243,17 +317,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mLPAREN()
 	{
 		EnterRule_LPAREN();
-		EnterRule("LPAREN", 5);
-		TraceIn("LPAREN", 5);
+		EnterRule("LPAREN", 7);
+		TraceIn("LPAREN", 7);
 		try
 		{
 			int _type = LPAREN;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:100:8: ( '(' )
+			// Chunky.g:106:8: ( '(' )
 			DebugEnterAlt(1);
-			// Chunky.g:100:10: '('
+			// Chunky.g:106:10: '('
 			{
-			DebugLocation(100, 10);
+			DebugLocation(106, 10);
 			Match('('); if (state.failed) return;
 
 			}
@@ -263,8 +337,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("LPAREN", 5);
-			LeaveRule("LPAREN", 5);
+			TraceOut("LPAREN", 7);
+			LeaveRule("LPAREN", 7);
 			LeaveRule_LPAREN();
 		}
 	}
@@ -278,17 +352,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mRPAREN()
 	{
 		EnterRule_RPAREN();
-		EnterRule("RPAREN", 6);
-		TraceIn("RPAREN", 6);
+		EnterRule("RPAREN", 8);
+		TraceIn("RPAREN", 8);
 		try
 		{
 			int _type = RPAREN;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:102:8: ( ')' )
+			// Chunky.g:108:8: ( ')' )
 			DebugEnterAlt(1);
-			// Chunky.g:102:10: ')'
+			// Chunky.g:108:10: ')'
 			{
-			DebugLocation(102, 10);
+			DebugLocation(108, 10);
 			Match(')'); if (state.failed) return;
 
 			}
@@ -298,8 +372,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("RPAREN", 6);
-			LeaveRule("RPAREN", 6);
+			TraceOut("RPAREN", 8);
+			LeaveRule("RPAREN", 8);
 			LeaveRule_RPAREN();
 		}
 	}
@@ -313,17 +387,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mCOMMA()
 	{
 		EnterRule_COMMA();
-		EnterRule("COMMA", 7);
-		TraceIn("COMMA", 7);
+		EnterRule("COMMA", 9);
+		TraceIn("COMMA", 9);
 		try
 		{
 			int _type = COMMA;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:104:7: ( ',' )
+			// Chunky.g:110:7: ( ',' )
 			DebugEnterAlt(1);
-			// Chunky.g:104:9: ','
+			// Chunky.g:110:9: ','
 			{
-			DebugLocation(104, 9);
+			DebugLocation(110, 9);
 			Match(','); if (state.failed) return;
 
 			}
@@ -333,8 +407,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("COMMA", 7);
-			LeaveRule("COMMA", 7);
+			TraceOut("COMMA", 9);
+			LeaveRule("COMMA", 9);
 			LeaveRule_COMMA();
 		}
 	}
@@ -348,17 +422,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mSEMI()
 	{
 		EnterRule_SEMI();
-		EnterRule("SEMI", 8);
-		TraceIn("SEMI", 8);
+		EnterRule("SEMI", 10);
+		TraceIn("SEMI", 10);
 		try
 		{
 			int _type = SEMI;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:106:7: ( ';' )
+			// Chunky.g:112:7: ( ';' )
 			DebugEnterAlt(1);
-			// Chunky.g:106:9: ';'
+			// Chunky.g:112:9: ';'
 			{
-			DebugLocation(106, 9);
+			DebugLocation(112, 9);
 			Match(';'); if (state.failed) return;
 
 			}
@@ -368,8 +442,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("SEMI", 8);
-			LeaveRule("SEMI", 8);
+			TraceOut("SEMI", 10);
+			LeaveRule("SEMI", 10);
 			LeaveRule_SEMI();
 		}
 	}
@@ -383,17 +457,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mPLUS()
 	{
 		EnterRule_PLUS();
-		EnterRule("PLUS", 9);
-		TraceIn("PLUS", 9);
+		EnterRule("PLUS", 11);
+		TraceIn("PLUS", 11);
 		try
 		{
 			int _type = PLUS;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:108:7: ( '+' )
+			// Chunky.g:114:7: ( '+' )
 			DebugEnterAlt(1);
-			// Chunky.g:108:9: '+'
+			// Chunky.g:114:9: '+'
 			{
-			DebugLocation(108, 9);
+			DebugLocation(114, 9);
 			Match('+'); if (state.failed) return;
 
 			}
@@ -403,8 +477,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("PLUS", 9);
-			LeaveRule("PLUS", 9);
+			TraceOut("PLUS", 11);
+			LeaveRule("PLUS", 11);
 			LeaveRule_PLUS();
 		}
 	}
@@ -418,17 +492,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mMINUS()
 	{
 		EnterRule_MINUS();
-		EnterRule("MINUS", 10);
-		TraceIn("MINUS", 10);
+		EnterRule("MINUS", 12);
+		TraceIn("MINUS", 12);
 		try
 		{
 			int _type = MINUS;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:110:10: ( '-' )
+			// Chunky.g:116:10: ( '-' )
 			DebugEnterAlt(1);
-			// Chunky.g:110:12: '-'
+			// Chunky.g:116:12: '-'
 			{
-			DebugLocation(110, 12);
+			DebugLocation(116, 12);
 			Match('-'); if (state.failed) return;
 
 			}
@@ -438,8 +512,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("MINUS", 10);
-			LeaveRule("MINUS", 10);
+			TraceOut("MINUS", 12);
+			LeaveRule("MINUS", 12);
 			LeaveRule_MINUS();
 		}
 	}
@@ -453,17 +527,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mSTAR()
 	{
 		EnterRule_STAR();
-		EnterRule("STAR", 11);
-		TraceIn("STAR", 11);
+		EnterRule("STAR", 13);
+		TraceIn("STAR", 13);
 		try
 		{
 			int _type = STAR;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:112:9: ( '*' )
+			// Chunky.g:118:9: ( '*' )
 			DebugEnterAlt(1);
-			// Chunky.g:112:11: '*'
+			// Chunky.g:118:11: '*'
 			{
-			DebugLocation(112, 11);
+			DebugLocation(118, 11);
 			Match('*'); if (state.failed) return;
 
 			}
@@ -473,8 +547,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("STAR", 11);
-			LeaveRule("STAR", 11);
+			TraceOut("STAR", 13);
+			LeaveRule("STAR", 13);
 			LeaveRule_STAR();
 		}
 	}
@@ -488,17 +562,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mSLASH()
 	{
 		EnterRule_SLASH();
-		EnterRule("SLASH", 12);
-		TraceIn("SLASH", 12);
+		EnterRule("SLASH", 14);
+		TraceIn("SLASH", 14);
 		try
 		{
 			int _type = SLASH;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:114:10: ( '/' )
+			// Chunky.g:120:10: ( '/' )
 			DebugEnterAlt(1);
-			// Chunky.g:114:12: '/'
+			// Chunky.g:120:12: '/'
 			{
-			DebugLocation(114, 12);
+			DebugLocation(120, 12);
 			Match('/'); if (state.failed) return;
 
 			}
@@ -508,8 +582,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("SLASH", 12);
-			LeaveRule("SLASH", 12);
+			TraceOut("SLASH", 14);
+			LeaveRule("SLASH", 14);
 			LeaveRule_SLASH();
 		}
 	}
@@ -523,17 +597,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mPIPE()
 	{
 		EnterRule_PIPE();
-		EnterRule("PIPE", 13);
-		TraceIn("PIPE", 13);
+		EnterRule("PIPE", 15);
+		TraceIn("PIPE", 15);
 		try
 		{
 			int _type = PIPE;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:116:6: ( '|' )
+			// Chunky.g:122:6: ( '|' )
 			DebugEnterAlt(1);
-			// Chunky.g:116:8: '|'
+			// Chunky.g:122:8: '|'
 			{
-			DebugLocation(116, 8);
+			DebugLocation(122, 8);
 			Match('|'); if (state.failed) return;
 
 			}
@@ -543,8 +617,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("PIPE", 13);
-			LeaveRule("PIPE", 13);
+			TraceOut("PIPE", 15);
+			LeaveRule("PIPE", 15);
 			LeaveRule_PIPE();
 		}
 	}
@@ -558,17 +632,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mDPIPE()
 	{
 		EnterRule_DPIPE();
-		EnterRule("DPIPE", 14);
-		TraceIn("DPIPE", 14);
+		EnterRule("DPIPE", 16);
+		TraceIn("DPIPE", 16);
 		try
 		{
 			int _type = DPIPE;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:118:7: ( '||' )
+			// Chunky.g:124:7: ( '||' )
 			DebugEnterAlt(1);
-			// Chunky.g:118:9: '||'
+			// Chunky.g:124:9: '||'
 			{
-			DebugLocation(118, 9);
+			DebugLocation(124, 9);
 			Match("||"); if (state.failed) return;
 
 
@@ -579,8 +653,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("DPIPE", 14);
-			LeaveRule("DPIPE", 14);
+			TraceOut("DPIPE", 16);
+			LeaveRule("DPIPE", 16);
 			LeaveRule_DPIPE();
 		}
 	}
@@ -594,17 +668,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mAMPER()
 	{
 		EnterRule_AMPER();
-		EnterRule("AMPER", 15);
-		TraceIn("AMPER", 15);
+		EnterRule("AMPER", 17);
+		TraceIn("AMPER", 17);
 		try
 		{
 			int _type = AMPER;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:120:10: ( '&' )
+			// Chunky.g:126:10: ( '&' )
 			DebugEnterAlt(1);
-			// Chunky.g:120:12: '&'
+			// Chunky.g:126:12: '&'
 			{
-			DebugLocation(120, 12);
+			DebugLocation(126, 12);
 			Match('&'); if (state.failed) return;
 
 			}
@@ -614,8 +688,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("AMPER", 15);
-			LeaveRule("AMPER", 15);
+			TraceOut("AMPER", 17);
+			LeaveRule("AMPER", 17);
 			LeaveRule_AMPER();
 		}
 	}
@@ -629,17 +703,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mDAMPER()
 	{
 		EnterRule_DAMPER();
-		EnterRule("DAMPER", 16);
-		TraceIn("DAMPER", 16);
+		EnterRule("DAMPER", 18);
+		TraceIn("DAMPER", 18);
 		try
 		{
 			int _type = DAMPER;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:122:8: ( '&&' )
+			// Chunky.g:128:8: ( '&&' )
 			DebugEnterAlt(1);
-			// Chunky.g:122:10: '&&'
+			// Chunky.g:128:10: '&&'
 			{
-			DebugLocation(122, 10);
+			DebugLocation(128, 10);
 			Match("&&"); if (state.failed) return;
 
 
@@ -650,8 +724,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("DAMPER", 16);
-			LeaveRule("DAMPER", 16);
+			TraceOut("DAMPER", 18);
+			LeaveRule("DAMPER", 18);
 			LeaveRule_DAMPER();
 		}
 	}
@@ -665,17 +739,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mLESS()
 	{
 		EnterRule_LESS();
-		EnterRule("LESS", 17);
-		TraceIn("LESS", 17);
+		EnterRule("LESS", 19);
+		TraceIn("LESS", 19);
 		try
 		{
 			int _type = LESS;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:124:9: ( '<' )
+			// Chunky.g:130:9: ( '<' )
 			DebugEnterAlt(1);
-			// Chunky.g:124:11: '<'
+			// Chunky.g:130:11: '<'
 			{
-			DebugLocation(124, 11);
+			DebugLocation(130, 11);
 			Match('<'); if (state.failed) return;
 
 			}
@@ -685,8 +759,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("LESS", 17);
-			LeaveRule("LESS", 17);
+			TraceOut("LESS", 19);
+			LeaveRule("LESS", 19);
 			LeaveRule_LESS();
 		}
 	}
@@ -700,17 +774,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mGREATER()
 	{
 		EnterRule_GREATER();
-		EnterRule("GREATER", 18);
-		TraceIn("GREATER", 18);
+		EnterRule("GREATER", 20);
+		TraceIn("GREATER", 20);
 		try
 		{
 			int _type = GREATER;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:126:12: ( '>' )
+			// Chunky.g:132:12: ( '>' )
 			DebugEnterAlt(1);
-			// Chunky.g:126:14: '>'
+			// Chunky.g:132:14: '>'
 			{
-			DebugLocation(126, 14);
+			DebugLocation(132, 14);
 			Match('>'); if (state.failed) return;
 
 			}
@@ -720,8 +794,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("GREATER", 18);
-			LeaveRule("GREATER", 18);
+			TraceOut("GREATER", 20);
+			LeaveRule("GREATER", 20);
 			LeaveRule_GREATER();
 		}
 	}
@@ -735,17 +809,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mASSIGN()
 	{
 		EnterRule_ASSIGN();
-		EnterRule("ASSIGN", 19);
-		TraceIn("ASSIGN", 19);
+		EnterRule("ASSIGN", 21);
+		TraceIn("ASSIGN", 21);
 		try
 		{
 			int _type = ASSIGN;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:128:11: ( '=' )
+			// Chunky.g:134:11: ( '=' )
 			DebugEnterAlt(1);
-			// Chunky.g:128:13: '='
+			// Chunky.g:134:13: '='
 			{
-			DebugLocation(128, 13);
+			DebugLocation(134, 13);
 			Match('='); if (state.failed) return;
 
 			}
@@ -755,8 +829,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("ASSIGN", 19);
-			LeaveRule("ASSIGN", 19);
+			TraceOut("ASSIGN", 21);
+			LeaveRule("ASSIGN", 21);
 			LeaveRule_ASSIGN();
 		}
 	}
@@ -770,17 +844,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mPERCENT()
 	{
 		EnterRule_PERCENT();
-		EnterRule("PERCENT", 20);
-		TraceIn("PERCENT", 20);
+		EnterRule("PERCENT", 22);
+		TraceIn("PERCENT", 22);
 		try
 		{
 			int _type = PERCENT;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:130:12: ( '%' )
+			// Chunky.g:136:12: ( '%' )
 			DebugEnterAlt(1);
-			// Chunky.g:130:14: '%'
+			// Chunky.g:136:14: '%'
 			{
-			DebugLocation(130, 14);
+			DebugLocation(136, 14);
 			Match('%'); if (state.failed) return;
 
 			}
@@ -790,8 +864,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("PERCENT", 20);
-			LeaveRule("PERCENT", 20);
+			TraceOut("PERCENT", 22);
+			LeaveRule("PERCENT", 22);
 			LeaveRule_PERCENT();
 		}
 	}
@@ -805,17 +879,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mLCURLY()
 	{
 		EnterRule_LCURLY();
-		EnterRule("LCURLY", 21);
-		TraceIn("LCURLY", 21);
+		EnterRule("LCURLY", 23);
+		TraceIn("LCURLY", 23);
 		try
 		{
 			int _type = LCURLY;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:132:11: ( '{' )
+			// Chunky.g:138:11: ( '{' )
 			DebugEnterAlt(1);
-			// Chunky.g:132:13: '{'
+			// Chunky.g:138:13: '{'
 			{
-			DebugLocation(132, 13);
+			DebugLocation(138, 13);
 			Match('{'); if (state.failed) return;
 
 			}
@@ -825,8 +899,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("LCURLY", 21);
-			LeaveRule("LCURLY", 21);
+			TraceOut("LCURLY", 23);
+			LeaveRule("LCURLY", 23);
 			LeaveRule_LCURLY();
 		}
 	}
@@ -840,17 +914,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mRCURLY()
 	{
 		EnterRule_RCURLY();
-		EnterRule("RCURLY", 22);
-		TraceIn("RCURLY", 22);
+		EnterRule("RCURLY", 24);
+		TraceIn("RCURLY", 24);
 		try
 		{
 			int _type = RCURLY;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:134:11: ( '}' )
+			// Chunky.g:140:11: ( '}' )
 			DebugEnterAlt(1);
-			// Chunky.g:134:13: '}'
+			// Chunky.g:140:13: '}'
 			{
-			DebugLocation(134, 13);
+			DebugLocation(140, 13);
 			Match('}'); if (state.failed) return;
 
 			}
@@ -860,8 +934,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("RCURLY", 22);
-			LeaveRule("RCURLY", 22);
+			TraceOut("RCURLY", 24);
+			LeaveRule("RCURLY", 24);
 			LeaveRule_RCURLY();
 		}
 	}
@@ -875,17 +949,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mEQUAL()
 	{
 		EnterRule_EQUAL();
-		EnterRule("EQUAL", 23);
-		TraceIn("EQUAL", 23);
+		EnterRule("EQUAL", 25);
+		TraceIn("EQUAL", 25);
 		try
 		{
 			int _type = EQUAL;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:136:10: ( '==' )
+			// Chunky.g:142:10: ( '==' )
 			DebugEnterAlt(1);
-			// Chunky.g:136:12: '=='
+			// Chunky.g:142:12: '=='
 			{
-			DebugLocation(136, 12);
+			DebugLocation(142, 12);
 			Match("=="); if (state.failed) return;
 
 
@@ -896,8 +970,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("EQUAL", 23);
-			LeaveRule("EQUAL", 23);
+			TraceOut("EQUAL", 25);
+			LeaveRule("EQUAL", 25);
 			LeaveRule_EQUAL();
 		}
 	}
@@ -911,17 +985,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mNOTEQUAL()
 	{
 		EnterRule_NOTEQUAL();
-		EnterRule("NOTEQUAL", 24);
-		TraceIn("NOTEQUAL", 24);
+		EnterRule("NOTEQUAL", 26);
+		TraceIn("NOTEQUAL", 26);
 		try
 		{
 			int _type = NOTEQUAL;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:138:13: ( '!=' )
+			// Chunky.g:144:13: ( '!=' )
 			DebugEnterAlt(1);
-			// Chunky.g:138:15: '!='
+			// Chunky.g:144:15: '!='
 			{
-			DebugLocation(138, 15);
+			DebugLocation(144, 15);
 			Match("!="); if (state.failed) return;
 
 
@@ -932,8 +1006,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("NOTEQUAL", 24);
-			LeaveRule("NOTEQUAL", 24);
+			TraceOut("NOTEQUAL", 26);
+			LeaveRule("NOTEQUAL", 26);
 			LeaveRule_NOTEQUAL();
 		}
 	}
@@ -947,17 +1021,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mLESSEQUAL()
 	{
 		EnterRule_LESSEQUAL();
-		EnterRule("LESSEQUAL", 25);
-		TraceIn("LESSEQUAL", 25);
+		EnterRule("LESSEQUAL", 27);
+		TraceIn("LESSEQUAL", 27);
 		try
 		{
 			int _type = LESSEQUAL;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:140:14: ( '<=' )
+			// Chunky.g:146:14: ( '<=' )
 			DebugEnterAlt(1);
-			// Chunky.g:140:16: '<='
+			// Chunky.g:146:16: '<='
 			{
-			DebugLocation(140, 16);
+			DebugLocation(146, 16);
 			Match("<="); if (state.failed) return;
 
 
@@ -968,8 +1042,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("LESSEQUAL", 25);
-			LeaveRule("LESSEQUAL", 25);
+			TraceOut("LESSEQUAL", 27);
+			LeaveRule("LESSEQUAL", 27);
 			LeaveRule_LESSEQUAL();
 		}
 	}
@@ -983,17 +1057,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mGREATEREQUAL()
 	{
 		EnterRule_GREATEREQUAL();
-		EnterRule("GREATEREQUAL", 26);
-		TraceIn("GREATEREQUAL", 26);
+		EnterRule("GREATEREQUAL", 28);
+		TraceIn("GREATEREQUAL", 28);
 		try
 		{
 			int _type = GREATEREQUAL;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:142:17: ( '>=' )
+			// Chunky.g:148:17: ( '>=' )
 			DebugEnterAlt(1);
-			// Chunky.g:142:19: '>='
+			// Chunky.g:148:19: '>='
 			{
-			DebugLocation(142, 19);
+			DebugLocation(148, 19);
 			Match(">="); if (state.failed) return;
 
 
@@ -1004,8 +1078,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("GREATEREQUAL", 26);
-			LeaveRule("GREATEREQUAL", 26);
+			TraceOut("GREATEREQUAL", 28);
+			LeaveRule("GREATEREQUAL", 28);
 			LeaveRule_GREATEREQUAL();
 		}
 	}
@@ -1019,17 +1093,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mDOT()
 	{
 		EnterRule_DOT();
-		EnterRule("DOT", 27);
-		TraceIn("DOT", 27);
+		EnterRule("DOT", 29);
+		TraceIn("DOT", 29);
 		try
 		{
 			int _type = DOT;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:144:5: ( '.' )
+			// Chunky.g:150:5: ( '.' )
 			DebugEnterAlt(1);
-			// Chunky.g:144:7: '.'
+			// Chunky.g:150:7: '.'
 			{
-			DebugLocation(144, 7);
+			DebugLocation(150, 7);
 			Match('.'); if (state.failed) return;
 
 			}
@@ -1039,8 +1113,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("DOT", 27);
-			LeaveRule("DOT", 27);
+			TraceOut("DOT", 29);
+			LeaveRule("DOT", 29);
 			LeaveRule_DOT();
 		}
 	}
@@ -1054,15 +1128,15 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mLETTER()
 	{
 		EnterRule_LETTER();
-		EnterRule("LETTER", 28);
-		TraceIn("LETTER", 28);
+		EnterRule("LETTER", 30);
+		TraceIn("LETTER", 30);
 		try
 		{
-			// Chunky.g:149:8: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
+			// Chunky.g:155:8: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
 			DebugEnterAlt(1);
 			// Chunky.g:
 			{
-			DebugLocation(149, 8);
+			DebugLocation(155, 8);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -1082,8 +1156,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("LETTER", 28);
-			LeaveRule("LETTER", 28);
+			TraceOut("LETTER", 30);
+			LeaveRule("LETTER", 30);
 			LeaveRule_LETTER();
 		}
 	}
@@ -1097,15 +1171,15 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mDIGIT()
 	{
 		EnterRule_DIGIT();
-		EnterRule("DIGIT", 29);
-		TraceIn("DIGIT", 29);
+		EnterRule("DIGIT", 31);
+		TraceIn("DIGIT", 31);
 		try
 		{
-			// Chunky.g:152:7: ( '0' .. '9' )
+			// Chunky.g:158:7: ( '0' .. '9' )
 			DebugEnterAlt(1);
 			// Chunky.g:
 			{
-			DebugLocation(152, 7);
+			DebugLocation(158, 7);
 			if ((input.LA(1)>='0' && input.LA(1)<='9'))
 			{
 				input.Consume();
@@ -1125,8 +1199,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("DIGIT", 29);
-			LeaveRule("DIGIT", 29);
+			TraceOut("DIGIT", 31);
+			LeaveRule("DIGIT", 31);
 			LeaveRule_DIGIT();
 		}
 	}
@@ -1140,20 +1214,20 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mSTRING()
 	{
 		EnterRule_STRING();
-		EnterRule("STRING", 30);
-		TraceIn("STRING", 30);
+		EnterRule("STRING", 32);
+		TraceIn("STRING", 32);
 		try
 		{
 			int _type = STRING;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:153:8: ( '\"' (~ '\"' | '\\\\\"' )* '\"' )
+			// Chunky.g:159:8: ( '\"' (~ '\"' | '\\\\\"' )* '\"' )
 			DebugEnterAlt(1);
-			// Chunky.g:153:10: '\"' (~ '\"' | '\\\\\"' )* '\"'
+			// Chunky.g:159:10: '\"' (~ '\"' | '\\\\\"' )* '\"'
 			{
-			DebugLocation(153, 10);
+			DebugLocation(159, 10);
 			Match('\"'); if (state.failed) return;
-			DebugLocation(153, 14);
-			// Chunky.g:153:14: (~ '\"' | '\\\\\"' )*
+			DebugLocation(159, 14);
+			// Chunky.g:159:14: (~ '\"' | '\\\\\"' )*
 			try { DebugEnterSubRule(1);
 			while (true)
 			{
@@ -1198,9 +1272,9 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Chunky.g:153:15: ~ '\"'
+					// Chunky.g:159:15: ~ '\"'
 					{
-					DebugLocation(153, 15);
+					DebugLocation(159, 15);
 					input.Consume();
 					state.failed=false;
 
@@ -1208,9 +1282,9 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// Chunky.g:153:20: '\\\\\"'
+					// Chunky.g:159:20: '\\\\\"'
 					{
-					DebugLocation(153, 20);
+					DebugLocation(159, 20);
 					Match("\\\""); if (state.failed) return;
 
 
@@ -1227,7 +1301,7 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(1); }
 
-			DebugLocation(153, 28);
+			DebugLocation(159, 28);
 			Match('\"'); if (state.failed) return;
 
 			}
@@ -1237,8 +1311,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("STRING", 30);
-			LeaveRule("STRING", 30);
+			TraceOut("STRING", 32);
+			LeaveRule("STRING", 32);
 			LeaveRule_STRING();
 		}
 	}
@@ -1252,17 +1326,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mID()
 	{
 		EnterRule_ID();
-		EnterRule("ID", 31);
-		TraceIn("ID", 31);
+		EnterRule("ID", 33);
+		TraceIn("ID", 33);
 		try
 		{
 			int _type = ID;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:155:4: ( ( LETTER | '_' ) ( LETTER | DIGIT | '_' )* )
+			// Chunky.g:161:4: ( ( LETTER | '_' ) ( LETTER | DIGIT | '_' )* )
 			DebugEnterAlt(1);
-			// Chunky.g:155:6: ( LETTER | '_' ) ( LETTER | DIGIT | '_' )*
+			// Chunky.g:161:6: ( LETTER | '_' ) ( LETTER | DIGIT | '_' )*
 			{
-			DebugLocation(155, 6);
+			DebugLocation(161, 6);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -1276,8 +1350,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 				Recover(mse);
 				throw mse;}
 
-			DebugLocation(155, 21);
-			// Chunky.g:155:21: ( LETTER | DIGIT | '_' )*
+			DebugLocation(161, 21);
+			// Chunky.g:161:21: ( LETTER | DIGIT | '_' )*
 			try { DebugEnterSubRule(2);
 			while (true)
 			{
@@ -1298,7 +1372,7 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// Chunky.g:
 					{
-					DebugLocation(155, 21);
+					DebugLocation(161, 21);
 					input.Consume();
 					state.failed=false;
 
@@ -1323,8 +1397,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("ID", 31);
-			LeaveRule("ID", 31);
+			TraceOut("ID", 33);
+			LeaveRule("ID", 33);
 			LeaveRule_ID();
 		}
 	}
@@ -1338,18 +1412,18 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mINT()
 	{
 		EnterRule_INT();
-		EnterRule("INT", 32);
-		TraceIn("INT", 32);
+		EnterRule("INT", 34);
+		TraceIn("INT", 34);
 		try
 		{
 			int _type = INT;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:157:5: ( ( DIGIT )+ )
+			// Chunky.g:163:5: ( ( DIGIT )+ )
 			DebugEnterAlt(1);
-			// Chunky.g:157:7: ( DIGIT )+
+			// Chunky.g:163:7: ( DIGIT )+
 			{
-			DebugLocation(157, 7);
-			// Chunky.g:157:7: ( DIGIT )+
+			DebugLocation(163, 7);
+			// Chunky.g:163:7: ( DIGIT )+
 			int cnt3=0;
 			try { DebugEnterSubRule(3);
 			while (true)
@@ -1371,7 +1445,7 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// Chunky.g:
 					{
-					DebugLocation(157, 7);
+					DebugLocation(163, 7);
 					input.Consume();
 					state.failed=false;
 
@@ -1402,8 +1476,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("INT", 32);
-			LeaveRule("INT", 32);
+			TraceOut("INT", 34);
+			LeaveRule("INT", 34);
 			LeaveRule_INT();
 		}
 	}
@@ -1417,18 +1491,18 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mFLOAT()
 	{
 		EnterRule_FLOAT();
-		EnterRule("FLOAT", 33);
-		TraceIn("FLOAT", 33);
+		EnterRule("FLOAT", 35);
+		TraceIn("FLOAT", 35);
 		try
 		{
 			int _type = FLOAT;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:159:7: ( ( DIGIT )* ( ( '.' ( DIGIT )+ )=> ( '.' ( DIGIT )+ ) |) )
+			// Chunky.g:165:7: ( ( DIGIT )* ( ( '.' ( DIGIT )+ )=> ( '.' ( DIGIT )+ ) |) )
 			DebugEnterAlt(1);
-			// Chunky.g:159:9: ( DIGIT )* ( ( '.' ( DIGIT )+ )=> ( '.' ( DIGIT )+ ) |)
+			// Chunky.g:165:9: ( DIGIT )* ( ( '.' ( DIGIT )+ )=> ( '.' ( DIGIT )+ ) |)
 			{
-			DebugLocation(159, 9);
-			// Chunky.g:159:9: ( DIGIT )*
+			DebugLocation(165, 9);
+			// Chunky.g:165:9: ( DIGIT )*
 			try { DebugEnterSubRule(4);
 			while (true)
 			{
@@ -1449,7 +1523,7 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// Chunky.g:
 					{
-					DebugLocation(159, 9);
+					DebugLocation(165, 9);
 					input.Consume();
 					state.failed=false;
 
@@ -1466,8 +1540,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(4); }
 
-			DebugLocation(159, 18);
-			// Chunky.g:159:18: ( ( '.' ( DIGIT )+ )=> ( '.' ( DIGIT )+ ) |)
+			DebugLocation(165, 18);
+			// Chunky.g:165:18: ( ( '.' ( DIGIT )+ )=> ( '.' ( DIGIT )+ ) |)
 			int alt6=2;
 			try { DebugEnterSubRule(6);
 			try { DebugEnterDecision(6, false);
@@ -1485,17 +1559,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Chunky.g:159:19: ( '.' ( DIGIT )+ )=> ( '.' ( DIGIT )+ )
+				// Chunky.g:165:19: ( '.' ( DIGIT )+ )=> ( '.' ( DIGIT )+ )
 				{
-				DebugLocation(159, 33);
-				// Chunky.g:159:33: ( '.' ( DIGIT )+ )
+				DebugLocation(165, 33);
+				// Chunky.g:165:33: ( '.' ( DIGIT )+ )
 				DebugEnterAlt(1);
-				// Chunky.g:159:34: '.' ( DIGIT )+
+				// Chunky.g:165:34: '.' ( DIGIT )+
 				{
-				DebugLocation(159, 34);
+				DebugLocation(165, 34);
 				Match('.'); if (state.failed) return;
-				DebugLocation(159, 38);
-				// Chunky.g:159:38: ( DIGIT )+
+				DebugLocation(165, 38);
+				// Chunky.g:165:38: ( DIGIT )+
 				int cnt5=0;
 				try { DebugEnterSubRule(5);
 				while (true)
@@ -1517,7 +1591,7 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// Chunky.g:
 						{
-						DebugLocation(159, 38);
+						DebugLocation(165, 38);
 						input.Consume();
 						state.failed=false;
 
@@ -1548,9 +1622,9 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Chunky.g:159:48: 
+				// Chunky.g:165:48: 
 				{
-				DebugLocation(159, 48);
+				DebugLocation(165, 48);
 				if (state.backtracking == 0)
 				{
 					 _type = INT; 
@@ -1570,8 +1644,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("FLOAT", 33);
-			LeaveRule("FLOAT", 33);
+			TraceOut("FLOAT", 35);
+			LeaveRule("FLOAT", 35);
 			LeaveRule_FLOAT();
 		}
 	}
@@ -1585,17 +1659,17 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private void mWS()
 	{
 		EnterRule_WS();
-		EnterRule("WS", 34);
-		TraceIn("WS", 34);
+		EnterRule("WS", 36);
+		TraceIn("WS", 36);
 		try
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// Chunky.g:162:4: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// Chunky.g:168:4: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
 			DebugEnterAlt(1);
-			// Chunky.g:162:6: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// Chunky.g:168:6: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
-			DebugLocation(162, 6);
+			DebugLocation(168, 6);
 			if ((input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ')
 			{
 				input.Consume();
@@ -1609,7 +1683,7 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 				Recover(mse);
 				throw mse;}
 
-			DebugLocation(166, 5);
+			DebugLocation(172, 5);
 			if (state.backtracking == 0)
 			{
 				_channel=99;
@@ -1622,8 +1696,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("WS", 34);
-			LeaveRule("WS", 34);
+			TraceOut("WS", 36);
+			LeaveRule("WS", 36);
 			LeaveRule_WS();
 		}
 	}
@@ -1631,8 +1705,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 
 	public override void mTokens()
 	{
-		// Chunky.g:1:8: ( T__40 | T__41 | IF | FUNC | LPAREN | RPAREN | COMMA | SEMI | PLUS | MINUS | STAR | SLASH | PIPE | DPIPE | AMPER | DAMPER | LESS | GREATER | ASSIGN | PERCENT | LCURLY | RCURLY | EQUAL | NOTEQUAL | LESSEQUAL | GREATEREQUAL | DOT | STRING | ID | INT | FLOAT | WS )
-		int alt7=32;
+		// Chunky.g:1:8: ( T__42 | T__43 | TRUE | FALSE | IF | FUNC | LPAREN | RPAREN | COMMA | SEMI | PLUS | MINUS | STAR | SLASH | PIPE | DPIPE | AMPER | DAMPER | LESS | GREATER | ASSIGN | PERCENT | LCURLY | RCURLY | EQUAL | NOTEQUAL | LESSEQUAL | GREATEREQUAL | DOT | STRING | ID | INT | FLOAT | WS )
+		int alt7=34;
 		try { DebugEnterDecision(7, false);
 		try
 		{
@@ -1648,288 +1722,306 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		{
 		case 1:
 			DebugEnterAlt(1);
-			// Chunky.g:1:10: T__40
+			// Chunky.g:1:10: T__42
 			{
 			DebugLocation(1, 10);
-			mT__40(); if (state.failed) return;
+			mT__42(); if (state.failed) return;
 
 			}
 			break;
 		case 2:
 			DebugEnterAlt(2);
-			// Chunky.g:1:16: T__41
+			// Chunky.g:1:16: T__43
 			{
 			DebugLocation(1, 16);
-			mT__41(); if (state.failed) return;
+			mT__43(); if (state.failed) return;
 
 			}
 			break;
 		case 3:
 			DebugEnterAlt(3);
-			// Chunky.g:1:22: IF
+			// Chunky.g:1:22: TRUE
 			{
 			DebugLocation(1, 22);
-			mIF(); if (state.failed) return;
+			mTRUE(); if (state.failed) return;
 
 			}
 			break;
 		case 4:
 			DebugEnterAlt(4);
-			// Chunky.g:1:25: FUNC
+			// Chunky.g:1:27: FALSE
 			{
-			DebugLocation(1, 25);
-			mFUNC(); if (state.failed) return;
+			DebugLocation(1, 27);
+			mFALSE(); if (state.failed) return;
 
 			}
 			break;
 		case 5:
 			DebugEnterAlt(5);
-			// Chunky.g:1:30: LPAREN
+			// Chunky.g:1:33: IF
 			{
-			DebugLocation(1, 30);
-			mLPAREN(); if (state.failed) return;
+			DebugLocation(1, 33);
+			mIF(); if (state.failed) return;
 
 			}
 			break;
 		case 6:
 			DebugEnterAlt(6);
-			// Chunky.g:1:37: RPAREN
+			// Chunky.g:1:36: FUNC
 			{
-			DebugLocation(1, 37);
-			mRPAREN(); if (state.failed) return;
+			DebugLocation(1, 36);
+			mFUNC(); if (state.failed) return;
 
 			}
 			break;
 		case 7:
 			DebugEnterAlt(7);
-			// Chunky.g:1:44: COMMA
+			// Chunky.g:1:41: LPAREN
 			{
-			DebugLocation(1, 44);
-			mCOMMA(); if (state.failed) return;
+			DebugLocation(1, 41);
+			mLPAREN(); if (state.failed) return;
 
 			}
 			break;
 		case 8:
 			DebugEnterAlt(8);
-			// Chunky.g:1:50: SEMI
+			// Chunky.g:1:48: RPAREN
 			{
-			DebugLocation(1, 50);
-			mSEMI(); if (state.failed) return;
+			DebugLocation(1, 48);
+			mRPAREN(); if (state.failed) return;
 
 			}
 			break;
 		case 9:
 			DebugEnterAlt(9);
-			// Chunky.g:1:55: PLUS
+			// Chunky.g:1:55: COMMA
 			{
 			DebugLocation(1, 55);
-			mPLUS(); if (state.failed) return;
+			mCOMMA(); if (state.failed) return;
 
 			}
 			break;
 		case 10:
 			DebugEnterAlt(10);
-			// Chunky.g:1:60: MINUS
+			// Chunky.g:1:61: SEMI
 			{
-			DebugLocation(1, 60);
-			mMINUS(); if (state.failed) return;
+			DebugLocation(1, 61);
+			mSEMI(); if (state.failed) return;
 
 			}
 			break;
 		case 11:
 			DebugEnterAlt(11);
-			// Chunky.g:1:66: STAR
+			// Chunky.g:1:66: PLUS
 			{
 			DebugLocation(1, 66);
-			mSTAR(); if (state.failed) return;
+			mPLUS(); if (state.failed) return;
 
 			}
 			break;
 		case 12:
 			DebugEnterAlt(12);
-			// Chunky.g:1:71: SLASH
+			// Chunky.g:1:71: MINUS
 			{
 			DebugLocation(1, 71);
-			mSLASH(); if (state.failed) return;
+			mMINUS(); if (state.failed) return;
 
 			}
 			break;
 		case 13:
 			DebugEnterAlt(13);
-			// Chunky.g:1:77: PIPE
+			// Chunky.g:1:77: STAR
 			{
 			DebugLocation(1, 77);
-			mPIPE(); if (state.failed) return;
+			mSTAR(); if (state.failed) return;
 
 			}
 			break;
 		case 14:
 			DebugEnterAlt(14);
-			// Chunky.g:1:82: DPIPE
+			// Chunky.g:1:82: SLASH
 			{
 			DebugLocation(1, 82);
-			mDPIPE(); if (state.failed) return;
+			mSLASH(); if (state.failed) return;
 
 			}
 			break;
 		case 15:
 			DebugEnterAlt(15);
-			// Chunky.g:1:88: AMPER
+			// Chunky.g:1:88: PIPE
 			{
 			DebugLocation(1, 88);
-			mAMPER(); if (state.failed) return;
+			mPIPE(); if (state.failed) return;
 
 			}
 			break;
 		case 16:
 			DebugEnterAlt(16);
-			// Chunky.g:1:94: DAMPER
+			// Chunky.g:1:93: DPIPE
 			{
-			DebugLocation(1, 94);
-			mDAMPER(); if (state.failed) return;
+			DebugLocation(1, 93);
+			mDPIPE(); if (state.failed) return;
 
 			}
 			break;
 		case 17:
 			DebugEnterAlt(17);
-			// Chunky.g:1:101: LESS
+			// Chunky.g:1:99: AMPER
 			{
-			DebugLocation(1, 101);
-			mLESS(); if (state.failed) return;
+			DebugLocation(1, 99);
+			mAMPER(); if (state.failed) return;
 
 			}
 			break;
 		case 18:
 			DebugEnterAlt(18);
-			// Chunky.g:1:106: GREATER
+			// Chunky.g:1:105: DAMPER
 			{
-			DebugLocation(1, 106);
-			mGREATER(); if (state.failed) return;
+			DebugLocation(1, 105);
+			mDAMPER(); if (state.failed) return;
 
 			}
 			break;
 		case 19:
 			DebugEnterAlt(19);
-			// Chunky.g:1:114: ASSIGN
+			// Chunky.g:1:112: LESS
 			{
-			DebugLocation(1, 114);
-			mASSIGN(); if (state.failed) return;
+			DebugLocation(1, 112);
+			mLESS(); if (state.failed) return;
 
 			}
 			break;
 		case 20:
 			DebugEnterAlt(20);
-			// Chunky.g:1:121: PERCENT
+			// Chunky.g:1:117: GREATER
 			{
-			DebugLocation(1, 121);
-			mPERCENT(); if (state.failed) return;
+			DebugLocation(1, 117);
+			mGREATER(); if (state.failed) return;
 
 			}
 			break;
 		case 21:
 			DebugEnterAlt(21);
-			// Chunky.g:1:129: LCURLY
+			// Chunky.g:1:125: ASSIGN
 			{
-			DebugLocation(1, 129);
-			mLCURLY(); if (state.failed) return;
+			DebugLocation(1, 125);
+			mASSIGN(); if (state.failed) return;
 
 			}
 			break;
 		case 22:
 			DebugEnterAlt(22);
-			// Chunky.g:1:136: RCURLY
+			// Chunky.g:1:132: PERCENT
 			{
-			DebugLocation(1, 136);
-			mRCURLY(); if (state.failed) return;
+			DebugLocation(1, 132);
+			mPERCENT(); if (state.failed) return;
 
 			}
 			break;
 		case 23:
 			DebugEnterAlt(23);
-			// Chunky.g:1:143: EQUAL
+			// Chunky.g:1:140: LCURLY
 			{
-			DebugLocation(1, 143);
-			mEQUAL(); if (state.failed) return;
+			DebugLocation(1, 140);
+			mLCURLY(); if (state.failed) return;
 
 			}
 			break;
 		case 24:
 			DebugEnterAlt(24);
-			// Chunky.g:1:149: NOTEQUAL
+			// Chunky.g:1:147: RCURLY
 			{
-			DebugLocation(1, 149);
-			mNOTEQUAL(); if (state.failed) return;
+			DebugLocation(1, 147);
+			mRCURLY(); if (state.failed) return;
 
 			}
 			break;
 		case 25:
 			DebugEnterAlt(25);
-			// Chunky.g:1:158: LESSEQUAL
+			// Chunky.g:1:154: EQUAL
 			{
-			DebugLocation(1, 158);
-			mLESSEQUAL(); if (state.failed) return;
+			DebugLocation(1, 154);
+			mEQUAL(); if (state.failed) return;
 
 			}
 			break;
 		case 26:
 			DebugEnterAlt(26);
-			// Chunky.g:1:168: GREATEREQUAL
+			// Chunky.g:1:160: NOTEQUAL
 			{
-			DebugLocation(1, 168);
-			mGREATEREQUAL(); if (state.failed) return;
+			DebugLocation(1, 160);
+			mNOTEQUAL(); if (state.failed) return;
 
 			}
 			break;
 		case 27:
 			DebugEnterAlt(27);
-			// Chunky.g:1:181: DOT
+			// Chunky.g:1:169: LESSEQUAL
 			{
-			DebugLocation(1, 181);
-			mDOT(); if (state.failed) return;
+			DebugLocation(1, 169);
+			mLESSEQUAL(); if (state.failed) return;
 
 			}
 			break;
 		case 28:
 			DebugEnterAlt(28);
-			// Chunky.g:1:185: STRING
+			// Chunky.g:1:179: GREATEREQUAL
 			{
-			DebugLocation(1, 185);
-			mSTRING(); if (state.failed) return;
+			DebugLocation(1, 179);
+			mGREATEREQUAL(); if (state.failed) return;
 
 			}
 			break;
 		case 29:
 			DebugEnterAlt(29);
-			// Chunky.g:1:192: ID
+			// Chunky.g:1:192: DOT
 			{
 			DebugLocation(1, 192);
-			mID(); if (state.failed) return;
+			mDOT(); if (state.failed) return;
 
 			}
 			break;
 		case 30:
 			DebugEnterAlt(30);
-			// Chunky.g:1:195: INT
+			// Chunky.g:1:196: STRING
 			{
-			DebugLocation(1, 195);
-			mINT(); if (state.failed) return;
+			DebugLocation(1, 196);
+			mSTRING(); if (state.failed) return;
 
 			}
 			break;
 		case 31:
 			DebugEnterAlt(31);
-			// Chunky.g:1:199: FLOAT
+			// Chunky.g:1:203: ID
 			{
-			DebugLocation(1, 199);
-			mFLOAT(); if (state.failed) return;
+			DebugLocation(1, 203);
+			mID(); if (state.failed) return;
 
 			}
 			break;
 		case 32:
 			DebugEnterAlt(32);
-			// Chunky.g:1:205: WS
+			// Chunky.g:1:206: INT
 			{
-			DebugLocation(1, 205);
+			DebugLocation(1, 206);
+			mINT(); if (state.failed) return;
+
+			}
+			break;
+		case 33:
+			DebugEnterAlt(33);
+			// Chunky.g:1:210: FLOAT
+			{
+			DebugLocation(1, 210);
+			mFLOAT(); if (state.failed) return;
+
+			}
+			break;
+		case 34:
+			DebugEnterAlt(34);
+			// Chunky.g:1:216: WS
+			{
+			DebugLocation(1, 216);
 			mWS(); if (state.failed) return;
 
 			}
@@ -1946,18 +2038,18 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	public void synpred1_Chunky_fragment()
 	{
 		EnterRule_synpred1_Chunky_fragment();
-		EnterRule("synpred1_Chunky_fragment", 36);
-		TraceIn("synpred1_Chunky_fragment", 36);
+		EnterRule("synpred1_Chunky_fragment", 38);
+		TraceIn("synpred1_Chunky_fragment", 38);
 		try
 		{
-			// Chunky.g:159:19: ( '.' ( DIGIT )+ )
+			// Chunky.g:165:19: ( '.' ( DIGIT )+ )
 			DebugEnterAlt(1);
-			// Chunky.g:159:20: '.' ( DIGIT )+
+			// Chunky.g:165:20: '.' ( DIGIT )+
 			{
-			DebugLocation(159, 20);
+			DebugLocation(165, 20);
 			Match('.'); if (state.failed) return;
-			DebugLocation(159, 24);
-			// Chunky.g:159:24: ( DIGIT )+
+			DebugLocation(165, 24);
+			// Chunky.g:165:24: ( DIGIT )+
 			int cnt8=0;
 			try { DebugEnterSubRule(8);
 			while (true)
@@ -1979,7 +2071,7 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// Chunky.g:
 					{
-					DebugLocation(159, 24);
+					DebugLocation(165, 24);
 					if ((input.LA(1)>='0' && input.LA(1)<='9'))
 					{
 						input.Consume();
@@ -2019,8 +2111,8 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("synpred1_Chunky_fragment", 36);
-			LeaveRule("synpred1_Chunky_fragment", 36);
+			TraceOut("synpred1_Chunky_fragment", 38);
+			LeaveRule("synpred1_Chunky_fragment", 38);
 			LeaveRule_synpred1_Chunky_fragment();
 		}
 	}
@@ -2063,64 +2155,41 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 	private class DFA7 : DFA
 	{
 		private const string DFA7_eotS =
-			"\x1\x19\x1\x1C\x3\x17\x8\xFFFF\x1\x21\x1\x23\x1\x25\x1\x27\x1\x29\x3"+
-			"\xFFFF\x1\x2A\x2\xFFFF\x1\x2B\x4\xFFFF\x1\x17\x1\x2D\x1\x17\xC\xFFFF"+
-			"\x1\x17\x1\xFFFF\x1\x17\x1\x31\x1\x32\x2\xFFFF";
+			"\x1\x1A\x1\x1D\x4\x18\x8\xFFFF\x1\x24\x1\x26\x1\x28\x1\x2A\x1\x2C\x3"+
+			"\xFFFF\x1\x2D\x2\xFFFF\x1\x2E\x4\xFFFF\x4\x18\x1\x33\xC\xFFFF\x4\x18"+
+			"\x1\xFFFF\x1\x38\x1\x39\x1\x18\x1\x3B\x2\xFFFF\x1\x3C\x2\xFFFF";
 		private const string DFA7_eofS =
-			"\x33\xFFFF";
+			"\x3D\xFFFF";
 		private const string DFA7_minS =
-			"\x1\x9\x1\x3D\x1\x6C\x1\x66\x1\x75\x8\xFFFF\x1\x7C\x1\x26\x3\x3D\x3\xFFFF"+
-			"\x1\x30\x2\xFFFF\x1\x2E\x4\xFFFF\x1\x73\x1\x30\x1\x6E\xC\xFFFF\x1\x65"+
-			"\x1\xFFFF\x1\x63\x2\x30\x2\xFFFF";
+			"\x1\x9\x1\x3D\x1\x6C\x1\x72\x1\x61\x1\x66\x8\xFFFF\x1\x7C\x1\x26\x3\x3D"+
+			"\x3\xFFFF\x1\x30\x2\xFFFF\x1\x2E\x4\xFFFF\x1\x73\x1\x75\x1\x6C\x1\x6E"+
+			"\x1\x30\xC\xFFFF\x2\x65\x1\x73\x1\x63\x1\xFFFF\x2\x30\x1\x65\x1\x30\x2"+
+			"\xFFFF\x1\x30\x2\xFFFF";
 		private const string DFA7_maxS =
-			"\x1\x7D\x1\x3D\x1\x6C\x1\x66\x1\x75\x8\xFFFF\x1\x7C\x1\x26\x3\x3D\x3"+
-			"\xFFFF\x1\x39\x2\xFFFF\x1\x39\x4\xFFFF\x1\x73\x1\x7A\x1\x6E\xC\xFFFF"+
-			"\x1\x65\x1\xFFFF\x1\x63\x2\x7A\x2\xFFFF";
+			"\x1\x7D\x1\x3D\x1\x6C\x1\x72\x1\x75\x1\x66\x8\xFFFF\x1\x7C\x1\x26\x3"+
+			"\x3D\x3\xFFFF\x1\x39\x2\xFFFF\x1\x39\x4\xFFFF\x1\x73\x1\x75\x1\x6C\x1"+
+			"\x6E\x1\x7A\xC\xFFFF\x2\x65\x1\x73\x1\x63\x1\xFFFF\x2\x7A\x1\x65\x1\x7A"+
+			"\x2\xFFFF\x1\x7A\x2\xFFFF";
 		private const string DFA7_acceptS =
-			"\x5\xFFFF\x1\x5\x1\x6\x1\x7\x1\x8\x1\x9\x1\xA\x1\xB\x1\xC\x5\xFFFF\x1"+
-			"\x14\x1\x15\x1\x16\x1\xFFFF\x1\x1C\x1\x1D\x1\xFFFF\x1\x1F\x1\x20\x1\x18"+
-			"\x1\x1\x3\xFFFF\x1\xE\x1\xD\x1\x10\x1\xF\x1\x19\x1\x11\x1\x1A\x1\x12"+
-			"\x1\x17\x1\x13\x1\x1B\x1\x1E\x1\xFFFF\x1\x3\x3\xFFFF\x1\x2\x1\x4";
+			"\x6\xFFFF\x1\x7\x1\x8\x1\x9\x1\xA\x1\xB\x1\xC\x1\xD\x1\xE\x5\xFFFF\x1"+
+			"\x16\x1\x17\x1\x18\x1\xFFFF\x1\x1E\x1\x1F\x1\xFFFF\x1\x21\x1\x22\x1\x1A"+
+			"\x1\x1\x5\xFFFF\x1\x10\x1\xF\x1\x12\x1\x11\x1\x1B\x1\x13\x1\x1C\x1\x14"+
+			"\x1\x19\x1\x15\x1\x1D\x1\x20\x4\xFFFF\x1\x5\x4\xFFFF\x1\x2\x1\x3\x1\xFFFF"+
+			"\x1\x6\x1\x4";
 		private const string DFA7_specialS =
-			"\x33\xFFFF}>";
+			"\x3D\xFFFF}>";
 		private static readonly string[] DFA7_transitionS =
 			{
-				"\x2\x1A\x2\xFFFF\x1\x1A\x12\xFFFF\x1\x1A\x1\x1\x1\x16\x2\xFFFF\x1\x12"+
-				"\x1\xE\x1\xFFFF\x1\x5\x1\x6\x1\xB\x1\x9\x1\x7\x1\xA\x1\x15\x1\xC\xA"+
-				"\x18\x1\xFFFF\x1\x8\x1\xF\x1\x11\x1\x10\x2\xFFFF\x1A\x17\x4\xFFFF\x1"+
-				"\x17\x1\xFFFF\x4\x17\x1\x2\x1\x4\x2\x17\x1\x3\x11\x17\x1\x13\x1\xD\x1"+
-				"\x14",
-				"\x1\x1B",
-				"\x1\x1D",
+				"\x2\x1B\x2\xFFFF\x1\x1B\x12\xFFFF\x1\x1B\x1\x1\x1\x17\x2\xFFFF\x1\x13"+
+				"\x1\xF\x1\xFFFF\x1\x6\x1\x7\x1\xC\x1\xA\x1\x8\x1\xB\x1\x16\x1\xD\xA"+
+				"\x19\x1\xFFFF\x1\x9\x1\x10\x1\x12\x1\x11\x2\xFFFF\x1A\x18\x4\xFFFF\x1"+
+				"\x18\x1\xFFFF\x4\x18\x1\x2\x1\x4\x2\x18\x1\x5\xA\x18\x1\x3\x6\x18\x1"+
+				"\x14\x1\xE\x1\x15",
+				"\x1\x1C",
 				"\x1\x1E",
 				"\x1\x1F",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"\x1\x20",
+				"\x1\x20\x13\xFFFF\x1\x21",
 				"\x1\x22",
-				"\x1\x24",
-				"\x1\x26",
-				"\x1\x28",
-				"",
-				"",
-				"",
-				"\xA\x19",
-				"",
-				"",
-				"\x1\x19\x1\xFFFF\xA\x18",
-				"",
-				"",
-				"",
-				"",
-				"\x1\x2C",
-				"\xA\x17\x7\xFFFF\x1A\x17\x4\xFFFF\x1\x17\x1\xFFFF\x1A\x17",
-				"\x1\x2E",
 				"",
 				"",
 				"",
@@ -2129,15 +2198,51 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 				"",
 				"",
 				"",
+				"\x1\x23",
+				"\x1\x25",
+				"\x1\x27",
+				"\x1\x29",
+				"\x1\x2B",
+				"",
+				"",
+				"",
+				"\xA\x1A",
+				"",
+				"",
+				"\x1\x1A\x1\xFFFF\xA\x19",
 				"",
 				"",
 				"",
 				"",
 				"\x1\x2F",
-				"",
 				"\x1\x30",
-				"\xA\x17\x7\xFFFF\x1A\x17\x4\xFFFF\x1\x17\x1\xFFFF\x1A\x17",
-				"\xA\x17\x7\xFFFF\x1A\x17\x4\xFFFF\x1\x17\x1\xFFFF\x1A\x17",
+				"\x1\x31",
+				"\x1\x32",
+				"\xA\x18\x7\xFFFF\x1A\x18\x4\xFFFF\x1\x18\x1\xFFFF\x1A\x18",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x34",
+				"\x1\x35",
+				"\x1\x36",
+				"\x1\x37",
+				"",
+				"\xA\x18\x7\xFFFF\x1A\x18\x4\xFFFF\x1\x18\x1\xFFFF\x1A\x18",
+				"\xA\x18\x7\xFFFF\x1A\x18\x4\xFFFF\x1\x18\x1\xFFFF\x1A\x18",
+				"\x1\x3A",
+				"\xA\x18\x7\xFFFF\x1A\x18\x4\xFFFF\x1\x18\x1\xFFFF\x1A\x18",
+				"",
+				"",
+				"\xA\x18\x7\xFFFF\x1A\x18\x4\xFFFF\x1\x18\x1\xFFFF\x1A\x18",
 				"",
 				""
 			};
@@ -2173,7 +2278,7 @@ public partial class ChunkyLexer : Antlr.Runtime.Lexer
 			this.transition = DFA7_transition;
 		}
 
-		public override string Description { get { return "1:1: Tokens : ( T__40 | T__41 | IF | FUNC | LPAREN | RPAREN | COMMA | SEMI | PLUS | MINUS | STAR | SLASH | PIPE | DPIPE | AMPER | DAMPER | LESS | GREATER | ASSIGN | PERCENT | LCURLY | RCURLY | EQUAL | NOTEQUAL | LESSEQUAL | GREATEREQUAL | DOT | STRING | ID | INT | FLOAT | WS );"; } }
+		public override string Description { get { return "1:1: Tokens : ( T__42 | T__43 | TRUE | FALSE | IF | FUNC | LPAREN | RPAREN | COMMA | SEMI | PLUS | MINUS | STAR | SLASH | PIPE | DPIPE | AMPER | DAMPER | LESS | GREATER | ASSIGN | PERCENT | LCURLY | RCURLY | EQUAL | NOTEQUAL | LESSEQUAL | GREATEREQUAL | DOT | STRING | ID | INT | FLOAT | WS );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{

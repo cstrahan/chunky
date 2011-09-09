@@ -4,6 +4,13 @@ namespace Chunky
 {
     internal static class Operator
     {
+        public static bool ToBool(object obj)
+        {
+            if (obj == null) return false;
+            if (obj is bool && (bool)obj == false) return false;
+            return true;
+        }
+
         public static object Add(object lhs, object rhs)
         {
             if (lhs is double)

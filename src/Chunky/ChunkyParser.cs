@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.3.1.7705 Chunky.g 2011-09-08 18:57:24
+// $ANTLR 3.3.1.7705 Chunky.g 2011-09-08 22:01:59
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -30,7 +30,7 @@ namespace  Chunky
 public partial class ChunkyParser : Antlr.Runtime.Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "AMPER", "ARGS", "ASSIGN", "BLOCK", "CALL", "COMMA", "DAMPER", "DIGIT", "DOT", "DPIPE", "EQUAL", "FLOAT", "FUNC", "GREATER", "GREATEREQUAL", "ID", "IF", "INT", "LCURLY", "LESS", "LESSEQUAL", "LETTER", "LPAREN", "MINUS", "NOTEQUAL", "PARAMS", "PERCENT", "PIPE", "PLUS", "RCURLY", "RPAREN", "SEMI", "SLASH", "STAR", "STRING", "WS", "'!'", "'else'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "AMPER", "ARGS", "ASSIGN", "BLOCK", "CALL", "COMMA", "DAMPER", "DIGIT", "DOT", "DPIPE", "EQUAL", "FALSE", "FLOAT", "FUNC", "GREATER", "GREATEREQUAL", "ID", "IF", "INT", "LCURLY", "LESS", "LESSEQUAL", "LETTER", "LPAREN", "MINUS", "NOTEQUAL", "PARAMS", "PERCENT", "PIPE", "PLUS", "RCURLY", "RPAREN", "SEMI", "SLASH", "STAR", "STRING", "TRUE", "WS", "'!'", "'else'"
 	};
 	public const int EOF=-1;
 	public const int AMPER=4;
@@ -44,33 +44,35 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	public const int DOT=12;
 	public const int DPIPE=13;
 	public const int EQUAL=14;
-	public const int FLOAT=15;
-	public const int FUNC=16;
-	public const int GREATER=17;
-	public const int GREATEREQUAL=18;
-	public const int ID=19;
-	public const int IF=20;
-	public const int INT=21;
-	public const int LCURLY=22;
-	public const int LESS=23;
-	public const int LESSEQUAL=24;
-	public const int LETTER=25;
-	public const int LPAREN=26;
-	public const int MINUS=27;
-	public const int NOTEQUAL=28;
-	public const int PARAMS=29;
-	public const int PERCENT=30;
-	public const int PIPE=31;
-	public const int PLUS=32;
-	public const int RCURLY=33;
-	public const int RPAREN=34;
-	public const int SEMI=35;
-	public const int SLASH=36;
-	public const int STAR=37;
-	public const int STRING=38;
-	public const int WS=39;
-	public const int T__40=40;
-	public const int T__41=41;
+	public const int FALSE=15;
+	public const int FLOAT=16;
+	public const int FUNC=17;
+	public const int GREATER=18;
+	public const int GREATEREQUAL=19;
+	public const int ID=20;
+	public const int IF=21;
+	public const int INT=22;
+	public const int LCURLY=23;
+	public const int LESS=24;
+	public const int LESSEQUAL=25;
+	public const int LETTER=26;
+	public const int LPAREN=27;
+	public const int MINUS=28;
+	public const int NOTEQUAL=29;
+	public const int PARAMS=30;
+	public const int PERCENT=31;
+	public const int PIPE=32;
+	public const int PLUS=33;
+	public const int RCURLY=34;
+	public const int RPAREN=35;
+	public const int SEMI=36;
+	public const int SLASH=37;
+	public const int STAR=38;
+	public const int STRING=39;
+	public const int TRUE=40;
+	public const int WS=41;
+	public const int T__42=42;
+	public const int T__43=43;
 
 	// delegates
 	// delegators
@@ -157,7 +159,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(20, 4);
-			PushFollow(Follow._exprs_in_program82);
+			PushFollow(Follow._exprs_in_program81);
 			exprs1=exprs();
 			PopFollow();
 
@@ -252,7 +254,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				// Chunky.g:24:5: p+= ID ( ',' p+= ID )*
 				{
 				DebugLocation(24, 6);
-				p=(IToken)Match(input,ID,Follow._ID_in_params96);  
+				p=(IToken)Match(input,ID,Follow._ID_in_params95);  
 				stream_ID.Add(p);
 
 				if (list_p==null) list_p=new List<IToken>();
@@ -281,11 +283,11 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 						// Chunky.g:24:12: ',' p+= ID
 						{
 						DebugLocation(24, 12);
-						char_literal2=(IToken)Match(input,COMMA,Follow._COMMA_in_params99);  
+						char_literal2=(IToken)Match(input,COMMA,Follow._COMMA_in_params98);  
 						stream_COMMA.Add(char_literal2);
 
 						DebugLocation(24, 17);
-						p=(IToken)Match(input,ID,Follow._ID_in_params103);  
+						p=(IToken)Match(input,ID,Follow._ID_in_params102);  
 						stream_ID.Add(p);
 
 						if (list_p==null) list_p=new List<IToken>();
@@ -428,22 +430,22 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(29, 8);
-			FUNC3=(IToken)Match(input,FUNC,Follow._FUNC_in_func_expr130); 
+			FUNC3=(IToken)Match(input,FUNC,Follow._FUNC_in_func_expr129); 
 			FUNC3_tree = (CommonTree)adaptor.Create(FUNC3);
 			root_0 = (CommonTree)adaptor.BecomeRoot(FUNC3_tree, root_0);
 
 			DebugLocation(29, 13);
-			char_literal4=(IToken)Match(input,LPAREN,Follow._LPAREN_in_func_expr133); 
+			char_literal4=(IToken)Match(input,LPAREN,Follow._LPAREN_in_func_expr132); 
 			DebugLocation(29, 15);
-			PushFollow(Follow._params_in_func_expr136);
+			PushFollow(Follow._params_in_func_expr135);
 			params5=@params();
 			PopFollow();
 
 			adaptor.AddChild(root_0, params5.Tree);
 			DebugLocation(29, 25);
-			char_literal6=(IToken)Match(input,RPAREN,Follow._RPAREN_in_func_expr138); 
+			char_literal6=(IToken)Match(input,RPAREN,Follow._RPAREN_in_func_expr137); 
 			DebugLocation(29, 27);
-			PushFollow(Follow._block_in_func_expr141);
+			PushFollow(Follow._block_in_func_expr140);
 			block7=block();
 			PopFollow();
 
@@ -490,7 +492,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_if_expr();
 
 	// $ANTLR start "if_expr"
-	// Chunky.g:32:1: if_expr : IF '(' cond= expr ')' if_body= block ( 'else' (a= if_expr -> ^( IF $cond $if_body $a) |b= block -> ^( IF $cond $if_body $b) ) | -> ^( IF $cond $if_body) ) ;
+	// Chunky.g:32:1: if_expr : IF '(' cond= expr ')' '{' ( (cons_exps+= expr )? ';' )* '}' ( 'else' (alt_if= if_expr -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) $alt_if) | '{' ( (alt_exps+= expr )? ';' )* '}' -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) ^( BLOCK ( $alt_exps)* ) ) ) | -> ^( IF $cond ( $cons_exps)* ) ) ;
 	[GrammarRule("if_expr")]
 	private ChunkyParser.if_expr_return if_expr()
 	{
@@ -505,153 +507,260 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		IToken IF8 = default(IToken);
 		IToken char_literal9 = default(IToken);
 		IToken char_literal10 = default(IToken);
-		IToken string_literal11 = default(IToken);
+		IToken char_literal11 = default(IToken);
+		IToken char_literal12 = default(IToken);
+		IToken char_literal13 = default(IToken);
+		IToken string_literal14 = default(IToken);
+		IToken char_literal15 = default(IToken);
+		IToken char_literal16 = default(IToken);
+		IToken char_literal17 = default(IToken);
+		List<CommonTree> list_cons_exps = null;
+		List<CommonTree> list_alt_exps = null;
 		ChunkyParser.expr_return cond = default(ChunkyParser.expr_return);
-		ChunkyParser.block_return if_body = default(ChunkyParser.block_return);
-		ChunkyParser.if_expr_return a = default(ChunkyParser.if_expr_return);
-		ChunkyParser.block_return b = default(ChunkyParser.block_return);
-
+		ChunkyParser.if_expr_return alt_if = default(ChunkyParser.if_expr_return);
+		ChunkyParser.expr_return cons_exps = default(ChunkyParser.expr_return);
+		ChunkyParser.expr_return alt_exps = default(ChunkyParser.expr_return);
 		CommonTree IF8_tree = default(CommonTree);
 		CommonTree char_literal9_tree = default(CommonTree);
 		CommonTree char_literal10_tree = default(CommonTree);
-		CommonTree string_literal11_tree = default(CommonTree);
+		CommonTree char_literal11_tree = default(CommonTree);
+		CommonTree char_literal12_tree = default(CommonTree);
+		CommonTree char_literal13_tree = default(CommonTree);
+		CommonTree string_literal14_tree = default(CommonTree);
+		CommonTree char_literal15_tree = default(CommonTree);
+		CommonTree char_literal16_tree = default(CommonTree);
+		CommonTree char_literal17_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_IF=new RewriteRuleITokenStream(adaptor,"token IF");
 		RewriteRuleITokenStream stream_LPAREN=new RewriteRuleITokenStream(adaptor,"token LPAREN");
 		RewriteRuleITokenStream stream_RPAREN=new RewriteRuleITokenStream(adaptor,"token RPAREN");
-		RewriteRuleITokenStream stream_41=new RewriteRuleITokenStream(adaptor,"token 41");
+		RewriteRuleITokenStream stream_LCURLY=new RewriteRuleITokenStream(adaptor,"token LCURLY");
+		RewriteRuleITokenStream stream_SEMI=new RewriteRuleITokenStream(adaptor,"token SEMI");
+		RewriteRuleITokenStream stream_RCURLY=new RewriteRuleITokenStream(adaptor,"token RCURLY");
+		RewriteRuleITokenStream stream_43=new RewriteRuleITokenStream(adaptor,"token 43");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
-		RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
 		RewriteRuleSubtreeStream stream_if_expr=new RewriteRuleSubtreeStream(adaptor,"rule if_expr");
 		try { DebugEnterRule(GrammarFileName, "if_expr");
 		DebugLocation(32, 1);
 		try
 		{
-			// Chunky.g:33:2: ( IF '(' cond= expr ')' if_body= block ( 'else' (a= if_expr -> ^( IF $cond $if_body $a) |b= block -> ^( IF $cond $if_body $b) ) | -> ^( IF $cond $if_body) ) )
+			// Chunky.g:33:2: ( IF '(' cond= expr ')' '{' ( (cons_exps+= expr )? ';' )* '}' ( 'else' (alt_if= if_expr -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) $alt_if) | '{' ( (alt_exps+= expr )? ';' )* '}' -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) ^( BLOCK ( $alt_exps)* ) ) ) | -> ^( IF $cond ( $cons_exps)* ) ) )
 			DebugEnterAlt(1);
-			// Chunky.g:33:4: IF '(' cond= expr ')' if_body= block ( 'else' (a= if_expr -> ^( IF $cond $if_body $a) |b= block -> ^( IF $cond $if_body $b) ) | -> ^( IF $cond $if_body) )
+			// Chunky.g:33:4: IF '(' cond= expr ')' '{' ( (cons_exps+= expr )? ';' )* '}' ( 'else' (alt_if= if_expr -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) $alt_if) | '{' ( (alt_exps+= expr )? ';' )* '}' -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) ^( BLOCK ( $alt_exps)* ) ) ) | -> ^( IF $cond ( $cons_exps)* ) )
 			{
 			DebugLocation(33, 4);
-			IF8=(IToken)Match(input,IF,Follow._IF_in_if_expr152);  
+			IF8=(IToken)Match(input,IF,Follow._IF_in_if_expr151);  
 			stream_IF.Add(IF8);
 
 			DebugLocation(33, 7);
-			char_literal9=(IToken)Match(input,LPAREN,Follow._LPAREN_in_if_expr154);  
+			char_literal9=(IToken)Match(input,LPAREN,Follow._LPAREN_in_if_expr153);  
 			stream_LPAREN.Add(char_literal9);
 
 			DebugLocation(33, 15);
-			PushFollow(Follow._expr_in_if_expr158);
+			PushFollow(Follow._expr_in_if_expr157);
 			cond=expr();
 			PopFollow();
 
 			stream_expr.Add(cond.Tree);
 			DebugLocation(33, 21);
-			char_literal10=(IToken)Match(input,RPAREN,Follow._RPAREN_in_if_expr160);  
+			char_literal10=(IToken)Match(input,RPAREN,Follow._RPAREN_in_if_expr159);  
 			stream_RPAREN.Add(char_literal10);
 
-			DebugLocation(33, 32);
-			PushFollow(Follow._block_in_if_expr164);
-			if_body=block();
-			PopFollow();
+			DebugLocation(33, 25);
+			char_literal11=(IToken)Match(input,LCURLY,Follow._LCURLY_in_if_expr161);  
+			stream_LCURLY.Add(char_literal11);
 
-			stream_block.Add(if_body.Tree);
-			DebugLocation(34, 3);
-			// Chunky.g:34:3: ( 'else' (a= if_expr -> ^( IF $cond $if_body $a) |b= block -> ^( IF $cond $if_body $b) ) | -> ^( IF $cond $if_body) )
-			int alt4=2;
+			DebugLocation(33, 29);
+			// Chunky.g:33:29: ( (cons_exps+= expr )? ';' )*
 			try { DebugEnterSubRule(4);
-			try { DebugEnterDecision(4, false);
-			int LA4_0 = input.LA(1);
+			while (true)
+			{
+				int alt4=2;
+				try { DebugEnterDecision(4, false);
+				int LA4_0 = input.LA(1);
 
-			if ((LA4_0==41))
-			{
-				alt4 = 1;
-			}
-			else if ((LA4_0==AMPER||LA4_0==ASSIGN||(LA4_0>=COMMA && LA4_0<=DAMPER)||(LA4_0>=DOT && LA4_0<=EQUAL)||(LA4_0>=GREATER && LA4_0<=GREATEREQUAL)||(LA4_0>=LESS && LA4_0<=LESSEQUAL)||(LA4_0>=LPAREN && LA4_0<=NOTEQUAL)||(LA4_0>=PERCENT && LA4_0<=PLUS)||(LA4_0>=RPAREN && LA4_0<=STAR)))
-			{
-				alt4 = 2;
-			}
-			else
-			{
-				NoViableAltException nvae = new NoViableAltException("", 4, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
-			} finally { DebugExitDecision(4); }
-			switch (alt4)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// Chunky.g:34:5: 'else' (a= if_expr -> ^( IF $cond $if_body $a) |b= block -> ^( IF $cond $if_body $b) )
+				if (((LA4_0>=FALSE && LA4_0<=FUNC)||(LA4_0>=ID && LA4_0<=INT)||LA4_0==LPAREN||LA4_0==SEMI||(LA4_0>=STRING && LA4_0<=TRUE)||LA4_0==42))
 				{
-				DebugLocation(34, 5);
-				string_literal11=(IToken)Match(input,41,Follow._41_in_if_expr170);  
-				stream_41.Add(string_literal11);
+					alt4 = 1;
+				}
 
-				DebugLocation(34, 12);
-				// Chunky.g:34:12: (a= if_expr -> ^( IF $cond $if_body $a) |b= block -> ^( IF $cond $if_body $b) )
-				int alt3=2;
-				try { DebugEnterSubRule(3);
-				try { DebugEnterDecision(3, false);
-				int LA3_0 = input.LA(1);
 
-				if ((LA3_0==IF))
-				{
-					alt3 = 1;
-				}
-				else if ((LA3_0==LCURLY))
-				{
-					alt3 = 2;
-				}
-				else
-				{
-					NoViableAltException nvae = new NoViableAltException("", 3, 0, input);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-				} finally { DebugExitDecision(3); }
-				switch (alt3)
+				} finally { DebugExitDecision(4); }
+				switch ( alt4 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Chunky.g:34:14: a= if_expr
+					// Chunky.g:33:30: (cons_exps+= expr )? ';'
 					{
-					DebugLocation(34, 15);
-					PushFollow(Follow._if_expr_in_if_expr176);
-					a=if_expr();
+					DebugLocation(33, 39);
+					// Chunky.g:33:39: (cons_exps+= expr )?
+					int alt3=2;
+					try { DebugEnterSubRule(3);
+					try { DebugEnterDecision(3, false);
+					int LA3_0 = input.LA(1);
+
+					if (((LA3_0>=FALSE && LA3_0<=FUNC)||(LA3_0>=ID && LA3_0<=INT)||LA3_0==LPAREN||(LA3_0>=STRING && LA3_0<=TRUE)||LA3_0==42))
+					{
+						alt3 = 1;
+					}
+					} finally { DebugExitDecision(3); }
+					switch (alt3)
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// Chunky.g:33:39: cons_exps+= expr
+						{
+						DebugLocation(33, 39);
+						PushFollow(Follow._expr_in_if_expr166);
+						cons_exps=expr();
+						PopFollow();
+
+						stream_expr.Add(cons_exps.Tree);
+						if (list_cons_exps==null) list_cons_exps=new List<CommonTree>();
+						list_cons_exps.Add(cons_exps.Tree);
+
+
+						}
+						break;
+
+					}
+					} finally { DebugExitSubRule(3); }
+
+					DebugLocation(33, 47);
+					char_literal12=(IToken)Match(input,SEMI,Follow._SEMI_in_if_expr169);  
+					stream_SEMI.Add(char_literal12);
+
+
+					}
+					break;
+
+				default:
+					goto loop4;
+				}
+			}
+
+			loop4:
+				;
+
+			} finally { DebugExitSubRule(4); }
+
+			DebugLocation(33, 53);
+			char_literal13=(IToken)Match(input,RCURLY,Follow._RCURLY_in_if_expr173);  
+			stream_RCURLY.Add(char_literal13);
+
+			DebugLocation(34, 3);
+			// Chunky.g:34:3: ( 'else' (alt_if= if_expr -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) $alt_if) | '{' ( (alt_exps+= expr )? ';' )* '}' -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) ^( BLOCK ( $alt_exps)* ) ) ) | -> ^( IF $cond ( $cons_exps)* ) )
+			int alt8=2;
+			try { DebugEnterSubRule(8);
+			try { DebugEnterDecision(8, false);
+			int LA8_0 = input.LA(1);
+
+			if ((LA8_0==43))
+			{
+				alt8 = 1;
+			}
+			else if ((LA8_0==AMPER||LA8_0==ASSIGN||(LA8_0>=COMMA && LA8_0<=DAMPER)||(LA8_0>=DOT && LA8_0<=EQUAL)||(LA8_0>=GREATER && LA8_0<=GREATEREQUAL)||(LA8_0>=LESS && LA8_0<=LESSEQUAL)||(LA8_0>=LPAREN && LA8_0<=NOTEQUAL)||(LA8_0>=PERCENT && LA8_0<=PLUS)||(LA8_0>=RPAREN && LA8_0<=STAR)))
+			{
+				alt8 = 2;
+			}
+			else
+			{
+				NoViableAltException nvae = new NoViableAltException("", 8, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(8); }
+			switch (alt8)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// Chunky.g:34:5: 'else' (alt_if= if_expr -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) $alt_if) | '{' ( (alt_exps+= expr )? ';' )* '}' -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) ^( BLOCK ( $alt_exps)* ) ) )
+				{
+				DebugLocation(34, 5);
+				string_literal14=(IToken)Match(input,43,Follow._43_in_if_expr179);  
+				stream_43.Add(string_literal14);
+
+				DebugLocation(34, 12);
+				// Chunky.g:34:12: (alt_if= if_expr -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) $alt_if) | '{' ( (alt_exps+= expr )? ';' )* '}' -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) ^( BLOCK ( $alt_exps)* ) ) )
+				int alt7=2;
+				try { DebugEnterSubRule(7);
+				try { DebugEnterDecision(7, false);
+				int LA7_0 = input.LA(1);
+
+				if ((LA7_0==IF))
+				{
+					alt7 = 1;
+				}
+				else if ((LA7_0==LCURLY))
+				{
+					alt7 = 2;
+				}
+				else
+				{
+					NoViableAltException nvae = new NoViableAltException("", 7, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				} finally { DebugExitDecision(7); }
+				switch (alt7)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// Chunky.g:34:14: alt_if= if_expr
+					{
+					DebugLocation(34, 20);
+					PushFollow(Follow._if_expr_in_if_expr185);
+					alt_if=if_expr();
 					PopFollow();
 
-					stream_if_expr.Add(a.Tree);
+					stream_if_expr.Add(alt_if.Tree);
 
 
 					{
 					// AST REWRITE
-					// elements: IF, cond, if_body, a
+					// elements: IF, cond, cons_exps, alt_if
 					// token labels: 
-					// rule labels: cond, if_body, a, retval
+					// rule labels: cond, alt_if, retval
 					// token list labels: 
-					// rule list labels: 
+					// rule list labels: cons_exps
 					// wildcard labels: 
 					retval.Tree = root_0;
 					RewriteRuleSubtreeStream stream_cond=new RewriteRuleSubtreeStream(adaptor,"rule cond",cond!=null?cond.Tree:null);
-					RewriteRuleSubtreeStream stream_if_body=new RewriteRuleSubtreeStream(adaptor,"rule if_body",if_body!=null?if_body.Tree:null);
-					RewriteRuleSubtreeStream stream_a=new RewriteRuleSubtreeStream(adaptor,"rule a",a!=null?a.Tree:null);
+					RewriteRuleSubtreeStream stream_alt_if=new RewriteRuleSubtreeStream(adaptor,"rule alt_if",alt_if!=null?alt_if.Tree:null);
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
-
+					RewriteRuleSubtreeStream stream_cons_exps=new RewriteRuleSubtreeStream(adaptor,"token cons_exps",list_cons_exps);
 					root_0 = (CommonTree)adaptor.Nil();
-					// 34:24: -> ^( IF $cond $if_body $a)
+					// 34:34: -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) $alt_if)
 					{
-						DebugLocation(34, 27);
-						// Chunky.g:34:27: ^( IF $cond $if_body $a)
+						DebugLocation(34, 37);
+						// Chunky.g:34:37: ^( IF $cond ^( BLOCK ( $cons_exps)* ) $alt_if)
 						{
 						CommonTree root_1 = (CommonTree)adaptor.Nil();
-						DebugLocation(34, 29);
+						DebugLocation(34, 39);
 						root_1 = (CommonTree)adaptor.BecomeRoot(stream_IF.NextNode(), root_1);
 
-						DebugLocation(34, 33);
+						DebugLocation(34, 43);
 						adaptor.AddChild(root_1, stream_cond.NextTree());
-						DebugLocation(34, 39);
-						adaptor.AddChild(root_1, stream_if_body.NextTree());
 						DebugLocation(34, 48);
-						adaptor.AddChild(root_1, stream_a.NextTree());
+						// Chunky.g:34:48: ^( BLOCK ( $cons_exps)* )
+						{
+						CommonTree root_2 = (CommonTree)adaptor.Nil();
+						DebugLocation(34, 50);
+						root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(BLOCK, "BLOCK"), root_2);
+
+						DebugLocation(34, 57);
+						// Chunky.g:34:57: ( $cons_exps)*
+						while ( stream_cons_exps.HasNext )
+						{
+							DebugLocation(34, 57);
+							adaptor.AddChild(root_2, stream_cons_exps.NextTree());
+
+						}
+						stream_cons_exps.Reset();
+
+						adaptor.AddChild(root_1, root_2);
+						}
+						DebugLocation(34, 70);
+						adaptor.AddChild(root_1, stream_alt_if.NextTree());
 
 						adaptor.AddChild(root_0, root_1);
 						}
@@ -665,46 +774,155 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// Chunky.g:35:8: b= block
+					// Chunky.g:35:8: '{' ( (alt_exps+= expr )? ';' )* '}'
 					{
-					DebugLocation(35, 9);
-					PushFollow(Follow._block_in_if_expr202);
-					b=block();
-					PopFollow();
+					DebugLocation(35, 8);
+					char_literal15=(IToken)Match(input,LCURLY,Follow._LCURLY_in_if_expr219);  
+					stream_LCURLY.Add(char_literal15);
 
-					stream_block.Add(b.Tree);
+					DebugLocation(35, 12);
+					// Chunky.g:35:12: ( (alt_exps+= expr )? ';' )*
+					try { DebugEnterSubRule(6);
+					while (true)
+					{
+						int alt6=2;
+						try { DebugEnterDecision(6, false);
+						int LA6_0 = input.LA(1);
+
+						if (((LA6_0>=FALSE && LA6_0<=FUNC)||(LA6_0>=ID && LA6_0<=INT)||LA6_0==LPAREN||LA6_0==SEMI||(LA6_0>=STRING && LA6_0<=TRUE)||LA6_0==42))
+						{
+							alt6 = 1;
+						}
+
+
+						} finally { DebugExitDecision(6); }
+						switch ( alt6 )
+						{
+						case 1:
+							DebugEnterAlt(1);
+							// Chunky.g:35:13: (alt_exps+= expr )? ';'
+							{
+							DebugLocation(35, 21);
+							// Chunky.g:35:21: (alt_exps+= expr )?
+							int alt5=2;
+							try { DebugEnterSubRule(5);
+							try { DebugEnterDecision(5, false);
+							int LA5_0 = input.LA(1);
+
+							if (((LA5_0>=FALSE && LA5_0<=FUNC)||(LA5_0>=ID && LA5_0<=INT)||LA5_0==LPAREN||(LA5_0>=STRING && LA5_0<=TRUE)||LA5_0==42))
+							{
+								alt5 = 1;
+							}
+							} finally { DebugExitDecision(5); }
+							switch (alt5)
+							{
+							case 1:
+								DebugEnterAlt(1);
+								// Chunky.g:35:21: alt_exps+= expr
+								{
+								DebugLocation(35, 21);
+								PushFollow(Follow._expr_in_if_expr224);
+								alt_exps=expr();
+								PopFollow();
+
+								stream_expr.Add(alt_exps.Tree);
+								if (list_alt_exps==null) list_alt_exps=new List<CommonTree>();
+								list_alt_exps.Add(alt_exps.Tree);
+
+
+								}
+								break;
+
+							}
+							} finally { DebugExitSubRule(5); }
+
+							DebugLocation(35, 29);
+							char_literal16=(IToken)Match(input,SEMI,Follow._SEMI_in_if_expr227);  
+							stream_SEMI.Add(char_literal16);
+
+
+							}
+							break;
+
+						default:
+							goto loop6;
+						}
+					}
+
+					loop6:
+						;
+
+					} finally { DebugExitSubRule(6); }
+
+					DebugLocation(35, 35);
+					char_literal17=(IToken)Match(input,RCURLY,Follow._RCURLY_in_if_expr231);  
+					stream_RCURLY.Add(char_literal17);
+
 
 
 					{
 					// AST REWRITE
-					// elements: IF, cond, if_body, b
+					// elements: IF, cond, cons_exps, alt_exps
 					// token labels: 
-					// rule labels: cond, if_body, b, retval
+					// rule labels: cond, retval
 					// token list labels: 
-					// rule list labels: 
+					// rule list labels: cons_exps, alt_exps
 					// wildcard labels: 
 					retval.Tree = root_0;
 					RewriteRuleSubtreeStream stream_cond=new RewriteRuleSubtreeStream(adaptor,"rule cond",cond!=null?cond.Tree:null);
-					RewriteRuleSubtreeStream stream_if_body=new RewriteRuleSubtreeStream(adaptor,"rule if_body",if_body!=null?if_body.Tree:null);
-					RewriteRuleSubtreeStream stream_b=new RewriteRuleSubtreeStream(adaptor,"rule b",b!=null?b.Tree:null);
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
-
+					RewriteRuleSubtreeStream stream_cons_exps=new RewriteRuleSubtreeStream(adaptor,"token cons_exps",list_cons_exps);
+					RewriteRuleSubtreeStream stream_alt_exps=new RewriteRuleSubtreeStream(adaptor,"token alt_exps",list_alt_exps);
 					root_0 = (CommonTree)adaptor.Nil();
-					// 35:17: -> ^( IF $cond $if_body $b)
+					// 35:40: -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) ^( BLOCK ( $alt_exps)* ) )
 					{
-						DebugLocation(35, 20);
-						// Chunky.g:35:20: ^( IF $cond $if_body $b)
+						DebugLocation(35, 43);
+						// Chunky.g:35:43: ^( IF $cond ^( BLOCK ( $cons_exps)* ) ^( BLOCK ( $alt_exps)* ) )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.Nil();
-						DebugLocation(35, 22);
+						DebugLocation(35, 45);
 						root_1 = (CommonTree)adaptor.BecomeRoot(stream_IF.NextNode(), root_1);
 
-						DebugLocation(35, 26);
+						DebugLocation(35, 49);
 						adaptor.AddChild(root_1, stream_cond.NextTree());
-						DebugLocation(35, 32);
-						adaptor.AddChild(root_1, stream_if_body.NextTree());
-						DebugLocation(35, 41);
-						adaptor.AddChild(root_1, stream_b.NextTree());
+						DebugLocation(35, 54);
+						// Chunky.g:35:54: ^( BLOCK ( $cons_exps)* )
+						{
+						CommonTree root_2 = (CommonTree)adaptor.Nil();
+						DebugLocation(35, 56);
+						root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(BLOCK, "BLOCK"), root_2);
+
+						DebugLocation(35, 63);
+						// Chunky.g:35:63: ( $cons_exps)*
+						while ( stream_cons_exps.HasNext )
+						{
+							DebugLocation(35, 63);
+							adaptor.AddChild(root_2, stream_cons_exps.NextTree());
+
+						}
+						stream_cons_exps.Reset();
+
+						adaptor.AddChild(root_1, root_2);
+						}
+						DebugLocation(35, 75);
+						// Chunky.g:35:75: ^( BLOCK ( $alt_exps)* )
+						{
+						CommonTree root_2 = (CommonTree)adaptor.Nil();
+						DebugLocation(35, 77);
+						root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(BLOCK, "BLOCK"), root_2);
+
+						DebugLocation(35, 84);
+						// Chunky.g:35:84: ( $alt_exps)*
+						while ( stream_alt_exps.HasNext )
+						{
+							DebugLocation(35, 84);
+							adaptor.AddChild(root_2, stream_alt_exps.NextTree());
+
+						}
+						stream_alt_exps.Reset();
+
+						adaptor.AddChild(root_1, root_2);
+						}
 
 						adaptor.AddChild(root_0, root_1);
 						}
@@ -718,43 +936,49 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					break;
 
 				}
-				} finally { DebugExitSubRule(3); }
+				} finally { DebugExitSubRule(7); }
 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Chunky.g:37:10: 
+				// Chunky.g:37:16: 
 				{
 
 				{
 				// AST REWRITE
-				// elements: IF, cond, if_body
+				// elements: IF, cond, cons_exps
 				// token labels: 
-				// rule labels: cond, if_body, retval
+				// rule labels: cond, retval
 				// token list labels: 
-				// rule list labels: 
+				// rule list labels: cons_exps
 				// wildcard labels: 
 				retval.Tree = root_0;
 				RewriteRuleSubtreeStream stream_cond=new RewriteRuleSubtreeStream(adaptor,"rule cond",cond!=null?cond.Tree:null);
-				RewriteRuleSubtreeStream stream_if_body=new RewriteRuleSubtreeStream(adaptor,"rule if_body",if_body!=null?if_body.Tree:null);
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
-
+				RewriteRuleSubtreeStream stream_cons_exps=new RewriteRuleSubtreeStream(adaptor,"token cons_exps",list_cons_exps);
 				root_0 = (CommonTree)adaptor.Nil();
-				// 37:10: -> ^( IF $cond $if_body)
+				// 37:16: -> ^( IF $cond ( $cons_exps)* )
 				{
-					DebugLocation(37, 13);
-					// Chunky.g:37:13: ^( IF $cond $if_body)
+					DebugLocation(37, 19);
+					// Chunky.g:37:19: ^( IF $cond ( $cons_exps)* )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(37, 15);
+					DebugLocation(37, 21);
 					root_1 = (CommonTree)adaptor.BecomeRoot(stream_IF.NextNode(), root_1);
 
-					DebugLocation(37, 19);
-					adaptor.AddChild(root_1, stream_cond.NextTree());
 					DebugLocation(37, 25);
-					adaptor.AddChild(root_1, stream_if_body.NextTree());
+					adaptor.AddChild(root_1, stream_cond.NextTree());
+					DebugLocation(37, 31);
+					// Chunky.g:37:31: ( $cons_exps)*
+					while ( stream_cons_exps.HasNext )
+					{
+						DebugLocation(37, 31);
+						adaptor.AddChild(root_1, stream_cons_exps.NextTree());
+
+					}
+					stream_cons_exps.Reset();
 
 					adaptor.AddChild(root_0, root_1);
 					}
@@ -768,7 +992,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(4); }
+			} finally { DebugExitSubRule(8); }
 
 
 			}
@@ -812,7 +1036,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_term();
 
 	// $ANTLR start "term"
-	// Chunky.g:41:1: term : ( ID | '(' expr ')' | INT | FLOAT | STRING | if_expr | func_expr );
+	// Chunky.g:41:1: term : ( ID | '(' expr ')' | INT | FLOAT | TRUE | FALSE | STRING | if_expr | func_expr );
 	[GrammarRule("term")]
 	private ChunkyParser.term_return term()
 	{
@@ -824,77 +1048,91 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		IToken ID12 = default(IToken);
-		IToken char_literal13 = default(IToken);
-		IToken char_literal15 = default(IToken);
-		IToken INT16 = default(IToken);
-		IToken FLOAT17 = default(IToken);
-		IToken STRING18 = default(IToken);
-		ChunkyParser.expr_return expr14 = default(ChunkyParser.expr_return);
-		ChunkyParser.if_expr_return if_expr19 = default(ChunkyParser.if_expr_return);
-		ChunkyParser.func_expr_return func_expr20 = default(ChunkyParser.func_expr_return);
+		IToken ID18 = default(IToken);
+		IToken char_literal19 = default(IToken);
+		IToken char_literal21 = default(IToken);
+		IToken INT22 = default(IToken);
+		IToken FLOAT23 = default(IToken);
+		IToken TRUE24 = default(IToken);
+		IToken FALSE25 = default(IToken);
+		IToken STRING26 = default(IToken);
+		ChunkyParser.expr_return expr20 = default(ChunkyParser.expr_return);
+		ChunkyParser.if_expr_return if_expr27 = default(ChunkyParser.if_expr_return);
+		ChunkyParser.func_expr_return func_expr28 = default(ChunkyParser.func_expr_return);
 
-		CommonTree ID12_tree = default(CommonTree);
-		CommonTree char_literal13_tree = default(CommonTree);
-		CommonTree char_literal15_tree = default(CommonTree);
-		CommonTree INT16_tree = default(CommonTree);
-		CommonTree FLOAT17_tree = default(CommonTree);
-		CommonTree STRING18_tree = default(CommonTree);
+		CommonTree ID18_tree = default(CommonTree);
+		CommonTree char_literal19_tree = default(CommonTree);
+		CommonTree char_literal21_tree = default(CommonTree);
+		CommonTree INT22_tree = default(CommonTree);
+		CommonTree FLOAT23_tree = default(CommonTree);
+		CommonTree TRUE24_tree = default(CommonTree);
+		CommonTree FALSE25_tree = default(CommonTree);
+		CommonTree STRING26_tree = default(CommonTree);
 
 		try { DebugEnterRule(GrammarFileName, "term");
 		DebugLocation(41, 1);
 		try
 		{
-			// Chunky.g:41:5: ( ID | '(' expr ')' | INT | FLOAT | STRING | if_expr | func_expr )
-			int alt5=7;
-			try { DebugEnterDecision(5, false);
+			// Chunky.g:41:5: ( ID | '(' expr ')' | INT | FLOAT | TRUE | FALSE | STRING | if_expr | func_expr )
+			int alt9=9;
+			try { DebugEnterDecision(9, false);
 			switch (input.LA(1))
 			{
 			case ID:
 				{
-				alt5 = 1;
+				alt9 = 1;
 				}
 				break;
 			case LPAREN:
 				{
-				alt5 = 2;
+				alt9 = 2;
 				}
 				break;
 			case INT:
 				{
-				alt5 = 3;
+				alt9 = 3;
 				}
 				break;
 			case FLOAT:
 				{
-				alt5 = 4;
+				alt9 = 4;
+				}
+				break;
+			case TRUE:
+				{
+				alt9 = 5;
+				}
+				break;
+			case FALSE:
+				{
+				alt9 = 6;
 				}
 				break;
 			case STRING:
 				{
-				alt5 = 5;
+				alt9 = 7;
 				}
 				break;
 			case IF:
 				{
-				alt5 = 6;
+				alt9 = 8;
 				}
 				break;
 			case FUNC:
 				{
-				alt5 = 7;
+				alt9 = 9;
 				}
 				break;
 			default:
 				{
-					NoViableAltException nvae = new NoViableAltException("", 5, 0, input);
+					NoViableAltException nvae = new NoViableAltException("", 9, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(5); }
-			switch (alt5)
+			} finally { DebugExitDecision(9); }
+			switch (alt9)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -903,9 +1141,9 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(41, 7);
-				ID12=(IToken)Match(input,ID,Follow._ID_in_term259); 
-				ID12_tree = (CommonTree)adaptor.Create(ID12);
-				adaptor.AddChild(root_0, ID12_tree);
+				ID18=(IToken)Match(input,ID,Follow._ID_in_term305); 
+				ID18_tree = (CommonTree)adaptor.Create(ID18);
+				adaptor.AddChild(root_0, ID18_tree);
 
 
 				}
@@ -917,15 +1155,15 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(42, 7);
-				char_literal13=(IToken)Match(input,LPAREN,Follow._LPAREN_in_term264); 
+				char_literal19=(IToken)Match(input,LPAREN,Follow._LPAREN_in_term310); 
 				DebugLocation(42, 9);
-				PushFollow(Follow._expr_in_term267);
-				expr14=expr();
+				PushFollow(Follow._expr_in_term313);
+				expr20=expr();
 				PopFollow();
 
-				adaptor.AddChild(root_0, expr14.Tree);
+				adaptor.AddChild(root_0, expr20.Tree);
 				DebugLocation(42, 17);
-				char_literal15=(IToken)Match(input,RPAREN,Follow._RPAREN_in_term269); 
+				char_literal21=(IToken)Match(input,RPAREN,Follow._RPAREN_in_term315); 
 
 				}
 				break;
@@ -936,9 +1174,9 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(43, 4);
-				INT16=(IToken)Match(input,INT,Follow._INT_in_term275); 
-				INT16_tree = (CommonTree)adaptor.Create(INT16);
-				adaptor.AddChild(root_0, INT16_tree);
+				INT22=(IToken)Match(input,INT,Follow._INT_in_term321); 
+				INT22_tree = (CommonTree)adaptor.Create(INT22);
+				adaptor.AddChild(root_0, INT22_tree);
 
 
 				}
@@ -950,54 +1188,82 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(44, 4);
-				FLOAT17=(IToken)Match(input,FLOAT,Follow._FLOAT_in_term280); 
-				FLOAT17_tree = (CommonTree)adaptor.Create(FLOAT17);
-				adaptor.AddChild(root_0, FLOAT17_tree);
+				FLOAT23=(IToken)Match(input,FLOAT,Follow._FLOAT_in_term326); 
+				FLOAT23_tree = (CommonTree)adaptor.Create(FLOAT23);
+				adaptor.AddChild(root_0, FLOAT23_tree);
 
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// Chunky.g:45:4: STRING
+				// Chunky.g:45:4: TRUE
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(45, 4);
-				STRING18=(IToken)Match(input,STRING,Follow._STRING_in_term285); 
-				STRING18_tree = (CommonTree)adaptor.Create(STRING18);
-				adaptor.AddChild(root_0, STRING18_tree);
+				TRUE24=(IToken)Match(input,TRUE,Follow._TRUE_in_term331); 
+				TRUE24_tree = (CommonTree)adaptor.Create(TRUE24);
+				adaptor.AddChild(root_0, TRUE24_tree);
 
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// Chunky.g:46:4: if_expr
+				// Chunky.g:46:4: FALSE
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(46, 4);
-				PushFollow(Follow._if_expr_in_term290);
-				if_expr19=if_expr();
-				PopFollow();
+				FALSE25=(IToken)Match(input,FALSE,Follow._FALSE_in_term336); 
+				FALSE25_tree = (CommonTree)adaptor.Create(FALSE25);
+				adaptor.AddChild(root_0, FALSE25_tree);
 
-				adaptor.AddChild(root_0, if_expr19.Tree);
 
 				}
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// Chunky.g:47:4: func_expr
+				// Chunky.g:47:4: STRING
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(47, 4);
-				PushFollow(Follow._func_expr_in_term295);
-				func_expr20=func_expr();
+				STRING26=(IToken)Match(input,STRING,Follow._STRING_in_term341); 
+				STRING26_tree = (CommonTree)adaptor.Create(STRING26);
+				adaptor.AddChild(root_0, STRING26_tree);
+
+
+				}
+				break;
+			case 8:
+				DebugEnterAlt(8);
+				// Chunky.g:48:4: if_expr
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(48, 4);
+				PushFollow(Follow._if_expr_in_term346);
+				if_expr27=if_expr();
 				PopFollow();
 
-				adaptor.AddChild(root_0, func_expr20.Tree);
+				adaptor.AddChild(root_0, if_expr27.Tree);
+
+				}
+				break;
+			case 9:
+				DebugEnterAlt(9);
+				// Chunky.g:49:4: func_expr
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(49, 4);
+				PushFollow(Follow._func_expr_in_term351);
+				func_expr28=func_expr();
+				PopFollow();
+
+				adaptor.AddChild(root_0, func_expr28.Tree);
 
 				}
 				break;
@@ -1022,7 +1288,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			LeaveRule("term", 5);
 			LeaveRule_term();
 		}
-		DebugLocation(48, 1);
+		DebugLocation(50, 1);
 		} finally { DebugExitRule(GrammarFileName, "term"); }
 		return retval;
 
@@ -1042,7 +1308,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_dot();
 
 	// $ANTLR start "dot"
-	// Chunky.g:50:1: dot : term ( DOT ID )* ( '=' expr )? ;
+	// Chunky.g:52:1: dot : term ( DOT ID )* ( '=' expr )? ;
 	[GrammarRule("dot")]
 	private ChunkyParser.dot_return dot()
 	{
@@ -1054,113 +1320,113 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		IToken DOT22 = default(IToken);
-		IToken ID23 = default(IToken);
-		IToken char_literal24 = default(IToken);
-		ChunkyParser.term_return term21 = default(ChunkyParser.term_return);
-		ChunkyParser.expr_return expr25 = default(ChunkyParser.expr_return);
+		IToken DOT30 = default(IToken);
+		IToken ID31 = default(IToken);
+		IToken char_literal32 = default(IToken);
+		ChunkyParser.term_return term29 = default(ChunkyParser.term_return);
+		ChunkyParser.expr_return expr33 = default(ChunkyParser.expr_return);
 
-		CommonTree DOT22_tree = default(CommonTree);
-		CommonTree ID23_tree = default(CommonTree);
-		CommonTree char_literal24_tree = default(CommonTree);
+		CommonTree DOT30_tree = default(CommonTree);
+		CommonTree ID31_tree = default(CommonTree);
+		CommonTree char_literal32_tree = default(CommonTree);
 
 		try { DebugEnterRule(GrammarFileName, "dot");
-		DebugLocation(50, 1);
+		DebugLocation(52, 1);
 		try
 		{
-			// Chunky.g:51:2: ( term ( DOT ID )* ( '=' expr )? )
+			// Chunky.g:53:2: ( term ( DOT ID )* ( '=' expr )? )
 			DebugEnterAlt(1);
-			// Chunky.g:51:4: term ( DOT ID )* ( '=' expr )?
+			// Chunky.g:53:4: term ( DOT ID )* ( '=' expr )?
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(51, 4);
-			PushFollow(Follow._term_in_dot306);
-			term21=term();
+			DebugLocation(53, 4);
+			PushFollow(Follow._term_in_dot362);
+			term29=term();
 			PopFollow();
 
-			adaptor.AddChild(root_0, term21.Tree);
-			DebugLocation(51, 9);
-			// Chunky.g:51:9: ( DOT ID )*
-			try { DebugEnterSubRule(6);
+			adaptor.AddChild(root_0, term29.Tree);
+			DebugLocation(53, 9);
+			// Chunky.g:53:9: ( DOT ID )*
+			try { DebugEnterSubRule(10);
 			while (true)
 			{
-				int alt6=2;
-				try { DebugEnterDecision(6, false);
-				int LA6_0 = input.LA(1);
+				int alt10=2;
+				try { DebugEnterDecision(10, false);
+				int LA10_0 = input.LA(1);
 
-				if ((LA6_0==DOT))
+				if ((LA10_0==DOT))
 				{
-					alt6 = 1;
+					alt10 = 1;
 				}
 
 
-				} finally { DebugExitDecision(6); }
-				switch ( alt6 )
+				} finally { DebugExitDecision(10); }
+				switch ( alt10 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Chunky.g:51:10: DOT ID
+					// Chunky.g:53:10: DOT ID
 					{
-					DebugLocation(51, 13);
-					DOT22=(IToken)Match(input,DOT,Follow._DOT_in_dot309); 
-					DOT22_tree = (CommonTree)adaptor.Create(DOT22);
-					root_0 = (CommonTree)adaptor.BecomeRoot(DOT22_tree, root_0);
+					DebugLocation(53, 13);
+					DOT30=(IToken)Match(input,DOT,Follow._DOT_in_dot365); 
+					DOT30_tree = (CommonTree)adaptor.Create(DOT30);
+					root_0 = (CommonTree)adaptor.BecomeRoot(DOT30_tree, root_0);
 
-					DebugLocation(51, 15);
-					ID23=(IToken)Match(input,ID,Follow._ID_in_dot312); 
-					ID23_tree = (CommonTree)adaptor.Create(ID23);
-					adaptor.AddChild(root_0, ID23_tree);
+					DebugLocation(53, 15);
+					ID31=(IToken)Match(input,ID,Follow._ID_in_dot368); 
+					ID31_tree = (CommonTree)adaptor.Create(ID31);
+					adaptor.AddChild(root_0, ID31_tree);
 
 
 					}
 					break;
 
 				default:
-					goto loop6;
+					goto loop10;
 				}
 			}
 
-			loop6:
+			loop10:
 				;
 
-			} finally { DebugExitSubRule(6); }
+			} finally { DebugExitSubRule(10); }
 
-			DebugLocation(52, 3);
-			// Chunky.g:52:3: ( '=' expr )?
-			int alt7=2;
-			try { DebugEnterSubRule(7);
-			try { DebugEnterDecision(7, false);
-			int LA7_0 = input.LA(1);
+			DebugLocation(54, 3);
+			// Chunky.g:54:3: ( '=' expr )?
+			int alt11=2;
+			try { DebugEnterSubRule(11);
+			try { DebugEnterDecision(11, false);
+			int LA11_0 = input.LA(1);
 
-			if ((LA7_0==ASSIGN))
+			if ((LA11_0==ASSIGN))
 			{
-				alt7 = 1;
+				alt11 = 1;
 			}
-			} finally { DebugExitDecision(7); }
-			switch (alt7)
+			} finally { DebugExitDecision(11); }
+			switch (alt11)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Chunky.g:52:4: '=' expr
+				// Chunky.g:54:4: '=' expr
 				{
-				DebugLocation(52, 7);
-				char_literal24=(IToken)Match(input,ASSIGN,Follow._ASSIGN_in_dot320); 
-				char_literal24_tree = (CommonTree)adaptor.Create(char_literal24);
-				root_0 = (CommonTree)adaptor.BecomeRoot(char_literal24_tree, root_0);
+				DebugLocation(54, 7);
+				char_literal32=(IToken)Match(input,ASSIGN,Follow._ASSIGN_in_dot376); 
+				char_literal32_tree = (CommonTree)adaptor.Create(char_literal32);
+				root_0 = (CommonTree)adaptor.BecomeRoot(char_literal32_tree, root_0);
 
-				DebugLocation(52, 9);
-				PushFollow(Follow._expr_in_dot323);
-				expr25=expr();
+				DebugLocation(54, 9);
+				PushFollow(Follow._expr_in_dot379);
+				expr33=expr();
 				PopFollow();
 
-				adaptor.AddChild(root_0, expr25.Tree);
+				adaptor.AddChild(root_0, expr33.Tree);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(7); }
+			} finally { DebugExitSubRule(11); }
 
 
 			}
@@ -1184,7 +1450,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			LeaveRule("dot", 6);
 			LeaveRule_dot();
 		}
-		DebugLocation(53, 1);
+		DebugLocation(55, 1);
 		} finally { DebugExitRule(GrammarFileName, "dot"); }
 		return retval;
 
@@ -1204,7 +1470,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_args();
 
 	// $ANTLR start "args"
-	// Chunky.g:55:1: args : (b= expr ( ',' b= expr )* )? -> ^( ARGS $b) ;
+	// Chunky.g:57:1: args : (b= expr ( ',' b= expr )* )? -> ^( ARGS $b) ;
 	[GrammarRule("args")]
 	private ChunkyParser.args_return args()
 	{
@@ -1216,72 +1482,72 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		IToken char_literal26 = default(IToken);
+		IToken char_literal34 = default(IToken);
 		ChunkyParser.expr_return b = default(ChunkyParser.expr_return);
 
-		CommonTree char_literal26_tree = default(CommonTree);
+		CommonTree char_literal34_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_COMMA=new RewriteRuleITokenStream(adaptor,"token COMMA");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		try { DebugEnterRule(GrammarFileName, "args");
-		DebugLocation(55, 1);
+		DebugLocation(57, 1);
 		try
 		{
-			// Chunky.g:55:5: ( (b= expr ( ',' b= expr )* )? -> ^( ARGS $b) )
+			// Chunky.g:57:5: ( (b= expr ( ',' b= expr )* )? -> ^( ARGS $b) )
 			DebugEnterAlt(1);
-			// Chunky.g:55:7: (b= expr ( ',' b= expr )* )?
+			// Chunky.g:57:7: (b= expr ( ',' b= expr )* )?
 			{
-			DebugLocation(55, 7);
-			// Chunky.g:55:7: (b= expr ( ',' b= expr )* )?
-			int alt9=2;
-			try { DebugEnterSubRule(9);
-			try { DebugEnterDecision(9, false);
-			int LA9_0 = input.LA(1);
+			DebugLocation(57, 7);
+			// Chunky.g:57:7: (b= expr ( ',' b= expr )* )?
+			int alt13=2;
+			try { DebugEnterSubRule(13);
+			try { DebugEnterDecision(13, false);
+			int LA13_0 = input.LA(1);
 
-			if (((LA9_0>=FLOAT && LA9_0<=FUNC)||(LA9_0>=ID && LA9_0<=INT)||LA9_0==LPAREN||LA9_0==STRING||LA9_0==40))
+			if (((LA13_0>=FALSE && LA13_0<=FUNC)||(LA13_0>=ID && LA13_0<=INT)||LA13_0==LPAREN||(LA13_0>=STRING && LA13_0<=TRUE)||LA13_0==42))
 			{
-				alt9 = 1;
+				alt13 = 1;
 			}
-			} finally { DebugExitDecision(9); }
-			switch (alt9)
+			} finally { DebugExitDecision(13); }
+			switch (alt13)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Chunky.g:55:8: b= expr ( ',' b= expr )*
+				// Chunky.g:57:8: b= expr ( ',' b= expr )*
 				{
-				DebugLocation(55, 9);
-				PushFollow(Follow._expr_in_args337);
+				DebugLocation(57, 9);
+				PushFollow(Follow._expr_in_args393);
 				b=expr();
 				PopFollow();
 
 				stream_expr.Add(b.Tree);
-				DebugLocation(55, 15);
-				// Chunky.g:55:15: ( ',' b= expr )*
-				try { DebugEnterSubRule(8);
+				DebugLocation(57, 15);
+				// Chunky.g:57:15: ( ',' b= expr )*
+				try { DebugEnterSubRule(12);
 				while (true)
 				{
-					int alt8=2;
-					try { DebugEnterDecision(8, false);
-					int LA8_0 = input.LA(1);
+					int alt12=2;
+					try { DebugEnterDecision(12, false);
+					int LA12_0 = input.LA(1);
 
-					if ((LA8_0==COMMA))
+					if ((LA12_0==COMMA))
 					{
-						alt8 = 1;
+						alt12 = 1;
 					}
 
 
-					} finally { DebugExitDecision(8); }
-					switch ( alt8 )
+					} finally { DebugExitDecision(12); }
+					switch ( alt12 )
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Chunky.g:55:16: ',' b= expr
+						// Chunky.g:57:16: ',' b= expr
 						{
-						DebugLocation(55, 16);
-						char_literal26=(IToken)Match(input,COMMA,Follow._COMMA_in_args340);  
-						stream_COMMA.Add(char_literal26);
+						DebugLocation(57, 16);
+						char_literal34=(IToken)Match(input,COMMA,Follow._COMMA_in_args396);  
+						stream_COMMA.Add(char_literal34);
 
-						DebugLocation(55, 21);
-						PushFollow(Follow._expr_in_args344);
+						DebugLocation(57, 21);
+						PushFollow(Follow._expr_in_args400);
 						b=expr();
 						PopFollow();
 
@@ -1291,21 +1557,21 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 						break;
 
 					default:
-						goto loop8;
+						goto loop12;
 					}
 				}
 
-				loop8:
+				loop12:
 					;
 
-				} finally { DebugExitSubRule(8); }
+				} finally { DebugExitSubRule(12); }
 
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(9); }
+			} finally { DebugExitSubRule(13); }
 
 
 
@@ -1322,16 +1588,16 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 56:3: -> ^( ARGS $b)
+			// 58:3: -> ^( ARGS $b)
 			{
-				DebugLocation(56, 6);
-				// Chunky.g:56:6: ^( ARGS $b)
+				DebugLocation(58, 6);
+				// Chunky.g:58:6: ^( ARGS $b)
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(56, 8);
+				DebugLocation(58, 8);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(ARGS, "ARGS"), root_1);
 
-				DebugLocation(56, 14);
+				DebugLocation(58, 14);
 				adaptor.AddChild(root_1, stream_b.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -1363,7 +1629,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			LeaveRule("args", 7);
 			LeaveRule_args();
 		}
-		DebugLocation(57, 1);
+		DebugLocation(59, 1);
 		} finally { DebugExitRule(GrammarFileName, "args"); }
 		return retval;
 
@@ -1383,7 +1649,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_call();
 
 	// $ANTLR start "call"
-	// Chunky.g:59:1: call : (t= dot -> $t) ( '(' args ')' -> ^( CALL $call args ) )* ;
+	// Chunky.g:61:1: call : (t= dot -> $t) ( '(' args ')' -> ^( CALL $call args ) )* ;
 	[GrammarRule("call")]
 	private ChunkyParser.call_return call()
 	{
@@ -1395,32 +1661,32 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		IToken char_literal27 = default(IToken);
-		IToken char_literal29 = default(IToken);
+		IToken char_literal35 = default(IToken);
+		IToken char_literal37 = default(IToken);
 		ChunkyParser.dot_return t = default(ChunkyParser.dot_return);
-		ChunkyParser.args_return args28 = default(ChunkyParser.args_return);
+		ChunkyParser.args_return args36 = default(ChunkyParser.args_return);
 
-		CommonTree char_literal27_tree = default(CommonTree);
-		CommonTree char_literal29_tree = default(CommonTree);
+		CommonTree char_literal35_tree = default(CommonTree);
+		CommonTree char_literal37_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_LPAREN=new RewriteRuleITokenStream(adaptor,"token LPAREN");
 		RewriteRuleITokenStream stream_RPAREN=new RewriteRuleITokenStream(adaptor,"token RPAREN");
 		RewriteRuleSubtreeStream stream_dot=new RewriteRuleSubtreeStream(adaptor,"rule dot");
 		RewriteRuleSubtreeStream stream_args=new RewriteRuleSubtreeStream(adaptor,"rule args");
 		try { DebugEnterRule(GrammarFileName, "call");
-		DebugLocation(59, 1);
+		DebugLocation(61, 1);
 		try
 		{
-			// Chunky.g:59:5: ( (t= dot -> $t) ( '(' args ')' -> ^( CALL $call args ) )* )
+			// Chunky.g:61:5: ( (t= dot -> $t) ( '(' args ')' -> ^( CALL $call args ) )* )
 			DebugEnterAlt(1);
-			// Chunky.g:59:7: (t= dot -> $t) ( '(' args ')' -> ^( CALL $call args ) )*
+			// Chunky.g:61:7: (t= dot -> $t) ( '(' args ')' -> ^( CALL $call args ) )*
 			{
-			DebugLocation(59, 7);
-			// Chunky.g:59:7: (t= dot -> $t)
+			DebugLocation(61, 7);
+			// Chunky.g:61:7: (t= dot -> $t)
 			DebugEnterAlt(1);
-			// Chunky.g:59:8: t= dot
+			// Chunky.g:61:8: t= dot
 			{
-			DebugLocation(59, 9);
-			PushFollow(Follow._dot_in_call371);
+			DebugLocation(61, 9);
+			PushFollow(Follow._dot_in_call427);
 			t=dot();
 			PopFollow();
 
@@ -1440,9 +1706,9 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 59:13: -> $t
+			// 61:13: -> $t
 			{
-				DebugLocation(59, 16);
+				DebugLocation(61, 16);
 				adaptor.AddChild(root_0, stream_t.NextTree());
 
 			}
@@ -1452,41 +1718,41 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			}
 
-			DebugLocation(60, 3);
-			// Chunky.g:60:3: ( '(' args ')' -> ^( CALL $call args ) )*
-			try { DebugEnterSubRule(10);
+			DebugLocation(62, 3);
+			// Chunky.g:62:3: ( '(' args ')' -> ^( CALL $call args ) )*
+			try { DebugEnterSubRule(14);
 			while (true)
 			{
-				int alt10=2;
-				try { DebugEnterDecision(10, false);
-				int LA10_0 = input.LA(1);
+				int alt14=2;
+				try { DebugEnterDecision(14, false);
+				int LA14_0 = input.LA(1);
 
-				if ((LA10_0==LPAREN))
+				if ((LA14_0==LPAREN))
 				{
-					alt10 = 1;
+					alt14 = 1;
 				}
 
 
-				} finally { DebugExitDecision(10); }
-				switch ( alt10 )
+				} finally { DebugExitDecision(14); }
+				switch ( alt14 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Chunky.g:61:4: '(' args ')'
+					// Chunky.g:63:4: '(' args ')'
 					{
-					DebugLocation(61, 4);
-					char_literal27=(IToken)Match(input,LPAREN,Follow._LPAREN_in_call384);  
-					stream_LPAREN.Add(char_literal27);
+					DebugLocation(63, 4);
+					char_literal35=(IToken)Match(input,LPAREN,Follow._LPAREN_in_call440);  
+					stream_LPAREN.Add(char_literal35);
 
-					DebugLocation(61, 8);
-					PushFollow(Follow._args_in_call386);
-					args28=args();
+					DebugLocation(63, 8);
+					PushFollow(Follow._args_in_call442);
+					args36=args();
 					PopFollow();
 
-					stream_args.Add(args28.Tree);
-					DebugLocation(61, 13);
-					char_literal29=(IToken)Match(input,RPAREN,Follow._RPAREN_in_call388);  
-					stream_RPAREN.Add(char_literal29);
+					stream_args.Add(args36.Tree);
+					DebugLocation(63, 13);
+					char_literal37=(IToken)Match(input,RPAREN,Follow._RPAREN_in_call444);  
+					stream_RPAREN.Add(char_literal37);
 
 
 
@@ -1502,18 +1768,18 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 					root_0 = (CommonTree)adaptor.Nil();
-					// 62:4: -> ^( CALL $call args )
+					// 64:4: -> ^( CALL $call args )
 					{
-						DebugLocation(62, 7);
-						// Chunky.g:62:7: ^( CALL $call args )
+						DebugLocation(64, 7);
+						// Chunky.g:64:7: ^( CALL $call args )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.Nil();
-						DebugLocation(62, 9);
+						DebugLocation(64, 9);
 						root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(CALL, "CALL"), root_1);
 
-						DebugLocation(62, 15);
+						DebugLocation(64, 15);
 						adaptor.AddChild(root_1, stream_retval.NextTree());
-						DebugLocation(62, 20);
+						DebugLocation(64, 20);
 						adaptor.AddChild(root_1, stream_args.NextTree());
 
 						adaptor.AddChild(root_0, root_1);
@@ -1523,513 +1789,6 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 					retval.Tree = root_0;
 					}
-
-					}
-					break;
-
-				default:
-					goto loop10;
-				}
-			}
-
-			loop10:
-				;
-
-			} finally { DebugExitSubRule(10); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("call", 8);
-			LeaveRule("call", 8);
-			LeaveRule_call();
-		}
-		DebugLocation(64, 1);
-		} finally { DebugExitRule(GrammarFileName, "call"); }
-		return retval;
-
-	}
-	// $ANTLR end "call"
-
-	private sealed partial class not_return : ParserRuleReturnScope<IToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
-	{
-		private CommonTree _tree;
-		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
-		object IAstRuleReturnScope.Tree { get { return Tree; } }
-		public not_return(ChunkyParser grammar) {OnCreated(grammar);}
-		partial void OnCreated(ChunkyParser grammar);
-	}
-
-	partial void EnterRule_not();
-	partial void LeaveRule_not();
-
-	// $ANTLR start "not"
-	// Chunky.g:66:1: not : ( '!' )? call ;
-	[GrammarRule("not")]
-	private ChunkyParser.not_return not()
-	{
-		EnterRule_not();
-		EnterRule("not", 9);
-		TraceIn("not", 9);
-		ChunkyParser.not_return retval = new ChunkyParser.not_return(this);
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken char_literal30 = default(IToken);
-		ChunkyParser.call_return call31 = default(ChunkyParser.call_return);
-
-		CommonTree char_literal30_tree = default(CommonTree);
-
-		try { DebugEnterRule(GrammarFileName, "not");
-		DebugLocation(66, 1);
-		try
-		{
-			// Chunky.g:66:5: ( ( '!' )? call )
-			DebugEnterAlt(1);
-			// Chunky.g:66:7: ( '!' )? call
-			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(66, 10);
-			// Chunky.g:66:10: ( '!' )?
-			int alt11=2;
-			try { DebugEnterSubRule(11);
-			try { DebugEnterDecision(11, false);
-			int LA11_0 = input.LA(1);
-
-			if ((LA11_0==40))
-			{
-				alt11 = 1;
-			}
-			} finally { DebugExitDecision(11); }
-			switch (alt11)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// Chunky.g:66:10: '!'
-				{
-				DebugLocation(66, 10);
-				char_literal30=(IToken)Match(input,40,Follow._40_in_not417); 
-				char_literal30_tree = (CommonTree)adaptor.Create(char_literal30);
-				root_0 = (CommonTree)adaptor.BecomeRoot(char_literal30_tree, root_0);
-
-
-				}
-				break;
-
-			}
-			} finally { DebugExitSubRule(11); }
-
-			DebugLocation(66, 13);
-			PushFollow(Follow._call_in_not421);
-			call31=call();
-			PopFollow();
-
-			adaptor.AddChild(root_0, call31.Tree);
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("not", 9);
-			LeaveRule("not", 9);
-			LeaveRule_not();
-		}
-		DebugLocation(67, 1);
-		} finally { DebugExitRule(GrammarFileName, "not"); }
-		return retval;
-
-	}
-	// $ANTLR end "not"
-
-	private sealed partial class mul_return : ParserRuleReturnScope<IToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
-	{
-		private CommonTree _tree;
-		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
-		object IAstRuleReturnScope.Tree { get { return Tree; } }
-		public mul_return(ChunkyParser grammar) {OnCreated(grammar);}
-		partial void OnCreated(ChunkyParser grammar);
-	}
-
-	partial void EnterRule_mul();
-	partial void LeaveRule_mul();
-
-	// $ANTLR start "mul"
-	// Chunky.g:69:1: mul : not ( ( '*' | '/' | '%' ) not )* ;
-	[GrammarRule("mul")]
-	private ChunkyParser.mul_return mul()
-	{
-		EnterRule_mul();
-		EnterRule("mul", 10);
-		TraceIn("mul", 10);
-		ChunkyParser.mul_return retval = new ChunkyParser.mul_return(this);
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken set33 = default(IToken);
-		ChunkyParser.not_return not32 = default(ChunkyParser.not_return);
-		ChunkyParser.not_return not34 = default(ChunkyParser.not_return);
-
-		CommonTree set33_tree = default(CommonTree);
-
-		try { DebugEnterRule(GrammarFileName, "mul");
-		DebugLocation(69, 1);
-		try
-		{
-			// Chunky.g:69:5: ( not ( ( '*' | '/' | '%' ) not )* )
-			DebugEnterAlt(1);
-			// Chunky.g:69:7: not ( ( '*' | '/' | '%' ) not )*
-			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(69, 7);
-			PushFollow(Follow._not_in_mul431);
-			not32=not();
-			PopFollow();
-
-			adaptor.AddChild(root_0, not32.Tree);
-			DebugLocation(69, 11);
-			// Chunky.g:69:11: ( ( '*' | '/' | '%' ) not )*
-			try { DebugEnterSubRule(12);
-			while (true)
-			{
-				int alt12=2;
-				try { DebugEnterDecision(12, false);
-				int LA12_0 = input.LA(1);
-
-				if ((LA12_0==PERCENT||(LA12_0>=SLASH && LA12_0<=STAR)))
-				{
-					alt12 = 1;
-				}
-
-
-				} finally { DebugExitDecision(12); }
-				switch ( alt12 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// Chunky.g:69:12: ( '*' | '/' | '%' ) not
-					{
-					DebugLocation(69, 29);
-					set33=(IToken)input.LT(1);
-					set33=(IToken)input.LT(1);
-					if (input.LA(1)==PERCENT||(input.LA(1)>=SLASH && input.LA(1)<=STAR))
-					{
-						input.Consume();
-						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set33), root_0);
-						state.errorRecovery=false;
-					}
-					else
-					{
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						DebugRecognitionException(mse);
-						throw mse;
-					}
-
-					DebugLocation(69, 31);
-					PushFollow(Follow._not_in_mul447);
-					not34=not();
-					PopFollow();
-
-					adaptor.AddChild(root_0, not34.Tree);
-
-					}
-					break;
-
-				default:
-					goto loop12;
-				}
-			}
-
-			loop12:
-				;
-
-			} finally { DebugExitSubRule(12); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("mul", 10);
-			LeaveRule("mul", 10);
-			LeaveRule_mul();
-		}
-		DebugLocation(70, 1);
-		} finally { DebugExitRule(GrammarFileName, "mul"); }
-		return retval;
-
-	}
-	// $ANTLR end "mul"
-
-	private sealed partial class add_return : ParserRuleReturnScope<IToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
-	{
-		private CommonTree _tree;
-		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
-		object IAstRuleReturnScope.Tree { get { return Tree; } }
-		public add_return(ChunkyParser grammar) {OnCreated(grammar);}
-		partial void OnCreated(ChunkyParser grammar);
-	}
-
-	partial void EnterRule_add();
-	partial void LeaveRule_add();
-
-	// $ANTLR start "add"
-	// Chunky.g:72:1: add : mul ( ( '+' | '-' ) mul )* ;
-	[GrammarRule("add")]
-	private ChunkyParser.add_return add()
-	{
-		EnterRule_add();
-		EnterRule("add", 11);
-		TraceIn("add", 11);
-		ChunkyParser.add_return retval = new ChunkyParser.add_return(this);
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken set36 = default(IToken);
-		ChunkyParser.mul_return mul35 = default(ChunkyParser.mul_return);
-		ChunkyParser.mul_return mul37 = default(ChunkyParser.mul_return);
-
-		CommonTree set36_tree = default(CommonTree);
-
-		try { DebugEnterRule(GrammarFileName, "add");
-		DebugLocation(72, 1);
-		try
-		{
-			// Chunky.g:72:5: ( mul ( ( '+' | '-' ) mul )* )
-			DebugEnterAlt(1);
-			// Chunky.g:72:7: mul ( ( '+' | '-' ) mul )*
-			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(72, 7);
-			PushFollow(Follow._mul_in_add459);
-			mul35=mul();
-			PopFollow();
-
-			adaptor.AddChild(root_0, mul35.Tree);
-			DebugLocation(72, 11);
-			// Chunky.g:72:11: ( ( '+' | '-' ) mul )*
-			try { DebugEnterSubRule(13);
-			while (true)
-			{
-				int alt13=2;
-				try { DebugEnterDecision(13, false);
-				int LA13_0 = input.LA(1);
-
-				if ((LA13_0==MINUS||LA13_0==PLUS))
-				{
-					alt13 = 1;
-				}
-
-
-				} finally { DebugExitDecision(13); }
-				switch ( alt13 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// Chunky.g:72:12: ( '+' | '-' ) mul
-					{
-					DebugLocation(72, 23);
-					set36=(IToken)input.LT(1);
-					set36=(IToken)input.LT(1);
-					if (input.LA(1)==MINUS||input.LA(1)==PLUS)
-					{
-						input.Consume();
-						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set36), root_0);
-						state.errorRecovery=false;
-					}
-					else
-					{
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						DebugRecognitionException(mse);
-						throw mse;
-					}
-
-					DebugLocation(72, 25);
-					PushFollow(Follow._mul_in_add471);
-					mul37=mul();
-					PopFollow();
-
-					adaptor.AddChild(root_0, mul37.Tree);
-
-					}
-					break;
-
-				default:
-					goto loop13;
-				}
-			}
-
-			loop13:
-				;
-
-			} finally { DebugExitSubRule(13); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("add", 11);
-			LeaveRule("add", 11);
-			LeaveRule_add();
-		}
-		DebugLocation(73, 1);
-		} finally { DebugExitRule(GrammarFileName, "add"); }
-		return retval;
-
-	}
-	// $ANTLR end "add"
-
-	private sealed partial class comp_return : ParserRuleReturnScope<IToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
-	{
-		private CommonTree _tree;
-		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
-		object IAstRuleReturnScope.Tree { get { return Tree; } }
-		public comp_return(ChunkyParser grammar) {OnCreated(grammar);}
-		partial void OnCreated(ChunkyParser grammar);
-	}
-
-	partial void EnterRule_comp();
-	partial void LeaveRule_comp();
-
-	// $ANTLR start "comp"
-	// Chunky.g:75:1: comp : add ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )* ;
-	[GrammarRule("comp")]
-	private ChunkyParser.comp_return comp()
-	{
-		EnterRule_comp();
-		EnterRule("comp", 12);
-		TraceIn("comp", 12);
-		ChunkyParser.comp_return retval = new ChunkyParser.comp_return(this);
-		retval.Start = (IToken)input.LT(1);
-
-		CommonTree root_0 = default(CommonTree);
-
-		IToken set39 = default(IToken);
-		ChunkyParser.add_return add38 = default(ChunkyParser.add_return);
-		ChunkyParser.add_return add40 = default(ChunkyParser.add_return);
-
-		CommonTree set39_tree = default(CommonTree);
-
-		try { DebugEnterRule(GrammarFileName, "comp");
-		DebugLocation(75, 1);
-		try
-		{
-			// Chunky.g:75:5: ( add ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )* )
-			DebugEnterAlt(1);
-			// Chunky.g:75:7: add ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )*
-			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(75, 7);
-			PushFollow(Follow._add_in_comp482);
-			add38=add();
-			PopFollow();
-
-			adaptor.AddChild(root_0, add38.Tree);
-			DebugLocation(75, 11);
-			// Chunky.g:75:11: ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )*
-			try { DebugEnterSubRule(14);
-			while (true)
-			{
-				int alt14=2;
-				try { DebugEnterDecision(14, false);
-				int LA14_0 = input.LA(1);
-
-				if ((LA14_0==EQUAL||(LA14_0>=GREATER && LA14_0<=GREATEREQUAL)||(LA14_0>=LESS && LA14_0<=LESSEQUAL)||LA14_0==NOTEQUAL))
-				{
-					alt14 = 1;
-				}
-
-
-				} finally { DebugExitDecision(14); }
-				switch ( alt14 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// Chunky.g:75:12: ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add
-					{
-					DebugLocation(75, 51);
-					set39=(IToken)input.LT(1);
-					set39=(IToken)input.LT(1);
-					if (input.LA(1)==EQUAL||(input.LA(1)>=GREATER && input.LA(1)<=GREATEREQUAL)||(input.LA(1)>=LESS && input.LA(1)<=LESSEQUAL)||input.LA(1)==NOTEQUAL)
-					{
-						input.Consume();
-						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set39), root_0);
-						state.errorRecovery=false;
-					}
-					else
-					{
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						DebugRecognitionException(mse);
-						throw mse;
-					}
-
-					DebugLocation(75, 53);
-					PushFollow(Follow._add_in_comp510);
-					add40=add();
-					PopFollow();
-
-					adaptor.AddChild(root_0, add40.Tree);
 
 					}
 					break;
@@ -2062,11 +1821,518 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
+			TraceOut("call", 8);
+			LeaveRule("call", 8);
+			LeaveRule_call();
+		}
+		DebugLocation(66, 1);
+		} finally { DebugExitRule(GrammarFileName, "call"); }
+		return retval;
+
+	}
+	// $ANTLR end "call"
+
+	private sealed partial class not_return : ParserRuleReturnScope<IToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public not_return(ChunkyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(ChunkyParser grammar);
+	}
+
+	partial void EnterRule_not();
+	partial void LeaveRule_not();
+
+	// $ANTLR start "not"
+	// Chunky.g:68:1: not : ( '!' )? call ;
+	[GrammarRule("not")]
+	private ChunkyParser.not_return not()
+	{
+		EnterRule_not();
+		EnterRule("not", 9);
+		TraceIn("not", 9);
+		ChunkyParser.not_return retval = new ChunkyParser.not_return(this);
+		retval.Start = (IToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		IToken char_literal38 = default(IToken);
+		ChunkyParser.call_return call39 = default(ChunkyParser.call_return);
+
+		CommonTree char_literal38_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "not");
+		DebugLocation(68, 1);
+		try
+		{
+			// Chunky.g:68:5: ( ( '!' )? call )
+			DebugEnterAlt(1);
+			// Chunky.g:68:7: ( '!' )? call
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(68, 10);
+			// Chunky.g:68:10: ( '!' )?
+			int alt15=2;
+			try { DebugEnterSubRule(15);
+			try { DebugEnterDecision(15, false);
+			int LA15_0 = input.LA(1);
+
+			if ((LA15_0==42))
+			{
+				alt15 = 1;
+			}
+			} finally { DebugExitDecision(15); }
+			switch (alt15)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// Chunky.g:68:10: '!'
+				{
+				DebugLocation(68, 10);
+				char_literal38=(IToken)Match(input,42,Follow._42_in_not473); 
+				char_literal38_tree = (CommonTree)adaptor.Create(char_literal38);
+				root_0 = (CommonTree)adaptor.BecomeRoot(char_literal38_tree, root_0);
+
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(15); }
+
+			DebugLocation(68, 13);
+			PushFollow(Follow._call_in_not477);
+			call39=call();
+			PopFollow();
+
+			adaptor.AddChild(root_0, call39.Tree);
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("not", 9);
+			LeaveRule("not", 9);
+			LeaveRule_not();
+		}
+		DebugLocation(69, 1);
+		} finally { DebugExitRule(GrammarFileName, "not"); }
+		return retval;
+
+	}
+	// $ANTLR end "not"
+
+	private sealed partial class mul_return : ParserRuleReturnScope<IToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public mul_return(ChunkyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(ChunkyParser grammar);
+	}
+
+	partial void EnterRule_mul();
+	partial void LeaveRule_mul();
+
+	// $ANTLR start "mul"
+	// Chunky.g:71:1: mul : not ( ( '*' | '/' | '%' ) not )* ;
+	[GrammarRule("mul")]
+	private ChunkyParser.mul_return mul()
+	{
+		EnterRule_mul();
+		EnterRule("mul", 10);
+		TraceIn("mul", 10);
+		ChunkyParser.mul_return retval = new ChunkyParser.mul_return(this);
+		retval.Start = (IToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		IToken set41 = default(IToken);
+		ChunkyParser.not_return not40 = default(ChunkyParser.not_return);
+		ChunkyParser.not_return not42 = default(ChunkyParser.not_return);
+
+		CommonTree set41_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "mul");
+		DebugLocation(71, 1);
+		try
+		{
+			// Chunky.g:71:5: ( not ( ( '*' | '/' | '%' ) not )* )
+			DebugEnterAlt(1);
+			// Chunky.g:71:7: not ( ( '*' | '/' | '%' ) not )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(71, 7);
+			PushFollow(Follow._not_in_mul487);
+			not40=not();
+			PopFollow();
+
+			adaptor.AddChild(root_0, not40.Tree);
+			DebugLocation(71, 11);
+			// Chunky.g:71:11: ( ( '*' | '/' | '%' ) not )*
+			try { DebugEnterSubRule(16);
+			while (true)
+			{
+				int alt16=2;
+				try { DebugEnterDecision(16, false);
+				int LA16_0 = input.LA(1);
+
+				if ((LA16_0==PERCENT||(LA16_0>=SLASH && LA16_0<=STAR)))
+				{
+					alt16 = 1;
+				}
+
+
+				} finally { DebugExitDecision(16); }
+				switch ( alt16 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// Chunky.g:71:12: ( '*' | '/' | '%' ) not
+					{
+					DebugLocation(71, 29);
+					set41=(IToken)input.LT(1);
+					set41=(IToken)input.LT(1);
+					if (input.LA(1)==PERCENT||(input.LA(1)>=SLASH && input.LA(1)<=STAR))
+					{
+						input.Consume();
+						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set41), root_0);
+						state.errorRecovery=false;
+					}
+					else
+					{
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(71, 31);
+					PushFollow(Follow._not_in_mul503);
+					not42=not();
+					PopFollow();
+
+					adaptor.AddChild(root_0, not42.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop16;
+				}
+			}
+
+			loop16:
+				;
+
+			} finally { DebugExitSubRule(16); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("mul", 10);
+			LeaveRule("mul", 10);
+			LeaveRule_mul();
+		}
+		DebugLocation(72, 1);
+		} finally { DebugExitRule(GrammarFileName, "mul"); }
+		return retval;
+
+	}
+	// $ANTLR end "mul"
+
+	private sealed partial class add_return : ParserRuleReturnScope<IToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public add_return(ChunkyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(ChunkyParser grammar);
+	}
+
+	partial void EnterRule_add();
+	partial void LeaveRule_add();
+
+	// $ANTLR start "add"
+	// Chunky.g:74:1: add : mul ( ( '+' | '-' ) mul )* ;
+	[GrammarRule("add")]
+	private ChunkyParser.add_return add()
+	{
+		EnterRule_add();
+		EnterRule("add", 11);
+		TraceIn("add", 11);
+		ChunkyParser.add_return retval = new ChunkyParser.add_return(this);
+		retval.Start = (IToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		IToken set44 = default(IToken);
+		ChunkyParser.mul_return mul43 = default(ChunkyParser.mul_return);
+		ChunkyParser.mul_return mul45 = default(ChunkyParser.mul_return);
+
+		CommonTree set44_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "add");
+		DebugLocation(74, 1);
+		try
+		{
+			// Chunky.g:74:5: ( mul ( ( '+' | '-' ) mul )* )
+			DebugEnterAlt(1);
+			// Chunky.g:74:7: mul ( ( '+' | '-' ) mul )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(74, 7);
+			PushFollow(Follow._mul_in_add515);
+			mul43=mul();
+			PopFollow();
+
+			adaptor.AddChild(root_0, mul43.Tree);
+			DebugLocation(74, 11);
+			// Chunky.g:74:11: ( ( '+' | '-' ) mul )*
+			try { DebugEnterSubRule(17);
+			while (true)
+			{
+				int alt17=2;
+				try { DebugEnterDecision(17, false);
+				int LA17_0 = input.LA(1);
+
+				if ((LA17_0==MINUS||LA17_0==PLUS))
+				{
+					alt17 = 1;
+				}
+
+
+				} finally { DebugExitDecision(17); }
+				switch ( alt17 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// Chunky.g:74:12: ( '+' | '-' ) mul
+					{
+					DebugLocation(74, 23);
+					set44=(IToken)input.LT(1);
+					set44=(IToken)input.LT(1);
+					if (input.LA(1)==MINUS||input.LA(1)==PLUS)
+					{
+						input.Consume();
+						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set44), root_0);
+						state.errorRecovery=false;
+					}
+					else
+					{
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(74, 25);
+					PushFollow(Follow._mul_in_add527);
+					mul45=mul();
+					PopFollow();
+
+					adaptor.AddChild(root_0, mul45.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop17;
+				}
+			}
+
+			loop17:
+				;
+
+			} finally { DebugExitSubRule(17); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("add", 11);
+			LeaveRule("add", 11);
+			LeaveRule_add();
+		}
+		DebugLocation(75, 1);
+		} finally { DebugExitRule(GrammarFileName, "add"); }
+		return retval;
+
+	}
+	// $ANTLR end "add"
+
+	private sealed partial class comp_return : ParserRuleReturnScope<IToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public comp_return(ChunkyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(ChunkyParser grammar);
+	}
+
+	partial void EnterRule_comp();
+	partial void LeaveRule_comp();
+
+	// $ANTLR start "comp"
+	// Chunky.g:77:1: comp : add ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )* ;
+	[GrammarRule("comp")]
+	private ChunkyParser.comp_return comp()
+	{
+		EnterRule_comp();
+		EnterRule("comp", 12);
+		TraceIn("comp", 12);
+		ChunkyParser.comp_return retval = new ChunkyParser.comp_return(this);
+		retval.Start = (IToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		IToken set47 = default(IToken);
+		ChunkyParser.add_return add46 = default(ChunkyParser.add_return);
+		ChunkyParser.add_return add48 = default(ChunkyParser.add_return);
+
+		CommonTree set47_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "comp");
+		DebugLocation(77, 1);
+		try
+		{
+			// Chunky.g:77:5: ( add ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )* )
+			DebugEnterAlt(1);
+			// Chunky.g:77:7: add ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(77, 7);
+			PushFollow(Follow._add_in_comp538);
+			add46=add();
+			PopFollow();
+
+			adaptor.AddChild(root_0, add46.Tree);
+			DebugLocation(77, 11);
+			// Chunky.g:77:11: ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )*
+			try { DebugEnterSubRule(18);
+			while (true)
+			{
+				int alt18=2;
+				try { DebugEnterDecision(18, false);
+				int LA18_0 = input.LA(1);
+
+				if ((LA18_0==EQUAL||(LA18_0>=GREATER && LA18_0<=GREATEREQUAL)||(LA18_0>=LESS && LA18_0<=LESSEQUAL)||LA18_0==NOTEQUAL))
+				{
+					alt18 = 1;
+				}
+
+
+				} finally { DebugExitDecision(18); }
+				switch ( alt18 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// Chunky.g:77:12: ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add
+					{
+					DebugLocation(77, 51);
+					set47=(IToken)input.LT(1);
+					set47=(IToken)input.LT(1);
+					if (input.LA(1)==EQUAL||(input.LA(1)>=GREATER && input.LA(1)<=GREATEREQUAL)||(input.LA(1)>=LESS && input.LA(1)<=LESSEQUAL)||input.LA(1)==NOTEQUAL)
+					{
+						input.Consume();
+						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set47), root_0);
+						state.errorRecovery=false;
+					}
+					else
+					{
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(77, 53);
+					PushFollow(Follow._add_in_comp566);
+					add48=add();
+					PopFollow();
+
+					adaptor.AddChild(root_0, add48.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop18;
+				}
+			}
+
+			loop18:
+				;
+
+			} finally { DebugExitSubRule(18); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
 			TraceOut("comp", 12);
 			LeaveRule("comp", 12);
 			LeaveRule_comp();
 		}
-		DebugLocation(76, 1);
+		DebugLocation(78, 1);
 		} finally { DebugExitRule(GrammarFileName, "comp"); }
 		return retval;
 
@@ -2086,7 +2352,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_bool();
 
 	// $ANTLR start "bool"
-	// Chunky.g:78:1: bool : comp ( ( '&' | '&&' | '|' | '||' ) comp )* ;
+	// Chunky.g:80:1: bool : comp ( ( '&' | '&&' | '|' | '||' ) comp )* ;
 	[GrammarRule("bool")]
 	private ChunkyParser.bool_return @bool()
 	{
@@ -2098,57 +2364,57 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		IToken set42 = default(IToken);
-		ChunkyParser.comp_return comp41 = default(ChunkyParser.comp_return);
-		ChunkyParser.comp_return comp43 = default(ChunkyParser.comp_return);
+		IToken set50 = default(IToken);
+		ChunkyParser.comp_return comp49 = default(ChunkyParser.comp_return);
+		ChunkyParser.comp_return comp51 = default(ChunkyParser.comp_return);
 
-		CommonTree set42_tree = default(CommonTree);
+		CommonTree set50_tree = default(CommonTree);
 
 		try { DebugEnterRule(GrammarFileName, "bool");
-		DebugLocation(78, 1);
+		DebugLocation(80, 1);
 		try
 		{
-			// Chunky.g:78:5: ( comp ( ( '&' | '&&' | '|' | '||' ) comp )* )
+			// Chunky.g:80:5: ( comp ( ( '&' | '&&' | '|' | '||' ) comp )* )
 			DebugEnterAlt(1);
-			// Chunky.g:78:7: comp ( ( '&' | '&&' | '|' | '||' ) comp )*
+			// Chunky.g:80:7: comp ( ( '&' | '&&' | '|' | '||' ) comp )*
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(78, 7);
-			PushFollow(Follow._comp_in_bool521);
-			comp41=comp();
+			DebugLocation(80, 7);
+			PushFollow(Follow._comp_in_bool577);
+			comp49=comp();
 			PopFollow();
 
-			adaptor.AddChild(root_0, comp41.Tree);
-			DebugLocation(78, 12);
-			// Chunky.g:78:12: ( ( '&' | '&&' | '|' | '||' ) comp )*
-			try { DebugEnterSubRule(15);
+			adaptor.AddChild(root_0, comp49.Tree);
+			DebugLocation(80, 12);
+			// Chunky.g:80:12: ( ( '&' | '&&' | '|' | '||' ) comp )*
+			try { DebugEnterSubRule(19);
 			while (true)
 			{
-				int alt15=2;
-				try { DebugEnterDecision(15, false);
-				int LA15_0 = input.LA(1);
+				int alt19=2;
+				try { DebugEnterDecision(19, false);
+				int LA19_0 = input.LA(1);
 
-				if ((LA15_0==AMPER||LA15_0==DAMPER||LA15_0==DPIPE||LA15_0==PIPE))
+				if ((LA19_0==AMPER||LA19_0==DAMPER||LA19_0==DPIPE||LA19_0==PIPE))
 				{
-					alt15 = 1;
+					alt19 = 1;
 				}
 
 
-				} finally { DebugExitDecision(15); }
-				switch ( alt15 )
+				} finally { DebugExitDecision(19); }
+				switch ( alt19 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Chunky.g:78:13: ( '&' | '&&' | '|' | '||' ) comp
+					// Chunky.g:80:13: ( '&' | '&&' | '|' | '||' ) comp
 					{
-					DebugLocation(78, 38);
-					set42=(IToken)input.LT(1);
-					set42=(IToken)input.LT(1);
+					DebugLocation(80, 38);
+					set50=(IToken)input.LT(1);
+					set50=(IToken)input.LT(1);
 					if (input.LA(1)==AMPER||input.LA(1)==DAMPER||input.LA(1)==DPIPE||input.LA(1)==PIPE)
 					{
 						input.Consume();
-						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set42), root_0);
+						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set50), root_0);
 						state.errorRecovery=false;
 					}
 					else
@@ -2158,25 +2424,25 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 						throw mse;
 					}
 
-					DebugLocation(78, 40);
-					PushFollow(Follow._comp_in_bool541);
-					comp43=comp();
+					DebugLocation(80, 40);
+					PushFollow(Follow._comp_in_bool597);
+					comp51=comp();
 					PopFollow();
 
-					adaptor.AddChild(root_0, comp43.Tree);
+					adaptor.AddChild(root_0, comp51.Tree);
 
 					}
 					break;
 
 				default:
-					goto loop15;
+					goto loop19;
 				}
 			}
 
-			loop15:
+			loop19:
 				;
 
-			} finally { DebugExitSubRule(15); }
+			} finally { DebugExitSubRule(19); }
 
 
 			}
@@ -2200,7 +2466,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			LeaveRule("bool", 13);
 			LeaveRule_bool();
 		}
-		DebugLocation(79, 1);
+		DebugLocation(81, 1);
 		} finally { DebugExitRule(GrammarFileName, "bool"); }
 		return retval;
 
@@ -2220,7 +2486,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_expr();
 
 	// $ANTLR start "expr"
-	// Chunky.g:81:1: expr : bool ;
+	// Chunky.g:83:1: expr : bool ;
 	[GrammarRule("expr")]
 	private ChunkyParser.expr_return expr()
 	{
@@ -2232,25 +2498,25 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		ChunkyParser.bool_return bool44 = default(ChunkyParser.bool_return);
+		ChunkyParser.bool_return bool52 = default(ChunkyParser.bool_return);
 
 
 		try { DebugEnterRule(GrammarFileName, "expr");
-		DebugLocation(81, 1);
+		DebugLocation(83, 1);
 		try
 		{
-			// Chunky.g:81:5: ( bool )
+			// Chunky.g:83:5: ( bool )
 			DebugEnterAlt(1);
-			// Chunky.g:81:7: bool
+			// Chunky.g:83:7: bool
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(81, 7);
-			PushFollow(Follow._bool_in_expr552);
-			bool44=@bool();
+			DebugLocation(83, 7);
+			PushFollow(Follow._bool_in_expr608);
+			bool52=@bool();
 			PopFollow();
 
-			adaptor.AddChild(root_0, bool44.Tree);
+			adaptor.AddChild(root_0, bool52.Tree);
 
 			}
 
@@ -2273,7 +2539,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			LeaveRule("expr", 14);
 			LeaveRule_expr();
 		}
-		DebugLocation(82, 1);
+		DebugLocation(84, 1);
 		} finally { DebugExitRule(GrammarFileName, "expr"); }
 		return retval;
 
@@ -2293,7 +2559,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_exprs();
 
 	// $ANTLR start "exprs"
-	// Chunky.g:84:1: exprs : ( (e+= expr )? ';' )+ -> ^( BLOCK ( $e)* ) ;
+	// Chunky.g:86:1: exprs : ( (e+= expr )? ';' )+ -> ^( BLOCK ( $e)* ) ;
 	[GrammarRule("exprs")]
 	private ChunkyParser.exprs_return exprs()
 	{
@@ -2305,63 +2571,63 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		IToken char_literal45 = default(IToken);
+		IToken char_literal53 = default(IToken);
 		List<CommonTree> list_e = null;
 		ChunkyParser.expr_return e = default(ChunkyParser.expr_return);
-		CommonTree char_literal45_tree = default(CommonTree);
+		CommonTree char_literal53_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_SEMI=new RewriteRuleITokenStream(adaptor,"token SEMI");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		try { DebugEnterRule(GrammarFileName, "exprs");
-		DebugLocation(84, 1);
+		DebugLocation(86, 1);
 		try
 		{
-			// Chunky.g:85:2: ( ( (e+= expr )? ';' )+ -> ^( BLOCK ( $e)* ) )
+			// Chunky.g:87:2: ( ( (e+= expr )? ';' )+ -> ^( BLOCK ( $e)* ) )
 			DebugEnterAlt(1);
-			// Chunky.g:85:4: ( (e+= expr )? ';' )+
+			// Chunky.g:87:4: ( (e+= expr )? ';' )+
 			{
-			DebugLocation(85, 4);
-			// Chunky.g:85:4: ( (e+= expr )? ';' )+
-			int cnt17=0;
-			try { DebugEnterSubRule(17);
+			DebugLocation(87, 4);
+			// Chunky.g:87:4: ( (e+= expr )? ';' )+
+			int cnt21=0;
+			try { DebugEnterSubRule(21);
 			while (true)
 			{
-				int alt17=2;
-				try { DebugEnterDecision(17, false);
-				int LA17_0 = input.LA(1);
+				int alt21=2;
+				try { DebugEnterDecision(21, false);
+				int LA21_0 = input.LA(1);
 
-				if (((LA17_0>=FLOAT && LA17_0<=FUNC)||(LA17_0>=ID && LA17_0<=INT)||LA17_0==LPAREN||LA17_0==SEMI||LA17_0==STRING||LA17_0==40))
+				if (((LA21_0>=FALSE && LA21_0<=FUNC)||(LA21_0>=ID && LA21_0<=INT)||LA21_0==LPAREN||LA21_0==SEMI||(LA21_0>=STRING && LA21_0<=TRUE)||LA21_0==42))
 				{
-					alt17 = 1;
+					alt21 = 1;
 				}
 
 
-				} finally { DebugExitDecision(17); }
-				switch (alt17)
+				} finally { DebugExitDecision(21); }
+				switch (alt21)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Chunky.g:85:5: (e+= expr )? ';'
+					// Chunky.g:87:5: (e+= expr )? ';'
 					{
-					DebugLocation(85, 6);
-					// Chunky.g:85:6: (e+= expr )?
-					int alt16=2;
-					try { DebugEnterSubRule(16);
-					try { DebugEnterDecision(16, false);
-					int LA16_0 = input.LA(1);
+					DebugLocation(87, 6);
+					// Chunky.g:87:6: (e+= expr )?
+					int alt20=2;
+					try { DebugEnterSubRule(20);
+					try { DebugEnterDecision(20, false);
+					int LA20_0 = input.LA(1);
 
-					if (((LA16_0>=FLOAT && LA16_0<=FUNC)||(LA16_0>=ID && LA16_0<=INT)||LA16_0==LPAREN||LA16_0==STRING||LA16_0==40))
+					if (((LA20_0>=FALSE && LA20_0<=FUNC)||(LA20_0>=ID && LA20_0<=INT)||LA20_0==LPAREN||(LA20_0>=STRING && LA20_0<=TRUE)||LA20_0==42))
 					{
-						alt16 = 1;
+						alt20 = 1;
 					}
-					} finally { DebugExitDecision(16); }
-					switch (alt16)
+					} finally { DebugExitDecision(20); }
+					switch (alt20)
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Chunky.g:85:6: e+= expr
+						// Chunky.g:87:6: e+= expr
 						{
-						DebugLocation(85, 6);
-						PushFollow(Follow._expr_in_exprs566);
+						DebugLocation(87, 6);
+						PushFollow(Follow._expr_in_exprs622);
 						e=expr();
 						PopFollow();
 
@@ -2374,30 +2640,30 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 						break;
 
 					}
-					} finally { DebugExitSubRule(16); }
+					} finally { DebugExitSubRule(20); }
 
-					DebugLocation(85, 14);
-					char_literal45=(IToken)Match(input,SEMI,Follow._SEMI_in_exprs569);  
-					stream_SEMI.Add(char_literal45);
+					DebugLocation(87, 14);
+					char_literal53=(IToken)Match(input,SEMI,Follow._SEMI_in_exprs625);  
+					stream_SEMI.Add(char_literal53);
 
 
 					}
 					break;
 
 				default:
-					if (cnt17 >= 1)
-						goto loop17;
+					if (cnt21 >= 1)
+						goto loop21;
 
-					EarlyExitException eee17 = new EarlyExitException( 17, input );
-					DebugRecognitionException(eee17);
-					throw eee17;
+					EarlyExitException eee21 = new EarlyExitException( 21, input );
+					DebugRecognitionException(eee21);
+					throw eee21;
 				}
-				cnt17++;
+				cnt21++;
 			}
-			loop17:
+			loop21:
 				;
 
-			} finally { DebugExitSubRule(17); }
+			} finally { DebugExitSubRule(21); }
 
 
 
@@ -2413,20 +2679,20 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 			RewriteRuleSubtreeStream stream_e=new RewriteRuleSubtreeStream(adaptor,"token e",list_e);
 			root_0 = (CommonTree)adaptor.Nil();
-			// 86:3: -> ^( BLOCK ( $e)* )
+			// 88:3: -> ^( BLOCK ( $e)* )
 			{
-				DebugLocation(86, 6);
-				// Chunky.g:86:6: ^( BLOCK ( $e)* )
+				DebugLocation(88, 6);
+				// Chunky.g:88:6: ^( BLOCK ( $e)* )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(86, 8);
+				DebugLocation(88, 8);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(BLOCK, "BLOCK"), root_1);
 
-				DebugLocation(86, 15);
-				// Chunky.g:86:15: ( $e)*
+				DebugLocation(88, 15);
+				// Chunky.g:88:15: ( $e)*
 				while ( stream_e.HasNext )
 				{
-					DebugLocation(86, 15);
+					DebugLocation(88, 15);
 					adaptor.AddChild(root_1, stream_e.NextTree());
 
 				}
@@ -2461,7 +2727,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			LeaveRule("exprs", 15);
 			LeaveRule_exprs();
 		}
-		DebugLocation(87, 1);
+		DebugLocation(89, 1);
 		} finally { DebugExitRule(GrammarFileName, "exprs"); }
 		return retval;
 
@@ -2481,7 +2747,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_block();
 
 	// $ANTLR start "block"
-	// Chunky.g:89:1: block : '{' ( exprs )? '}' ;
+	// Chunky.g:91:1: block : '{' ( exprs )? '}' ;
 	[GrammarRule("block")]
 	private ChunkyParser.block_return block()
 	{
@@ -2493,58 +2759,58 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		IToken char_literal46 = default(IToken);
-		IToken char_literal48 = default(IToken);
-		ChunkyParser.exprs_return exprs47 = default(ChunkyParser.exprs_return);
+		IToken char_literal54 = default(IToken);
+		IToken char_literal56 = default(IToken);
+		ChunkyParser.exprs_return exprs55 = default(ChunkyParser.exprs_return);
 
-		CommonTree char_literal46_tree = default(CommonTree);
-		CommonTree char_literal48_tree = default(CommonTree);
+		CommonTree char_literal54_tree = default(CommonTree);
+		CommonTree char_literal56_tree = default(CommonTree);
 
 		try { DebugEnterRule(GrammarFileName, "block");
-		DebugLocation(89, 1);
+		DebugLocation(91, 1);
 		try
 		{
-			// Chunky.g:90:2: ( '{' ( exprs )? '}' )
+			// Chunky.g:92:2: ( '{' ( exprs )? '}' )
 			DebugEnterAlt(1);
-			// Chunky.g:90:4: '{' ( exprs )? '}'
+			// Chunky.g:92:4: '{' ( exprs )? '}'
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(90, 7);
-			char_literal46=(IToken)Match(input,LCURLY,Follow._LCURLY_in_block595); 
-			DebugLocation(90, 9);
-			// Chunky.g:90:9: ( exprs )?
-			int alt18=2;
-			try { DebugEnterSubRule(18);
-			try { DebugEnterDecision(18, false);
-			int LA18_0 = input.LA(1);
+			DebugLocation(92, 7);
+			char_literal54=(IToken)Match(input,LCURLY,Follow._LCURLY_in_block651); 
+			DebugLocation(92, 9);
+			// Chunky.g:92:9: ( exprs )?
+			int alt22=2;
+			try { DebugEnterSubRule(22);
+			try { DebugEnterDecision(22, false);
+			int LA22_0 = input.LA(1);
 
-			if (((LA18_0>=FLOAT && LA18_0<=FUNC)||(LA18_0>=ID && LA18_0<=INT)||LA18_0==LPAREN||LA18_0==SEMI||LA18_0==STRING||LA18_0==40))
+			if (((LA22_0>=FALSE && LA22_0<=FUNC)||(LA22_0>=ID && LA22_0<=INT)||LA22_0==LPAREN||LA22_0==SEMI||(LA22_0>=STRING && LA22_0<=TRUE)||LA22_0==42))
 			{
-				alt18 = 1;
+				alt22 = 1;
 			}
-			} finally { DebugExitDecision(18); }
-			switch (alt18)
+			} finally { DebugExitDecision(22); }
+			switch (alt22)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Chunky.g:90:9: exprs
+				// Chunky.g:92:9: exprs
 				{
-				DebugLocation(90, 9);
-				PushFollow(Follow._exprs_in_block598);
-				exprs47=exprs();
+				DebugLocation(92, 9);
+				PushFollow(Follow._exprs_in_block654);
+				exprs55=exprs();
 				PopFollow();
 
-				adaptor.AddChild(root_0, exprs47.Tree);
+				adaptor.AddChild(root_0, exprs55.Tree);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(18); }
+			} finally { DebugExitSubRule(22); }
 
-			DebugLocation(90, 19);
-			char_literal48=(IToken)Match(input,RCURLY,Follow._RCURLY_in_block601); 
+			DebugLocation(92, 19);
+			char_literal56=(IToken)Match(input,RCURLY,Follow._RCURLY_in_block657); 
 
 			}
 
@@ -2567,7 +2833,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			LeaveRule("block", 16);
 			LeaveRule_block();
 		}
-		DebugLocation(91, 1);
+		DebugLocation(93, 1);
 		} finally { DebugExitRule(GrammarFileName, "block"); }
 		return retval;
 
@@ -2579,64 +2845,72 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _exprs_in_program82 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_params96 = new BitSet(new ulong[]{0x202UL});
-		public static readonly BitSet _COMMA_in_params99 = new BitSet(new ulong[]{0x80000UL});
-		public static readonly BitSet _ID_in_params103 = new BitSet(new ulong[]{0x202UL});
-		public static readonly BitSet _FUNC_in_func_expr130 = new BitSet(new ulong[]{0x4000000UL});
-		public static readonly BitSet _LPAREN_in_func_expr133 = new BitSet(new ulong[]{0x400080000UL});
-		public static readonly BitSet _params_in_func_expr136 = new BitSet(new ulong[]{0x400000000UL});
-		public static readonly BitSet _RPAREN_in_func_expr138 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _block_in_func_expr141 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IF_in_if_expr152 = new BitSet(new ulong[]{0x4000000UL});
-		public static readonly BitSet _LPAREN_in_if_expr154 = new BitSet(new ulong[]{0x14004398000UL});
-		public static readonly BitSet _expr_in_if_expr158 = new BitSet(new ulong[]{0x400000000UL});
-		public static readonly BitSet _RPAREN_in_if_expr160 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _block_in_if_expr164 = new BitSet(new ulong[]{0x20000000002UL});
-		public static readonly BitSet _41_in_if_expr170 = new BitSet(new ulong[]{0x500000UL});
-		public static readonly BitSet _if_expr_in_if_expr176 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _block_in_if_expr202 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_term259 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LPAREN_in_term264 = new BitSet(new ulong[]{0x14004398000UL});
-		public static readonly BitSet _expr_in_term267 = new BitSet(new ulong[]{0x400000000UL});
-		public static readonly BitSet _RPAREN_in_term269 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _INT_in_term275 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FLOAT_in_term280 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _STRING_in_term285 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _if_expr_in_term290 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _func_expr_in_term295 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _term_in_dot306 = new BitSet(new ulong[]{0x1042UL});
-		public static readonly BitSet _DOT_in_dot309 = new BitSet(new ulong[]{0x80000UL});
-		public static readonly BitSet _ID_in_dot312 = new BitSet(new ulong[]{0x1042UL});
-		public static readonly BitSet _ASSIGN_in_dot320 = new BitSet(new ulong[]{0x14004398000UL});
-		public static readonly BitSet _expr_in_dot323 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expr_in_args337 = new BitSet(new ulong[]{0x202UL});
-		public static readonly BitSet _COMMA_in_args340 = new BitSet(new ulong[]{0x14004398000UL});
-		public static readonly BitSet _expr_in_args344 = new BitSet(new ulong[]{0x202UL});
-		public static readonly BitSet _dot_in_call371 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _LPAREN_in_call384 = new BitSet(new ulong[]{0x14404398000UL});
-		public static readonly BitSet _args_in_call386 = new BitSet(new ulong[]{0x400000000UL});
-		public static readonly BitSet _RPAREN_in_call388 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _40_in_not417 = new BitSet(new ulong[]{0x14004398000UL});
-		public static readonly BitSet _call_in_not421 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _not_in_mul431 = new BitSet(new ulong[]{0x3040000002UL});
-		public static readonly BitSet _set_in_mul434 = new BitSet(new ulong[]{0x14004398000UL});
-		public static readonly BitSet _not_in_mul447 = new BitSet(new ulong[]{0x3040000002UL});
-		public static readonly BitSet _mul_in_add459 = new BitSet(new ulong[]{0x108000002UL});
-		public static readonly BitSet _set_in_add462 = new BitSet(new ulong[]{0x14004398000UL});
-		public static readonly BitSet _mul_in_add471 = new BitSet(new ulong[]{0x108000002UL});
-		public static readonly BitSet _add_in_comp482 = new BitSet(new ulong[]{0x11864002UL});
-		public static readonly BitSet _set_in_comp485 = new BitSet(new ulong[]{0x14004398000UL});
-		public static readonly BitSet _add_in_comp510 = new BitSet(new ulong[]{0x11864002UL});
-		public static readonly BitSet _comp_in_bool521 = new BitSet(new ulong[]{0x80002412UL});
-		public static readonly BitSet _set_in_bool524 = new BitSet(new ulong[]{0x14004398000UL});
-		public static readonly BitSet _comp_in_bool541 = new BitSet(new ulong[]{0x80002412UL});
-		public static readonly BitSet _bool_in_expr552 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expr_in_exprs566 = new BitSet(new ulong[]{0x800000000UL});
-		public static readonly BitSet _SEMI_in_exprs569 = new BitSet(new ulong[]{0x14804398002UL});
-		public static readonly BitSet _LCURLY_in_block595 = new BitSet(new ulong[]{0x14A04398000UL});
-		public static readonly BitSet _exprs_in_block598 = new BitSet(new ulong[]{0x200000000UL});
-		public static readonly BitSet _RCURLY_in_block601 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _exprs_in_program81 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_params95 = new BitSet(new ulong[]{0x202UL});
+		public static readonly BitSet _COMMA_in_params98 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_params102 = new BitSet(new ulong[]{0x202UL});
+		public static readonly BitSet _FUNC_in_func_expr129 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _LPAREN_in_func_expr132 = new BitSet(new ulong[]{0x800100000UL});
+		public static readonly BitSet _params_in_func_expr135 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _RPAREN_in_func_expr137 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _block_in_func_expr140 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IF_in_if_expr151 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _LPAREN_in_if_expr153 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _expr_in_if_expr157 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _RPAREN_in_if_expr159 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _LCURLY_in_if_expr161 = new BitSet(new ulong[]{0x59408738000UL});
+		public static readonly BitSet _expr_in_if_expr166 = new BitSet(new ulong[]{0x1000000000UL});
+		public static readonly BitSet _SEMI_in_if_expr169 = new BitSet(new ulong[]{0x59408738000UL});
+		public static readonly BitSet _RCURLY_in_if_expr173 = new BitSet(new ulong[]{0x80000000002UL});
+		public static readonly BitSet _43_in_if_expr179 = new BitSet(new ulong[]{0xA00000UL});
+		public static readonly BitSet _if_expr_in_if_expr185 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LCURLY_in_if_expr219 = new BitSet(new ulong[]{0x59408738000UL});
+		public static readonly BitSet _expr_in_if_expr224 = new BitSet(new ulong[]{0x1000000000UL});
+		public static readonly BitSet _SEMI_in_if_expr227 = new BitSet(new ulong[]{0x59408738000UL});
+		public static readonly BitSet _RCURLY_in_if_expr231 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_term305 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_term310 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _expr_in_term313 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _RPAREN_in_term315 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _INT_in_term321 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FLOAT_in_term326 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _TRUE_in_term331 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FALSE_in_term336 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _STRING_in_term341 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _if_expr_in_term346 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _func_expr_in_term351 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _term_in_dot362 = new BitSet(new ulong[]{0x1042UL});
+		public static readonly BitSet _DOT_in_dot365 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_dot368 = new BitSet(new ulong[]{0x1042UL});
+		public static readonly BitSet _ASSIGN_in_dot376 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _expr_in_dot379 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expr_in_args393 = new BitSet(new ulong[]{0x202UL});
+		public static readonly BitSet _COMMA_in_args396 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _expr_in_args400 = new BitSet(new ulong[]{0x202UL});
+		public static readonly BitSet _dot_in_call427 = new BitSet(new ulong[]{0x8000002UL});
+		public static readonly BitSet _LPAREN_in_call440 = new BitSet(new ulong[]{0x58808738000UL});
+		public static readonly BitSet _args_in_call442 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _RPAREN_in_call444 = new BitSet(new ulong[]{0x8000002UL});
+		public static readonly BitSet _42_in_not473 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _call_in_not477 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _not_in_mul487 = new BitSet(new ulong[]{0x6080000002UL});
+		public static readonly BitSet _set_in_mul490 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _not_in_mul503 = new BitSet(new ulong[]{0x6080000002UL});
+		public static readonly BitSet _mul_in_add515 = new BitSet(new ulong[]{0x210000002UL});
+		public static readonly BitSet _set_in_add518 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _mul_in_add527 = new BitSet(new ulong[]{0x210000002UL});
+		public static readonly BitSet _add_in_comp538 = new BitSet(new ulong[]{0x230C4002UL});
+		public static readonly BitSet _set_in_comp541 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _add_in_comp566 = new BitSet(new ulong[]{0x230C4002UL});
+		public static readonly BitSet _comp_in_bool577 = new BitSet(new ulong[]{0x100002412UL});
+		public static readonly BitSet _set_in_bool580 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _comp_in_bool597 = new BitSet(new ulong[]{0x100002412UL});
+		public static readonly BitSet _bool_in_expr608 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expr_in_exprs622 = new BitSet(new ulong[]{0x1000000000UL});
+		public static readonly BitSet _SEMI_in_exprs625 = new BitSet(new ulong[]{0x59008738002UL});
+		public static readonly BitSet _LCURLY_in_block651 = new BitSet(new ulong[]{0x59408738000UL});
+		public static readonly BitSet _exprs_in_block654 = new BitSet(new ulong[]{0x400000000UL});
+		public static readonly BitSet _RCURLY_in_block657 = new BitSet(new ulong[]{0x2UL});
 
 	}
 	#endregion Follow sets
