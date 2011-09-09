@@ -76,7 +76,7 @@ namespace Chunky
         {
             var type1 = lhs.GetType().Name;
             var type2 = rhs.GetType().Name;
-            return string.Format("Can't add operands of type \"{0}\" and \"{1}\"", type1, type2);
+            return string.Format("Can't {0} operands of type \"{1}\" and \"{2}\"", operation, type1, type2);
         }
     }
 }
