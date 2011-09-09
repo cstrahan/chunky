@@ -56,6 +56,7 @@ namespace Chunky
                 case ChunkyParser.TRUE: return true;
                 case ChunkyParser.FALSE: return false;
                 case ChunkyParser.INT: return Int(tree);
+                case ChunkyParser.ID: return Identifier(tree);
                 default:
                     Console.WriteLine("Tree type \"" + ChunkyParser.tokenNames[tree.Type] + "\" not yet stupported.");
                     break;
@@ -139,6 +140,15 @@ namespace Chunky
         private object Int(CommonTree tree)
         {
             return int.Parse(tree.Text);
+        }
+
+        private object Identifier(CommonTree tree)
+        {
+            object obj;
+            if (_currentSpace.TryGetValue(tree.Text, out obj))
+                return obj;
+
+            throw new InvalidOperationException("Undefined variable: " + tree.Text);
         }
     }
 }

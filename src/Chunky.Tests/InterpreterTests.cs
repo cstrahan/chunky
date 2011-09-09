@@ -32,6 +32,11 @@ namespace Chunky.Tests
             return interpreter.GetGlobal(name);
         }
 
+        private void SetGlobal(string name, object obj)
+        {
+            interpreter.SetGlobal(name, obj);
+        }
+
         [Test]
         public void Integer()
         {
@@ -91,6 +96,13 @@ namespace Chunky.Tests
         public void If_then_else_empty()
         {
             Interpret("if (true) { } else { };").ShouldEqual(null);
+        }
+
+        [Test]
+        public void Variable_access()
+        {
+            SetGlobal("a", 42);
+            Interpret("a;").ShouldEqual(42);
         }
     }
 }
