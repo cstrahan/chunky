@@ -62,25 +62,25 @@ namespace Chunky.Tests
         public static object ShouldEqual(this object actual, object expected)
         {
             Assert.AreEqual(expected, actual);
-            return expected;
+            return actual;
         }
 
         public static object ShouldEqual(this float actual, float expected, float epsilon)
         {
             Assert.That(actual, new FloatingPointEquals(expected, epsilon));
-            return expected;
+            return actual;
         }
 
         public static object ShouldEqual(this double actual, double expected, double epsilon)
         {
             Assert.That(actual, new FloatingPointEquals(expected, epsilon));
-            return expected;
+            return actual;
         }
 
         public static object ShouldNotEqual(this object actual, object expected)
         {
             Assert.AreNotEqual(expected, actual);
-            return expected;
+            return actual;
         }
 
         public static void ShouldBeNull(this object anObject)
@@ -110,9 +110,19 @@ namespace Chunky.Tests
             Assert.IsInstanceOfType(expected, actual);
         }
 
+        public static void ShouldBeOfType<T>(this object actual)
+        {
+            Assert.IsInstanceOfType(typeof(T), actual);
+        }
+
         public static void ShouldNotBeOfType(this object actual, Type expected)
         {
             Assert.IsNotInstanceOfType(expected, actual);
+        }
+
+        public static void ShouldNotBeOfType<T>(this object actual)
+        {
+            Assert.IsNotInstanceOfType(typeof(T), actual);
         }
 
         public static void ShouldContain(this IList actual, object expected)

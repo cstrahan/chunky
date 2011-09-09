@@ -35,7 +35,8 @@ namespace Chunky.Tests
         [Test]
         public void Integer()
         {
-            Interpret("1234;").ShouldEqual(1234);
+            Interpret("1234;").ShouldEqual(1234)
+                              .ShouldBeOfType<int>();
         }
 
         [Test]

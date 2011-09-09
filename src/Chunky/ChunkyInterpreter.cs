@@ -51,6 +51,7 @@ namespace Chunky
                 case ChunkyParser.PLUS: return Add(tree);
                 case ChunkyParser.MINUS: return Sub(tree);
                 case ChunkyParser.STAR: return Mult(tree);
+                case ChunkyParser.SLASH: return Div(tree);
                 case ChunkyParser.INT: return Int(tree);
                 default:
                     Console.WriteLine("Tree type \"" + ChunkyParser.tokenNames[tree.Type] + "\" not yet stupported.");
@@ -85,26 +86,34 @@ namespace Chunky
 
         private object Add(CommonTree tree)
         {
-            var lhs = (int)LhsOperand(tree);
-            var rhs = (int)RhsOperand(tree);
+            var lhs = LhsOperand(tree);
+            var rhs = RhsOperand(tree);
 
-            return lhs + rhs;
+            return Operator.Add(lhs, rhs);
         }
 
         private object Sub(CommonTree tree)
         {
-            var lhs = (int)LhsOperand(tree);
-            var rhs = (int)RhsOperand(tree);
+            var lhs = LhsOperand(tree);
+            var rhs = RhsOperand(tree);
 
-            return lhs - rhs;
+            return Operator.Substract(lhs, rhs);
         }
 
         private object Mult(CommonTree tree)
         {
-            var lhs = (int)LhsOperand(tree);
-            var rhs = (int)RhsOperand(tree);
+            var lhs = LhsOperand(tree);
+            var rhs = RhsOperand(tree);
 
-            return lhs * rhs;
+            return Operator.Multiply(lhs, rhs);
+        }
+
+        private object Div(CommonTree tree)
+        {
+            var lhs = LhsOperand(tree);
+            var rhs = RhsOperand(tree);
+
+            return Operator.Divide(lhs, rhs);
         }
 
         private object Int(CommonTree tree)
