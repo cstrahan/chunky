@@ -57,6 +57,7 @@ namespace Chunky
                 case ChunkyParser.FALSE: return false;
                 case ChunkyParser.INT: return Int(tree);
                 case ChunkyParser.ID: return Identifier(tree);
+                case ChunkyParser.ASSIGN: return Assign(tree);
                 default:
                     Console.WriteLine("Tree type \"" + ChunkyParser.tokenNames[tree.Type] + "\" not yet stupported.");
                     break;
@@ -149,6 +150,24 @@ namespace Chunky
                 return obj;
 
             throw new InvalidOperationException("Undefined variable: " + tree.Text);
+        }
+
+        private object Assign(CommonTree tree)
+        {
+            var valueToAssign = RhsOperand(tree);
+            var leftTree = (CommonTree)tree.Children[0];
+
+            if (leftTree.Type == ChunkyParser.ID)
+            {
+                _currentSpace[leftTree.Text] = valueToAssign;
+            }
+            else
+            {
+                var treeType = ChunkyParser.tokenNames[tree.Type];
+                throw new InvalidOperationException("Can't assign to tree of type \"" + treeType +"\"");
+            }
+
+            return valueToAssign;
         }
     }
 }

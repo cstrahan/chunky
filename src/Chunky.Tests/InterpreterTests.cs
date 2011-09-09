@@ -99,10 +99,17 @@ namespace Chunky.Tests
         }
 
         [Test]
-        public void Variable_access()
+        public void Variable_get()
         {
             SetGlobal("a", 42);
             Interpret("a;").ShouldEqual(42);
+        }
+
+        [Test]
+        public void Variable_set()
+        {
+            Interpret("a = 42;");
+            Global("a").ShouldEqual(42);
         }
     }
 }
