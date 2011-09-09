@@ -32,6 +32,11 @@ namespace Chunky.Tests
             return interpreter.GetGlobal(name);
         }
 
+        private T Global<T>(string name)
+        {
+            return (T)interpreter.GetGlobal(name);
+        }
+
         private void SetGlobal(string name, object obj)
         {
             interpreter.SetGlobal(name, obj);
@@ -110,6 +115,28 @@ namespace Chunky.Tests
         {
             Interpret("a = 42;");
             Global("a").ShouldEqual(42);
+        }
+
+        [Test]
+        public void Instance_field_set()
+        {
+            var dummy = new Dummy();
+            SetGlobal("dummy", dummy);
+            
+            Interpret("dummy.object_field = 42;");
+
+            Global<Dummy>("dummy").object_field.ShouldEqual(42);
+        }
+
+        [Test]
+        public void Instance_property_set()
+        {
+            var dummy = new Dummy();
+            SetGlobal("dummy", dummy);
+
+            Interpret("dummy.object_property = 42;");
+
+            Global<Dummy>("dummy").object_property.ShouldEqual(42);
         }
     }
 }

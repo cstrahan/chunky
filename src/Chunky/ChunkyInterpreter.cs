@@ -161,9 +161,15 @@ namespace Chunky
             {
                 _currentSpace[leftTree.Text] = valueToAssign;
             }
+            else if (leftTree.Type == ChunkyParser.DOT)
+            {
+                var memberName = leftTree.Children[1].Text;
+                var targetObject = LhsOperand(leftTree);
+                Operator.Assign(targetObject, memberName, valueToAssign);
+            }
             else
             {
-                var treeType = ChunkyParser.tokenNames[tree.Type];
+                var treeType = ChunkyParser.tokenNames[leftTree.Type];
                 throw new InvalidOperationException("Can't assign to tree of type \"" + treeType +"\"");
             }
 

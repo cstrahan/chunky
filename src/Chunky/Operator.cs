@@ -1,9 +1,36 @@
 ﻿using System;
+using System.Linq;
+using System.Reflection;
 
 namespace Chunky
 {
     internal static class Operator
     {
+        public static void Assign(object lhs, string name, object rhs)
+        {
+            if (lhs == null)
+                throw new InvalidOperationException("Null reference");
+
+            var bindingAttrs = BindingFlags.Public | BindingFlags.Instance;
+            var member = lhs.GetType().GetMember(name, bindingAttrs).FirstOrDefault();
+
+            if (member == null)
+                throw new InvalidOperationException("No such public instance member: " + name);
+
+            switch (member.MemberType)
+            {
+                case MemberTypes.Property:
+                    ((PropertyInfo)member).SetValue(lhs, rhs, null);
+                    break;
+                case MemberTypes.Field:
+                    ((FieldInfo)member).SetValue(lhs, rhs);
+                    break;
+                default:
+                    throw new InvalidOperationException("Can't assign to " + member.MemberType + "'s");
+                    break;
+            }
+        }
+
         public static bool ToBool(object obj)
         {
             if (obj == null) return false;
