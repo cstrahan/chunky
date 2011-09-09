@@ -22,9 +22,9 @@ namespace Chunky
             _globalsSpace[name] = obj;
         }
 
-        public void GetGlobal(string name, object obj)
+        public object GetGlobal(string name)
         {
-            _globalsSpace[name] = obj;
+            return _globalsSpace[name];
         }
 
         public object Interpret(string text)
@@ -39,7 +39,7 @@ namespace Chunky
             var tokenStream = new CommonTokenStream(lexer);
             var parser = new ChunkyParser(tokenStream);
             var ast = parser.program().Tree;
-            
+
             return Exec(ast);
         }
 
@@ -50,7 +50,8 @@ namespace Chunky
                 case ChunkyParser.BLOCK: return Block(tree);
                 case ChunkyParser.PLUS: return Add(tree);
                 case ChunkyParser.MINUS: return Sub(tree);
-                case ChunkyParser.INT: return Int(tree); 
+                case ChunkyParser.STAR: return Mult(tree);
+                case ChunkyParser.INT: return Int(tree);
                 default:
                     Console.WriteLine("Tree type \"" + ChunkyParser.tokenNames[tree.Type] + "\" not yet stupported.");
                     break;
@@ -74,7 +75,7 @@ namespace Chunky
         {
             var lhs = Convert.ToDouble(Exec((CommonTree)tree.Children[0]));
             var rhs = Convert.ToDouble(Exec((CommonTree)tree.Children[1]));
-            
+
             return lhs + rhs;
         }
 
@@ -84,6 +85,14 @@ namespace Chunky
             var rhs = Convert.ToDouble(Exec((CommonTree)tree.Children[1]));
 
             return lhs - rhs;
+        }
+
+        private object Mult(CommonTree tree)
+        {
+            var lhs = Convert.ToDouble(Exec((CommonTree)tree.Children[0]));
+            var rhs = Convert.ToDouble(Exec((CommonTree)tree.Children[1]));
+
+            return lhs * rhs;
         }
 
         private object Int(CommonTree tree)

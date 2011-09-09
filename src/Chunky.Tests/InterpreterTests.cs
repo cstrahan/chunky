@@ -27,6 +27,11 @@ namespace Chunky.Tests
             return interpreter.Interpret(text);
         }
 
+        private object Global(string name)
+        {
+            return interpreter.GetGlobal(name);
+        }
+
         [Test]
         public void Integer()
         {
@@ -43,6 +48,24 @@ namespace Chunky.Tests
         public void Three_minus_two()
         {
             Interpret("3 - 2;").ShouldEqual(1);
+        }
+
+        [Test]
+        public void Three_times_two()
+        {
+            Interpret("3 * 2;").ShouldEqual(6);
+        }
+
+        [Test]
+        public void Times_precedence()
+        {
+            Interpret("1 + 3 * 2;").ShouldEqual(7);
+        }
+
+        [Test]
+        public void Paren_precedence()
+        {
+            Interpret("(1 + 3) * 2;").ShouldEqual(8);
         }
     }
 }
