@@ -66,7 +66,7 @@ call:	(t=dot->$t)
 not	:	'!'^? call
 	;
 
-mul :	not (('*' | '/')^ not)*
+mul :	not (('*' | '/' | '%')^ not)*
 	;
 
 add :	mul (('+' | '-')^ mul)*
@@ -93,22 +93,71 @@ block
 
 //   T O K E N S
 
-STRING
-	:	'"' (~'"'|'\\"')* '"'
-	;
-
 IF	:	'if' ;
 
 FUNC:	'func' ;
 
-ID	:	(LETTER | '_') (LETTER | DIGIT | '_')*
-		;
+LPAREN	: '(';
 
-INT	:	DIGIT+;
+RPAREN	: ')';
 
-FLOAT
-	:	(DIGIT)* (('.' DIGIT+)=>('.' DIGIT+) | { $type = INT; })
-	;
+COMMA	: ',';
+
+SEMI 	: ';';
+
+PLUS 	: '+';
+
+MINUS    : '-' ;
+
+STAR    : '*' ;
+
+SLASH    : '/' ;
+
+PIPE	: '|' ;
+
+DPIPE	: '||' ;
+
+AMPER    : '&' ;
+
+DAMPER :	'&&' ;
+
+LESS    : '<' ;
+
+GREATER    : '>' ;
+
+ASSIGN    : '=' ;
+
+PERCENT    : '%' ;
+
+LCURLY    : '{' ;
+
+RCURLY    : '}' ;
+
+EQUAL    : '==' ;
+
+NOTEQUAL    : '!=' ;
+
+LESSEQUAL    : '<=' ;
+
+GREATEREQUAL    : '>=' ;
+
+DOT	:	'.' ;
+
+
+fragment
+LETTER	: ('a'..'z'|'A'..'Z') ;
+
+fragment
+DIGIT	: '0'..'9' ;
+
+STRING :	'"' (~'"'|'\\"')* '"' ;
+
+ID	:	(LETTER | '_') (LETTER | DIGIT | '_')* ;
+
+INT	:	DIGIT+ ;
+
+FLOAT :	(DIGIT)* (('.' DIGIT+)=>('.' DIGIT+) | { $type = INT; }) ;
+
 
 WS	:	( ' '
 		| '\t'
@@ -116,11 +165,3 @@ WS	:	( ' '
 		| '\n'
 		) {$channel=99;}
 		;
-
-DOT	:	'.';
-
-fragment
-LETTER	: ('a'..'z'|'A'..'Z') ;
-
-fragment
-DIGIT	: '0'..'9' ;

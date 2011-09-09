@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.3.1.7705 Chunky.g 2011-09-08 18:00:21
+// $ANTLR 3.3.1.7705 Chunky.g 2011-09-08 18:57:24
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -30,46 +30,47 @@ namespace  Chunky
 public partial class ChunkyParser : Antlr.Runtime.Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ARGS", "BLOCK", "CALL", "DIGIT", "DOT", "FLOAT", "FUNC", "ID", "IF", "INT", "LETTER", "PARAMS", "STRING", "WS", "'!'", "'!='", "'&&'", "'&'", "'('", "')'", "'*'", "'+'", "','", "'-'", "'/'", "';'", "'<'", "'<='", "'='", "'=='", "'>'", "'>='", "'else'", "'{'", "'|'", "'||'", "'}'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "AMPER", "ARGS", "ASSIGN", "BLOCK", "CALL", "COMMA", "DAMPER", "DIGIT", "DOT", "DPIPE", "EQUAL", "FLOAT", "FUNC", "GREATER", "GREATEREQUAL", "ID", "IF", "INT", "LCURLY", "LESS", "LESSEQUAL", "LETTER", "LPAREN", "MINUS", "NOTEQUAL", "PARAMS", "PERCENT", "PIPE", "PLUS", "RCURLY", "RPAREN", "SEMI", "SLASH", "STAR", "STRING", "WS", "'!'", "'else'"
 	};
 	public const int EOF=-1;
-	public const int ARGS=4;
-	public const int BLOCK=5;
-	public const int CALL=6;
-	public const int DIGIT=7;
-	public const int DOT=8;
-	public const int FLOAT=9;
-	public const int FUNC=10;
-	public const int ID=11;
-	public const int IF=12;
-	public const int INT=13;
-	public const int LETTER=14;
-	public const int PARAMS=15;
-	public const int STRING=16;
-	public const int WS=17;
-	public const int T__18=18;
-	public const int T__19=19;
-	public const int T__20=20;
-	public const int T__21=21;
-	public const int T__22=22;
-	public const int T__23=23;
-	public const int T__24=24;
-	public const int T__25=25;
-	public const int T__26=26;
-	public const int T__27=27;
-	public const int T__28=28;
-	public const int T__29=29;
-	public const int T__30=30;
-	public const int T__31=31;
-	public const int T__32=32;
-	public const int T__33=33;
-	public const int T__34=34;
-	public const int T__35=35;
-	public const int T__36=36;
-	public const int T__37=37;
-	public const int T__38=38;
-	public const int T__39=39;
+	public const int AMPER=4;
+	public const int ARGS=5;
+	public const int ASSIGN=6;
+	public const int BLOCK=7;
+	public const int CALL=8;
+	public const int COMMA=9;
+	public const int DAMPER=10;
+	public const int DIGIT=11;
+	public const int DOT=12;
+	public const int DPIPE=13;
+	public const int EQUAL=14;
+	public const int FLOAT=15;
+	public const int FUNC=16;
+	public const int GREATER=17;
+	public const int GREATEREQUAL=18;
+	public const int ID=19;
+	public const int IF=20;
+	public const int INT=21;
+	public const int LCURLY=22;
+	public const int LESS=23;
+	public const int LESSEQUAL=24;
+	public const int LETTER=25;
+	public const int LPAREN=26;
+	public const int MINUS=27;
+	public const int NOTEQUAL=28;
+	public const int PARAMS=29;
+	public const int PERCENT=30;
+	public const int PIPE=31;
+	public const int PLUS=32;
+	public const int RCURLY=33;
+	public const int RPAREN=34;
+	public const int SEMI=35;
+	public const int SLASH=36;
+	public const int STAR=37;
+	public const int STRING=38;
+	public const int WS=39;
 	public const int T__40=40;
+	public const int T__41=41;
 
 	// delegates
 	// delegators
@@ -222,7 +223,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		CommonTree char_literal2_tree = default(CommonTree);
 		CommonTree p_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		RewriteRuleITokenStream stream_26=new RewriteRuleITokenStream(adaptor,"token 26");
+		RewriteRuleITokenStream stream_COMMA=new RewriteRuleITokenStream(adaptor,"token COMMA");
 
 		try { DebugEnterRule(GrammarFileName, "params");
 		DebugLocation(23, 1);
@@ -266,7 +267,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					try { DebugEnterDecision(1, false);
 					int LA1_0 = input.LA(1);
 
-					if ((LA1_0==26))
+					if ((LA1_0==COMMA))
 					{
 						alt1 = 1;
 					}
@@ -280,8 +281,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 						// Chunky.g:24:12: ',' p+= ID
 						{
 						DebugLocation(24, 12);
-						char_literal2=(IToken)Match(input,26,Follow._26_in_params99);  
-						stream_26.Add(char_literal2);
+						char_literal2=(IToken)Match(input,COMMA,Follow._COMMA_in_params99);  
+						stream_COMMA.Add(char_literal2);
 
 						DebugLocation(24, 17);
 						p=(IToken)Match(input,ID,Follow._ID_in_params103);  
@@ -432,7 +433,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			root_0 = (CommonTree)adaptor.BecomeRoot(FUNC3_tree, root_0);
 
 			DebugLocation(29, 13);
-			char_literal4=(IToken)Match(input,22,Follow._22_in_func_expr133); 
+			char_literal4=(IToken)Match(input,LPAREN,Follow._LPAREN_in_func_expr133); 
 			DebugLocation(29, 15);
 			PushFollow(Follow._params_in_func_expr136);
 			params5=@params();
@@ -440,7 +441,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			adaptor.AddChild(root_0, params5.Tree);
 			DebugLocation(29, 25);
-			char_literal6=(IToken)Match(input,23,Follow._23_in_func_expr138); 
+			char_literal6=(IToken)Match(input,RPAREN,Follow._RPAREN_in_func_expr138); 
 			DebugLocation(29, 27);
 			PushFollow(Follow._block_in_func_expr141);
 			block7=block();
@@ -515,9 +516,9 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		CommonTree char_literal10_tree = default(CommonTree);
 		CommonTree string_literal11_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_IF=new RewriteRuleITokenStream(adaptor,"token IF");
-		RewriteRuleITokenStream stream_22=new RewriteRuleITokenStream(adaptor,"token 22");
-		RewriteRuleITokenStream stream_23=new RewriteRuleITokenStream(adaptor,"token 23");
-		RewriteRuleITokenStream stream_36=new RewriteRuleITokenStream(adaptor,"token 36");
+		RewriteRuleITokenStream stream_LPAREN=new RewriteRuleITokenStream(adaptor,"token LPAREN");
+		RewriteRuleITokenStream stream_RPAREN=new RewriteRuleITokenStream(adaptor,"token RPAREN");
+		RewriteRuleITokenStream stream_41=new RewriteRuleITokenStream(adaptor,"token 41");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
 		RewriteRuleSubtreeStream stream_if_expr=new RewriteRuleSubtreeStream(adaptor,"rule if_expr");
@@ -534,8 +535,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			stream_IF.Add(IF8);
 
 			DebugLocation(33, 7);
-			char_literal9=(IToken)Match(input,22,Follow._22_in_if_expr154);  
-			stream_22.Add(char_literal9);
+			char_literal9=(IToken)Match(input,LPAREN,Follow._LPAREN_in_if_expr154);  
+			stream_LPAREN.Add(char_literal9);
 
 			DebugLocation(33, 15);
 			PushFollow(Follow._expr_in_if_expr158);
@@ -544,8 +545,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			stream_expr.Add(cond.Tree);
 			DebugLocation(33, 21);
-			char_literal10=(IToken)Match(input,23,Follow._23_in_if_expr160);  
-			stream_23.Add(char_literal10);
+			char_literal10=(IToken)Match(input,RPAREN,Follow._RPAREN_in_if_expr160);  
+			stream_RPAREN.Add(char_literal10);
 
 			DebugLocation(33, 32);
 			PushFollow(Follow._block_in_if_expr164);
@@ -560,11 +561,11 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			try { DebugEnterDecision(4, false);
 			int LA4_0 = input.LA(1);
 
-			if ((LA4_0==36))
+			if ((LA4_0==41))
 			{
 				alt4 = 1;
 			}
-			else if ((LA4_0==DOT||(LA4_0>=19 && LA4_0<=35)||(LA4_0>=38 && LA4_0<=39)))
+			else if ((LA4_0==AMPER||LA4_0==ASSIGN||(LA4_0>=COMMA && LA4_0<=DAMPER)||(LA4_0>=DOT && LA4_0<=EQUAL)||(LA4_0>=GREATER && LA4_0<=GREATEREQUAL)||(LA4_0>=LESS && LA4_0<=LESSEQUAL)||(LA4_0>=LPAREN && LA4_0<=NOTEQUAL)||(LA4_0>=PERCENT && LA4_0<=PLUS)||(LA4_0>=RPAREN && LA4_0<=STAR)))
 			{
 				alt4 = 2;
 			}
@@ -582,8 +583,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				// Chunky.g:34:5: 'else' (a= if_expr -> ^( IF $cond $if_body $a) |b= block -> ^( IF $cond $if_body $b) )
 				{
 				DebugLocation(34, 5);
-				string_literal11=(IToken)Match(input,36,Follow._36_in_if_expr170);  
-				stream_36.Add(string_literal11);
+				string_literal11=(IToken)Match(input,41,Follow._41_in_if_expr170);  
+				stream_41.Add(string_literal11);
 
 				DebugLocation(34, 12);
 				// Chunky.g:34:12: (a= if_expr -> ^( IF $cond $if_body $a) |b= block -> ^( IF $cond $if_body $b) )
@@ -596,7 +597,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				{
 					alt3 = 1;
 				}
-				else if ((LA3_0==37))
+				else if ((LA3_0==LCURLY))
 				{
 					alt3 = 2;
 				}
@@ -854,7 +855,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				alt5 = 1;
 				}
 				break;
-			case 22:
+			case LPAREN:
 				{
 				alt5 = 2;
 				}
@@ -916,7 +917,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(42, 7);
-				char_literal13=(IToken)Match(input,22,Follow._22_in_term264); 
+				char_literal13=(IToken)Match(input,LPAREN,Follow._LPAREN_in_term264); 
 				DebugLocation(42, 9);
 				PushFollow(Follow._expr_in_term267);
 				expr14=expr();
@@ -924,7 +925,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 				adaptor.AddChild(root_0, expr14.Tree);
 				DebugLocation(42, 17);
-				char_literal15=(IToken)Match(input,23,Follow._23_in_term269); 
+				char_literal15=(IToken)Match(input,RPAREN,Follow._RPAREN_in_term269); 
 
 				}
 				break;
@@ -1132,7 +1133,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			try { DebugEnterDecision(7, false);
 			int LA7_0 = input.LA(1);
 
-			if ((LA7_0==32))
+			if ((LA7_0==ASSIGN))
 			{
 				alt7 = 1;
 			}
@@ -1144,7 +1145,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				// Chunky.g:52:4: '=' expr
 				{
 				DebugLocation(52, 7);
-				char_literal24=(IToken)Match(input,32,Follow._32_in_dot320); 
+				char_literal24=(IToken)Match(input,ASSIGN,Follow._ASSIGN_in_dot320); 
 				char_literal24_tree = (CommonTree)adaptor.Create(char_literal24);
 				root_0 = (CommonTree)adaptor.BecomeRoot(char_literal24_tree, root_0);
 
@@ -1219,7 +1220,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		ChunkyParser.expr_return b = default(ChunkyParser.expr_return);
 
 		CommonTree char_literal26_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_26=new RewriteRuleITokenStream(adaptor,"token 26");
+		RewriteRuleITokenStream stream_COMMA=new RewriteRuleITokenStream(adaptor,"token COMMA");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		try { DebugEnterRule(GrammarFileName, "args");
 		DebugLocation(55, 1);
@@ -1236,7 +1237,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			try { DebugEnterDecision(9, false);
 			int LA9_0 = input.LA(1);
 
-			if (((LA9_0>=FLOAT && LA9_0<=INT)||LA9_0==STRING||LA9_0==18||LA9_0==22))
+			if (((LA9_0>=FLOAT && LA9_0<=FUNC)||(LA9_0>=ID && LA9_0<=INT)||LA9_0==LPAREN||LA9_0==STRING||LA9_0==40))
 			{
 				alt9 = 1;
 			}
@@ -1262,7 +1263,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					try { DebugEnterDecision(8, false);
 					int LA8_0 = input.LA(1);
 
-					if ((LA8_0==26))
+					if ((LA8_0==COMMA))
 					{
 						alt8 = 1;
 					}
@@ -1276,8 +1277,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 						// Chunky.g:55:16: ',' b= expr
 						{
 						DebugLocation(55, 16);
-						char_literal26=(IToken)Match(input,26,Follow._26_in_args340);  
-						stream_26.Add(char_literal26);
+						char_literal26=(IToken)Match(input,COMMA,Follow._COMMA_in_args340);  
+						stream_COMMA.Add(char_literal26);
 
 						DebugLocation(55, 21);
 						PushFollow(Follow._expr_in_args344);
@@ -1401,8 +1402,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 		CommonTree char_literal27_tree = default(CommonTree);
 		CommonTree char_literal29_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_22=new RewriteRuleITokenStream(adaptor,"token 22");
-		RewriteRuleITokenStream stream_23=new RewriteRuleITokenStream(adaptor,"token 23");
+		RewriteRuleITokenStream stream_LPAREN=new RewriteRuleITokenStream(adaptor,"token LPAREN");
+		RewriteRuleITokenStream stream_RPAREN=new RewriteRuleITokenStream(adaptor,"token RPAREN");
 		RewriteRuleSubtreeStream stream_dot=new RewriteRuleSubtreeStream(adaptor,"rule dot");
 		RewriteRuleSubtreeStream stream_args=new RewriteRuleSubtreeStream(adaptor,"rule args");
 		try { DebugEnterRule(GrammarFileName, "call");
@@ -1460,7 +1461,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(10, false);
 				int LA10_0 = input.LA(1);
 
-				if ((LA10_0==22))
+				if ((LA10_0==LPAREN))
 				{
 					alt10 = 1;
 				}
@@ -1474,8 +1475,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					// Chunky.g:61:4: '(' args ')'
 					{
 					DebugLocation(61, 4);
-					char_literal27=(IToken)Match(input,22,Follow._22_in_call384);  
-					stream_22.Add(char_literal27);
+					char_literal27=(IToken)Match(input,LPAREN,Follow._LPAREN_in_call384);  
+					stream_LPAREN.Add(char_literal27);
 
 					DebugLocation(61, 8);
 					PushFollow(Follow._args_in_call386);
@@ -1484,8 +1485,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 					stream_args.Add(args28.Tree);
 					DebugLocation(61, 13);
-					char_literal29=(IToken)Match(input,23,Follow._23_in_call388);  
-					stream_23.Add(char_literal29);
+					char_literal29=(IToken)Match(input,RPAREN,Follow._RPAREN_in_call388);  
+					stream_RPAREN.Add(char_literal29);
 
 
 
@@ -1612,7 +1613,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			try { DebugEnterDecision(11, false);
 			int LA11_0 = input.LA(1);
 
-			if ((LA11_0==18))
+			if ((LA11_0==40))
 			{
 				alt11 = 1;
 			}
@@ -1624,7 +1625,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				// Chunky.g:66:10: '!'
 				{
 				DebugLocation(66, 10);
-				char_literal30=(IToken)Match(input,18,Follow._18_in_not417); 
+				char_literal30=(IToken)Match(input,40,Follow._40_in_not417); 
 				char_literal30_tree = (CommonTree)adaptor.Create(char_literal30);
 				root_0 = (CommonTree)adaptor.BecomeRoot(char_literal30_tree, root_0);
 
@@ -1683,7 +1684,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_mul();
 
 	// $ANTLR start "mul"
-	// Chunky.g:69:1: mul : not ( ( '*' | '/' ) not )* ;
+	// Chunky.g:69:1: mul : not ( ( '*' | '/' | '%' ) not )* ;
 	[GrammarRule("mul")]
 	private ChunkyParser.mul_return mul()
 	{
@@ -1705,9 +1706,9 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		DebugLocation(69, 1);
 		try
 		{
-			// Chunky.g:69:5: ( not ( ( '*' | '/' ) not )* )
+			// Chunky.g:69:5: ( not ( ( '*' | '/' | '%' ) not )* )
 			DebugEnterAlt(1);
-			// Chunky.g:69:7: not ( ( '*' | '/' ) not )*
+			// Chunky.g:69:7: not ( ( '*' | '/' | '%' ) not )*
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
@@ -1718,7 +1719,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			adaptor.AddChild(root_0, not32.Tree);
 			DebugLocation(69, 11);
-			// Chunky.g:69:11: ( ( '*' | '/' ) not )*
+			// Chunky.g:69:11: ( ( '*' | '/' | '%' ) not )*
 			try { DebugEnterSubRule(12);
 			while (true)
 			{
@@ -1726,7 +1727,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(12, false);
 				int LA12_0 = input.LA(1);
 
-				if ((LA12_0==24||LA12_0==28))
+				if ((LA12_0==PERCENT||(LA12_0>=SLASH && LA12_0<=STAR)))
 				{
 					alt12 = 1;
 				}
@@ -1737,12 +1738,12 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Chunky.g:69:12: ( '*' | '/' ) not
+					// Chunky.g:69:12: ( '*' | '/' | '%' ) not
 					{
-					DebugLocation(69, 23);
+					DebugLocation(69, 29);
 					set33=(IToken)input.LT(1);
 					set33=(IToken)input.LT(1);
-					if (input.LA(1)==24||input.LA(1)==28)
+					if (input.LA(1)==PERCENT||(input.LA(1)>=SLASH && input.LA(1)<=STAR))
 					{
 						input.Consume();
 						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set33), root_0);
@@ -1755,8 +1756,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 						throw mse;
 					}
 
-					DebugLocation(69, 25);
-					PushFollow(Follow._not_in_mul443);
+					DebugLocation(69, 31);
+					PushFollow(Follow._not_in_mul447);
 					not34=not();
 					PopFollow();
 
@@ -1846,7 +1847,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(72, 7);
-			PushFollow(Follow._mul_in_add455);
+			PushFollow(Follow._mul_in_add459);
 			mul35=mul();
 			PopFollow();
 
@@ -1860,7 +1861,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(13, false);
 				int LA13_0 = input.LA(1);
 
-				if ((LA13_0==25||LA13_0==27))
+				if ((LA13_0==MINUS||LA13_0==PLUS))
 				{
 					alt13 = 1;
 				}
@@ -1876,7 +1877,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					DebugLocation(72, 23);
 					set36=(IToken)input.LT(1);
 					set36=(IToken)input.LT(1);
-					if (input.LA(1)==25||input.LA(1)==27)
+					if (input.LA(1)==MINUS||input.LA(1)==PLUS)
 					{
 						input.Consume();
 						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set36), root_0);
@@ -1890,7 +1891,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					}
 
 					DebugLocation(72, 25);
-					PushFollow(Follow._mul_in_add467);
+					PushFollow(Follow._mul_in_add471);
 					mul37=mul();
 					PopFollow();
 
@@ -1980,7 +1981,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(75, 7);
-			PushFollow(Follow._add_in_comp478);
+			PushFollow(Follow._add_in_comp482);
 			add38=add();
 			PopFollow();
 
@@ -1994,7 +1995,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(14, false);
 				int LA14_0 = input.LA(1);
 
-				if ((LA14_0==19||(LA14_0>=30 && LA14_0<=31)||(LA14_0>=33 && LA14_0<=35)))
+				if ((LA14_0==EQUAL||(LA14_0>=GREATER && LA14_0<=GREATEREQUAL)||(LA14_0>=LESS && LA14_0<=LESSEQUAL)||LA14_0==NOTEQUAL))
 				{
 					alt14 = 1;
 				}
@@ -2010,7 +2011,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					DebugLocation(75, 51);
 					set39=(IToken)input.LT(1);
 					set39=(IToken)input.LT(1);
-					if (input.LA(1)==19||(input.LA(1)>=30 && input.LA(1)<=31)||(input.LA(1)>=33 && input.LA(1)<=35))
+					if (input.LA(1)==EQUAL||(input.LA(1)>=GREATER && input.LA(1)<=GREATEREQUAL)||(input.LA(1)>=LESS && input.LA(1)<=LESSEQUAL)||input.LA(1)==NOTEQUAL)
 					{
 						input.Consume();
 						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set39), root_0);
@@ -2024,7 +2025,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					}
 
 					DebugLocation(75, 53);
-					PushFollow(Follow._add_in_comp506);
+					PushFollow(Follow._add_in_comp510);
 					add40=add();
 					PopFollow();
 
@@ -2114,7 +2115,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(78, 7);
-			PushFollow(Follow._comp_in_bool517);
+			PushFollow(Follow._comp_in_bool521);
 			comp41=comp();
 			PopFollow();
 
@@ -2128,7 +2129,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(15, false);
 				int LA15_0 = input.LA(1);
 
-				if (((LA15_0>=20 && LA15_0<=21)||(LA15_0>=38 && LA15_0<=39)))
+				if ((LA15_0==AMPER||LA15_0==DAMPER||LA15_0==DPIPE||LA15_0==PIPE))
 				{
 					alt15 = 1;
 				}
@@ -2144,7 +2145,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					DebugLocation(78, 38);
 					set42=(IToken)input.LT(1);
 					set42=(IToken)input.LT(1);
-					if ((input.LA(1)>=20 && input.LA(1)<=21)||(input.LA(1)>=38 && input.LA(1)<=39))
+					if (input.LA(1)==AMPER||input.LA(1)==DAMPER||input.LA(1)==DPIPE||input.LA(1)==PIPE)
 					{
 						input.Consume();
 						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set42), root_0);
@@ -2158,7 +2159,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					}
 
 					DebugLocation(78, 40);
-					PushFollow(Follow._comp_in_bool537);
+					PushFollow(Follow._comp_in_bool541);
 					comp43=comp();
 					PopFollow();
 
@@ -2245,7 +2246,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(81, 7);
-			PushFollow(Follow._bool_in_expr548);
+			PushFollow(Follow._bool_in_expr552);
 			bool44=@bool();
 			PopFollow();
 
@@ -2308,7 +2309,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		List<CommonTree> list_e = null;
 		ChunkyParser.expr_return e = default(ChunkyParser.expr_return);
 		CommonTree char_literal45_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_29=new RewriteRuleITokenStream(adaptor,"token 29");
+		RewriteRuleITokenStream stream_SEMI=new RewriteRuleITokenStream(adaptor,"token SEMI");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		try { DebugEnterRule(GrammarFileName, "exprs");
 		DebugLocation(84, 1);
@@ -2328,7 +2329,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(17, false);
 				int LA17_0 = input.LA(1);
 
-				if (((LA17_0>=FLOAT && LA17_0<=INT)||LA17_0==STRING||LA17_0==18||LA17_0==22||LA17_0==29))
+				if (((LA17_0>=FLOAT && LA17_0<=FUNC)||(LA17_0>=ID && LA17_0<=INT)||LA17_0==LPAREN||LA17_0==SEMI||LA17_0==STRING||LA17_0==40))
 				{
 					alt17 = 1;
 				}
@@ -2348,7 +2349,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					try { DebugEnterDecision(16, false);
 					int LA16_0 = input.LA(1);
 
-					if (((LA16_0>=FLOAT && LA16_0<=INT)||LA16_0==STRING||LA16_0==18||LA16_0==22))
+					if (((LA16_0>=FLOAT && LA16_0<=FUNC)||(LA16_0>=ID && LA16_0<=INT)||LA16_0==LPAREN||LA16_0==STRING||LA16_0==40))
 					{
 						alt16 = 1;
 					}
@@ -2360,7 +2361,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 						// Chunky.g:85:6: e+= expr
 						{
 						DebugLocation(85, 6);
-						PushFollow(Follow._expr_in_exprs562);
+						PushFollow(Follow._expr_in_exprs566);
 						e=expr();
 						PopFollow();
 
@@ -2376,8 +2377,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					} finally { DebugExitSubRule(16); }
 
 					DebugLocation(85, 14);
-					char_literal45=(IToken)Match(input,29,Follow._29_in_exprs565);  
-					stream_29.Add(char_literal45);
+					char_literal45=(IToken)Match(input,SEMI,Follow._SEMI_in_exprs569);  
+					stream_SEMI.Add(char_literal45);
 
 
 					}
@@ -2510,7 +2511,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(90, 7);
-			char_literal46=(IToken)Match(input,37,Follow._37_in_block591); 
+			char_literal46=(IToken)Match(input,LCURLY,Follow._LCURLY_in_block595); 
 			DebugLocation(90, 9);
 			// Chunky.g:90:9: ( exprs )?
 			int alt18=2;
@@ -2518,7 +2519,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			try { DebugEnterDecision(18, false);
 			int LA18_0 = input.LA(1);
 
-			if (((LA18_0>=FLOAT && LA18_0<=INT)||LA18_0==STRING||LA18_0==18||LA18_0==22||LA18_0==29))
+			if (((LA18_0>=FLOAT && LA18_0<=FUNC)||(LA18_0>=ID && LA18_0<=INT)||LA18_0==LPAREN||LA18_0==SEMI||LA18_0==STRING||LA18_0==40))
 			{
 				alt18 = 1;
 			}
@@ -2530,7 +2531,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				// Chunky.g:90:9: exprs
 				{
 				DebugLocation(90, 9);
-				PushFollow(Follow._exprs_in_block594);
+				PushFollow(Follow._exprs_in_block598);
 				exprs47=exprs();
 				PopFollow();
 
@@ -2543,7 +2544,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(18); }
 
 			DebugLocation(90, 19);
-			char_literal48=(IToken)Match(input,40,Follow._40_in_block597); 
+			char_literal48=(IToken)Match(input,RCURLY,Follow._RCURLY_in_block601); 
 
 			}
 
@@ -2579,63 +2580,63 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	private static class Follow
 	{
 		public static readonly BitSet _exprs_in_program82 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_params96 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _26_in_params99 = new BitSet(new ulong[]{0x800UL});
-		public static readonly BitSet _ID_in_params103 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _FUNC_in_func_expr130 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _22_in_func_expr133 = new BitSet(new ulong[]{0x800800UL});
-		public static readonly BitSet _params_in_func_expr136 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_func_expr138 = new BitSet(new ulong[]{0x2000000000UL});
+		public static readonly BitSet _ID_in_params96 = new BitSet(new ulong[]{0x202UL});
+		public static readonly BitSet _COMMA_in_params99 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _ID_in_params103 = new BitSet(new ulong[]{0x202UL});
+		public static readonly BitSet _FUNC_in_func_expr130 = new BitSet(new ulong[]{0x4000000UL});
+		public static readonly BitSet _LPAREN_in_func_expr133 = new BitSet(new ulong[]{0x400080000UL});
+		public static readonly BitSet _params_in_func_expr136 = new BitSet(new ulong[]{0x400000000UL});
+		public static readonly BitSet _RPAREN_in_func_expr138 = new BitSet(new ulong[]{0x400000UL});
 		public static readonly BitSet _block_in_func_expr141 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IF_in_if_expr152 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _22_in_if_expr154 = new BitSet(new ulong[]{0x453E00UL});
-		public static readonly BitSet _expr_in_if_expr158 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_if_expr160 = new BitSet(new ulong[]{0x2000000000UL});
-		public static readonly BitSet _block_in_if_expr164 = new BitSet(new ulong[]{0x1000000002UL});
-		public static readonly BitSet _36_in_if_expr170 = new BitSet(new ulong[]{0x2000001000UL});
+		public static readonly BitSet _IF_in_if_expr152 = new BitSet(new ulong[]{0x4000000UL});
+		public static readonly BitSet _LPAREN_in_if_expr154 = new BitSet(new ulong[]{0x14004398000UL});
+		public static readonly BitSet _expr_in_if_expr158 = new BitSet(new ulong[]{0x400000000UL});
+		public static readonly BitSet _RPAREN_in_if_expr160 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _block_in_if_expr164 = new BitSet(new ulong[]{0x20000000002UL});
+		public static readonly BitSet _41_in_if_expr170 = new BitSet(new ulong[]{0x500000UL});
 		public static readonly BitSet _if_expr_in_if_expr176 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _block_in_if_expr202 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _ID_in_term259 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _22_in_term264 = new BitSet(new ulong[]{0x453E00UL});
-		public static readonly BitSet _expr_in_term267 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_term269 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_term264 = new BitSet(new ulong[]{0x14004398000UL});
+		public static readonly BitSet _expr_in_term267 = new BitSet(new ulong[]{0x400000000UL});
+		public static readonly BitSet _RPAREN_in_term269 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _INT_in_term275 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _FLOAT_in_term280 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _STRING_in_term285 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _if_expr_in_term290 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _func_expr_in_term295 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _term_in_dot306 = new BitSet(new ulong[]{0x100000102UL});
-		public static readonly BitSet _DOT_in_dot309 = new BitSet(new ulong[]{0x800UL});
-		public static readonly BitSet _ID_in_dot312 = new BitSet(new ulong[]{0x100000102UL});
-		public static readonly BitSet _32_in_dot320 = new BitSet(new ulong[]{0x453E00UL});
+		public static readonly BitSet _term_in_dot306 = new BitSet(new ulong[]{0x1042UL});
+		public static readonly BitSet _DOT_in_dot309 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _ID_in_dot312 = new BitSet(new ulong[]{0x1042UL});
+		public static readonly BitSet _ASSIGN_in_dot320 = new BitSet(new ulong[]{0x14004398000UL});
 		public static readonly BitSet _expr_in_dot323 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expr_in_args337 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _26_in_args340 = new BitSet(new ulong[]{0x453E00UL});
-		public static readonly BitSet _expr_in_args344 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _dot_in_call371 = new BitSet(new ulong[]{0x400002UL});
-		public static readonly BitSet _22_in_call384 = new BitSet(new ulong[]{0xC53E00UL});
-		public static readonly BitSet _args_in_call386 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_call388 = new BitSet(new ulong[]{0x400002UL});
-		public static readonly BitSet _18_in_not417 = new BitSet(new ulong[]{0x453E00UL});
+		public static readonly BitSet _expr_in_args337 = new BitSet(new ulong[]{0x202UL});
+		public static readonly BitSet _COMMA_in_args340 = new BitSet(new ulong[]{0x14004398000UL});
+		public static readonly BitSet _expr_in_args344 = new BitSet(new ulong[]{0x202UL});
+		public static readonly BitSet _dot_in_call371 = new BitSet(new ulong[]{0x4000002UL});
+		public static readonly BitSet _LPAREN_in_call384 = new BitSet(new ulong[]{0x14404398000UL});
+		public static readonly BitSet _args_in_call386 = new BitSet(new ulong[]{0x400000000UL});
+		public static readonly BitSet _RPAREN_in_call388 = new BitSet(new ulong[]{0x4000002UL});
+		public static readonly BitSet _40_in_not417 = new BitSet(new ulong[]{0x14004398000UL});
 		public static readonly BitSet _call_in_not421 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _not_in_mul431 = new BitSet(new ulong[]{0x11000002UL});
-		public static readonly BitSet _set_in_mul434 = new BitSet(new ulong[]{0x453E00UL});
-		public static readonly BitSet _not_in_mul443 = new BitSet(new ulong[]{0x11000002UL});
-		public static readonly BitSet _mul_in_add455 = new BitSet(new ulong[]{0xA000002UL});
-		public static readonly BitSet _set_in_add458 = new BitSet(new ulong[]{0x453E00UL});
-		public static readonly BitSet _mul_in_add467 = new BitSet(new ulong[]{0xA000002UL});
-		public static readonly BitSet _add_in_comp478 = new BitSet(new ulong[]{0xEC0080002UL});
-		public static readonly BitSet _set_in_comp481 = new BitSet(new ulong[]{0x453E00UL});
-		public static readonly BitSet _add_in_comp506 = new BitSet(new ulong[]{0xEC0080002UL});
-		public static readonly BitSet _comp_in_bool517 = new BitSet(new ulong[]{0xC000300002UL});
-		public static readonly BitSet _set_in_bool520 = new BitSet(new ulong[]{0x453E00UL});
-		public static readonly BitSet _comp_in_bool537 = new BitSet(new ulong[]{0xC000300002UL});
-		public static readonly BitSet _bool_in_expr548 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expr_in_exprs562 = new BitSet(new ulong[]{0x20000000UL});
-		public static readonly BitSet _29_in_exprs565 = new BitSet(new ulong[]{0x20453E02UL});
-		public static readonly BitSet _37_in_block591 = new BitSet(new ulong[]{0x10020453E00UL});
-		public static readonly BitSet _exprs_in_block594 = new BitSet(new ulong[]{0x10000000000UL});
-		public static readonly BitSet _40_in_block597 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _not_in_mul431 = new BitSet(new ulong[]{0x3040000002UL});
+		public static readonly BitSet _set_in_mul434 = new BitSet(new ulong[]{0x14004398000UL});
+		public static readonly BitSet _not_in_mul447 = new BitSet(new ulong[]{0x3040000002UL});
+		public static readonly BitSet _mul_in_add459 = new BitSet(new ulong[]{0x108000002UL});
+		public static readonly BitSet _set_in_add462 = new BitSet(new ulong[]{0x14004398000UL});
+		public static readonly BitSet _mul_in_add471 = new BitSet(new ulong[]{0x108000002UL});
+		public static readonly BitSet _add_in_comp482 = new BitSet(new ulong[]{0x11864002UL});
+		public static readonly BitSet _set_in_comp485 = new BitSet(new ulong[]{0x14004398000UL});
+		public static readonly BitSet _add_in_comp510 = new BitSet(new ulong[]{0x11864002UL});
+		public static readonly BitSet _comp_in_bool521 = new BitSet(new ulong[]{0x80002412UL});
+		public static readonly BitSet _set_in_bool524 = new BitSet(new ulong[]{0x14004398000UL});
+		public static readonly BitSet _comp_in_bool541 = new BitSet(new ulong[]{0x80002412UL});
+		public static readonly BitSet _bool_in_expr552 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expr_in_exprs566 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _SEMI_in_exprs569 = new BitSet(new ulong[]{0x14804398002UL});
+		public static readonly BitSet _LCURLY_in_block595 = new BitSet(new ulong[]{0x14A04398000UL});
+		public static readonly BitSet _exprs_in_block598 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _RCURLY_in_block601 = new BitSet(new ulong[]{0x2UL});
 
 	}
 	#endregion Follow sets

@@ -11,13 +11,8 @@ namespace Chunky
     {
         static void Main(string[] args)
         {
-            var reader = new StringReader("1 + 2;");
-            var charStream = new ANTLRReaderStream(reader);
-            var lexer = new ChunkyLexer(charStream);
-            var tokenStream = new CommonTokenStream(lexer);
-            var parser = new ChunkyParser(tokenStream);
-            var ast = parser.program().Tree;
-            Console.WriteLine(ast.Token.ToString());
+            var interpreter = new ChunkyInterpreter();
+            var result = interpreter.Interpret("1 + 2;");
             
             //---------------
             Console.WriteLine("DONE . . .");
