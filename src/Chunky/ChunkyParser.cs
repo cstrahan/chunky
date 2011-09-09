@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.3.1.7705 Chunky.g 2011-09-08 22:01:59
+// $ANTLR 3.3.1.7705 Chunky.g 2011-09-09 01:29:13
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -162,16 +162,17 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			PushFollow(Follow._exprs_in_program81);
 			exprs1=exprs();
 			PopFollow();
-
-			adaptor.AddChild(root_0, exprs1.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, exprs1.Tree);
 
 			}
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -254,8 +255,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				// Chunky.g:24:5: p+= ID ( ',' p+= ID )*
 				{
 				DebugLocation(24, 6);
-				p=(IToken)Match(input,ID,Follow._ID_in_params95);  
-				stream_ID.Add(p);
+				p=(IToken)Match(input,ID,Follow._ID_in_params95); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_ID.Add(p);
 
 				if (list_p==null) list_p=new List<IToken>();
 				list_p.Add(p);
@@ -283,12 +284,12 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 						// Chunky.g:24:12: ',' p+= ID
 						{
 						DebugLocation(24, 12);
-						char_literal2=(IToken)Match(input,COMMA,Follow._COMMA_in_params98);  
-						stream_COMMA.Add(char_literal2);
+						char_literal2=(IToken)Match(input,COMMA,Follow._COMMA_in_params98); if (state.failed) return retval; 
+						if (state.backtracking == 0) stream_COMMA.Add(char_literal2);
 
 						DebugLocation(24, 17);
-						p=(IToken)Match(input,ID,Follow._ID_in_params102);  
-						stream_ID.Add(p);
+						p=(IToken)Match(input,ID,Follow._ID_in_params102); if (state.failed) return retval; 
+						if (state.backtracking == 0) stream_ID.Add(p);
 
 						if (list_p==null) list_p=new List<IToken>();
 						list_p.Add(p);
@@ -324,6 +325,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			// token list labels: p
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleITokenStream stream_p=new RewriteRuleITokenStream(adaptor,"token p", list_p);
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
@@ -355,14 +357,16 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -430,34 +434,36 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(29, 8);
-			FUNC3=(IToken)Match(input,FUNC,Follow._FUNC_in_func_expr129); 
+			FUNC3=(IToken)Match(input,FUNC,Follow._FUNC_in_func_expr129); if (state.failed) return retval;
+			if (state.backtracking == 0) {
 			FUNC3_tree = (CommonTree)adaptor.Create(FUNC3);
 			root_0 = (CommonTree)adaptor.BecomeRoot(FUNC3_tree, root_0);
-
+			}
 			DebugLocation(29, 13);
-			char_literal4=(IToken)Match(input,LPAREN,Follow._LPAREN_in_func_expr132); 
+			char_literal4=(IToken)Match(input,LPAREN,Follow._LPAREN_in_func_expr132); if (state.failed) return retval;
 			DebugLocation(29, 15);
 			PushFollow(Follow._params_in_func_expr135);
 			params5=@params();
 			PopFollow();
-
-			adaptor.AddChild(root_0, params5.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, params5.Tree);
 			DebugLocation(29, 25);
-			char_literal6=(IToken)Match(input,RPAREN,Follow._RPAREN_in_func_expr137); 
+			char_literal6=(IToken)Match(input,RPAREN,Follow._RPAREN_in_func_expr137); if (state.failed) return retval;
 			DebugLocation(29, 27);
 			PushFollow(Follow._block_in_func_expr140);
 			block7=block();
 			PopFollow();
-
-			adaptor.AddChild(root_0, block7.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block7.Tree);
 
 			}
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -548,26 +554,26 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			// Chunky.g:33:4: IF '(' cond= expr ')' '{' ( (cons_exps+= expr )? ';' )* '}' ( 'else' (alt_if= if_expr -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) $alt_if) | '{' ( (alt_exps+= expr )? ';' )* '}' -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) ^( BLOCK ( $alt_exps)* ) ) ) | -> ^( IF $cond ( $cons_exps)* ) )
 			{
 			DebugLocation(33, 4);
-			IF8=(IToken)Match(input,IF,Follow._IF_in_if_expr151);  
-			stream_IF.Add(IF8);
+			IF8=(IToken)Match(input,IF,Follow._IF_in_if_expr151); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_IF.Add(IF8);
 
 			DebugLocation(33, 7);
-			char_literal9=(IToken)Match(input,LPAREN,Follow._LPAREN_in_if_expr153);  
-			stream_LPAREN.Add(char_literal9);
+			char_literal9=(IToken)Match(input,LPAREN,Follow._LPAREN_in_if_expr153); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_LPAREN.Add(char_literal9);
 
 			DebugLocation(33, 15);
 			PushFollow(Follow._expr_in_if_expr157);
 			cond=expr();
 			PopFollow();
-
-			stream_expr.Add(cond.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_expr.Add(cond.Tree);
 			DebugLocation(33, 21);
-			char_literal10=(IToken)Match(input,RPAREN,Follow._RPAREN_in_if_expr159);  
-			stream_RPAREN.Add(char_literal10);
+			char_literal10=(IToken)Match(input,RPAREN,Follow._RPAREN_in_if_expr159); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_RPAREN.Add(char_literal10);
 
 			DebugLocation(33, 25);
-			char_literal11=(IToken)Match(input,LCURLY,Follow._LCURLY_in_if_expr161);  
-			stream_LCURLY.Add(char_literal11);
+			char_literal11=(IToken)Match(input,LCURLY,Follow._LCURLY_in_if_expr161); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_LCURLY.Add(char_literal11);
 
 			DebugLocation(33, 29);
 			// Chunky.g:33:29: ( (cons_exps+= expr )? ';' )*
@@ -613,8 +619,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 						PushFollow(Follow._expr_in_if_expr166);
 						cons_exps=expr();
 						PopFollow();
-
-						stream_expr.Add(cons_exps.Tree);
+						if (state.failed) return retval;
+						if (state.backtracking == 0) stream_expr.Add(cons_exps.Tree);
 						if (list_cons_exps==null) list_cons_exps=new List<CommonTree>();
 						list_cons_exps.Add(cons_exps.Tree);
 
@@ -626,8 +632,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					} finally { DebugExitSubRule(3); }
 
 					DebugLocation(33, 47);
-					char_literal12=(IToken)Match(input,SEMI,Follow._SEMI_in_if_expr169);  
-					stream_SEMI.Add(char_literal12);
+					char_literal12=(IToken)Match(input,SEMI,Follow._SEMI_in_if_expr169); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_SEMI.Add(char_literal12);
 
 
 					}
@@ -644,8 +650,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(4); }
 
 			DebugLocation(33, 53);
-			char_literal13=(IToken)Match(input,RCURLY,Follow._RCURLY_in_if_expr173);  
-			stream_RCURLY.Add(char_literal13);
+			char_literal13=(IToken)Match(input,RCURLY,Follow._RCURLY_in_if_expr173); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_RCURLY.Add(char_literal13);
 
 			DebugLocation(34, 3);
 			// Chunky.g:34:3: ( 'else' (alt_if= if_expr -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) $alt_if) | '{' ( (alt_exps+= expr )? ';' )* '}' -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) ^( BLOCK ( $alt_exps)* ) ) ) | -> ^( IF $cond ( $cons_exps)* ) )
@@ -664,6 +670,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			}
 			else
 			{
+				if (state.backtracking>0) {state.failed=true; return retval;}
 				NoViableAltException nvae = new NoViableAltException("", 8, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
@@ -676,8 +683,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				// Chunky.g:34:5: 'else' (alt_if= if_expr -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) $alt_if) | '{' ( (alt_exps+= expr )? ';' )* '}' -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) ^( BLOCK ( $alt_exps)* ) ) )
 				{
 				DebugLocation(34, 5);
-				string_literal14=(IToken)Match(input,43,Follow._43_in_if_expr179);  
-				stream_43.Add(string_literal14);
+				string_literal14=(IToken)Match(input,43,Follow._43_in_if_expr179); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_43.Add(string_literal14);
 
 				DebugLocation(34, 12);
 				// Chunky.g:34:12: (alt_if= if_expr -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) $alt_if) | '{' ( (alt_exps+= expr )? ';' )* '}' -> ^( IF $cond ^( BLOCK ( $cons_exps)* ) ^( BLOCK ( $alt_exps)* ) ) )
@@ -696,6 +703,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				}
 				else
 				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
 					NoViableAltException nvae = new NoViableAltException("", 7, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
@@ -711,8 +719,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					PushFollow(Follow._if_expr_in_if_expr185);
 					alt_if=if_expr();
 					PopFollow();
-
-					stream_if_expr.Add(alt_if.Tree);
+					if (state.failed) return retval;
+					if (state.backtracking == 0) stream_if_expr.Add(alt_if.Tree);
 
 
 					{
@@ -723,6 +731,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					// token list labels: 
 					// rule list labels: cons_exps
 					// wildcard labels: 
+					if (state.backtracking == 0) {
 					retval.Tree = root_0;
 					RewriteRuleSubtreeStream stream_cond=new RewriteRuleSubtreeStream(adaptor,"rule cond",cond!=null?cond.Tree:null);
 					RewriteRuleSubtreeStream stream_alt_if=new RewriteRuleSubtreeStream(adaptor,"rule alt_if",alt_if!=null?alt_if.Tree:null);
@@ -769,6 +778,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 					retval.Tree = root_0;
 					}
+					}
 
 					}
 					break;
@@ -777,8 +787,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					// Chunky.g:35:8: '{' ( (alt_exps+= expr )? ';' )* '}'
 					{
 					DebugLocation(35, 8);
-					char_literal15=(IToken)Match(input,LCURLY,Follow._LCURLY_in_if_expr219);  
-					stream_LCURLY.Add(char_literal15);
+					char_literal15=(IToken)Match(input,LCURLY,Follow._LCURLY_in_if_expr219); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_LCURLY.Add(char_literal15);
 
 					DebugLocation(35, 12);
 					// Chunky.g:35:12: ( (alt_exps+= expr )? ';' )*
@@ -824,8 +834,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 								PushFollow(Follow._expr_in_if_expr224);
 								alt_exps=expr();
 								PopFollow();
-
-								stream_expr.Add(alt_exps.Tree);
+								if (state.failed) return retval;
+								if (state.backtracking == 0) stream_expr.Add(alt_exps.Tree);
 								if (list_alt_exps==null) list_alt_exps=new List<CommonTree>();
 								list_alt_exps.Add(alt_exps.Tree);
 
@@ -837,8 +847,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 							} finally { DebugExitSubRule(5); }
 
 							DebugLocation(35, 29);
-							char_literal16=(IToken)Match(input,SEMI,Follow._SEMI_in_if_expr227);  
-							stream_SEMI.Add(char_literal16);
+							char_literal16=(IToken)Match(input,SEMI,Follow._SEMI_in_if_expr227); if (state.failed) return retval; 
+							if (state.backtracking == 0) stream_SEMI.Add(char_literal16);
 
 
 							}
@@ -855,8 +865,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					} finally { DebugExitSubRule(6); }
 
 					DebugLocation(35, 35);
-					char_literal17=(IToken)Match(input,RCURLY,Follow._RCURLY_in_if_expr231);  
-					stream_RCURLY.Add(char_literal17);
+					char_literal17=(IToken)Match(input,RCURLY,Follow._RCURLY_in_if_expr231); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_RCURLY.Add(char_literal17);
 
 
 
@@ -868,6 +878,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					// token list labels: 
 					// rule list labels: cons_exps, alt_exps
 					// wildcard labels: 
+					if (state.backtracking == 0) {
 					retval.Tree = root_0;
 					RewriteRuleSubtreeStream stream_cond=new RewriteRuleSubtreeStream(adaptor,"rule cond",cond!=null?cond.Tree:null);
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
@@ -931,6 +942,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 					retval.Tree = root_0;
 					}
+					}
 
 					}
 					break;
@@ -954,6 +966,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				// token list labels: 
 				// rule list labels: cons_exps
 				// wildcard labels: 
+				if (state.backtracking == 0) {
 				retval.Tree = root_0;
 				RewriteRuleSubtreeStream stream_cond=new RewriteRuleSubtreeStream(adaptor,"rule cond",cond!=null?cond.Tree:null);
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
@@ -987,6 +1000,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 				retval.Tree = root_0;
 				}
+				}
 
 				}
 				break;
@@ -999,9 +1013,10 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -1125,6 +1140,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				break;
 			default:
 				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
 					NoViableAltException nvae = new NoViableAltException("", 9, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
@@ -1141,10 +1157,11 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(41, 7);
-				ID18=(IToken)Match(input,ID,Follow._ID_in_term305); 
+				ID18=(IToken)Match(input,ID,Follow._ID_in_term305); if (state.failed) return retval;
+				if (state.backtracking == 0) {
 				ID18_tree = (CommonTree)adaptor.Create(ID18);
 				adaptor.AddChild(root_0, ID18_tree);
-
+				}
 
 				}
 				break;
@@ -1155,15 +1172,15 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(42, 7);
-				char_literal19=(IToken)Match(input,LPAREN,Follow._LPAREN_in_term310); 
+				char_literal19=(IToken)Match(input,LPAREN,Follow._LPAREN_in_term310); if (state.failed) return retval;
 				DebugLocation(42, 9);
 				PushFollow(Follow._expr_in_term313);
 				expr20=expr();
 				PopFollow();
-
-				adaptor.AddChild(root_0, expr20.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expr20.Tree);
 				DebugLocation(42, 17);
-				char_literal21=(IToken)Match(input,RPAREN,Follow._RPAREN_in_term315); 
+				char_literal21=(IToken)Match(input,RPAREN,Follow._RPAREN_in_term315); if (state.failed) return retval;
 
 				}
 				break;
@@ -1174,10 +1191,11 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(43, 4);
-				INT22=(IToken)Match(input,INT,Follow._INT_in_term321); 
+				INT22=(IToken)Match(input,INT,Follow._INT_in_term321); if (state.failed) return retval;
+				if (state.backtracking == 0) {
 				INT22_tree = (CommonTree)adaptor.Create(INT22);
 				adaptor.AddChild(root_0, INT22_tree);
-
+				}
 
 				}
 				break;
@@ -1188,10 +1206,11 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(44, 4);
-				FLOAT23=(IToken)Match(input,FLOAT,Follow._FLOAT_in_term326); 
+				FLOAT23=(IToken)Match(input,FLOAT,Follow._FLOAT_in_term326); if (state.failed) return retval;
+				if (state.backtracking == 0) {
 				FLOAT23_tree = (CommonTree)adaptor.Create(FLOAT23);
 				adaptor.AddChild(root_0, FLOAT23_tree);
-
+				}
 
 				}
 				break;
@@ -1202,10 +1221,11 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(45, 4);
-				TRUE24=(IToken)Match(input,TRUE,Follow._TRUE_in_term331); 
+				TRUE24=(IToken)Match(input,TRUE,Follow._TRUE_in_term331); if (state.failed) return retval;
+				if (state.backtracking == 0) {
 				TRUE24_tree = (CommonTree)adaptor.Create(TRUE24);
 				adaptor.AddChild(root_0, TRUE24_tree);
-
+				}
 
 				}
 				break;
@@ -1216,10 +1236,11 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(46, 4);
-				FALSE25=(IToken)Match(input,FALSE,Follow._FALSE_in_term336); 
+				FALSE25=(IToken)Match(input,FALSE,Follow._FALSE_in_term336); if (state.failed) return retval;
+				if (state.backtracking == 0) {
 				FALSE25_tree = (CommonTree)adaptor.Create(FALSE25);
 				adaptor.AddChild(root_0, FALSE25_tree);
-
+				}
 
 				}
 				break;
@@ -1230,10 +1251,11 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				root_0 = (CommonTree)adaptor.Nil();
 
 				DebugLocation(47, 4);
-				STRING26=(IToken)Match(input,STRING,Follow._STRING_in_term341); 
+				STRING26=(IToken)Match(input,STRING,Follow._STRING_in_term341); if (state.failed) return retval;
+				if (state.backtracking == 0) {
 				STRING26_tree = (CommonTree)adaptor.Create(STRING26);
 				adaptor.AddChild(root_0, STRING26_tree);
-
+				}
 
 				}
 				break;
@@ -1247,8 +1269,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				PushFollow(Follow._if_expr_in_term346);
 				if_expr27=if_expr();
 				PopFollow();
-
-				adaptor.AddChild(root_0, if_expr27.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, if_expr27.Tree);
 
 				}
 				break;
@@ -1262,8 +1284,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				PushFollow(Follow._func_expr_in_term351);
 				func_expr28=func_expr();
 				PopFollow();
-
-				adaptor.AddChild(root_0, func_expr28.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, func_expr28.Tree);
 
 				}
 				break;
@@ -1271,9 +1293,10 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			}
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -1344,8 +1367,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			PushFollow(Follow._term_in_dot362);
 			term29=term();
 			PopFollow();
-
-			adaptor.AddChild(root_0, term29.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, term29.Tree);
 			DebugLocation(53, 9);
 			// Chunky.g:53:9: ( DOT ID )*
 			try { DebugEnterSubRule(10);
@@ -1369,15 +1392,17 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					// Chunky.g:53:10: DOT ID
 					{
 					DebugLocation(53, 13);
-					DOT30=(IToken)Match(input,DOT,Follow._DOT_in_dot365); 
+					DOT30=(IToken)Match(input,DOT,Follow._DOT_in_dot365); if (state.failed) return retval;
+					if (state.backtracking == 0) {
 					DOT30_tree = (CommonTree)adaptor.Create(DOT30);
 					root_0 = (CommonTree)adaptor.BecomeRoot(DOT30_tree, root_0);
-
+					}
 					DebugLocation(53, 15);
-					ID31=(IToken)Match(input,ID,Follow._ID_in_dot368); 
+					ID31=(IToken)Match(input,ID,Follow._ID_in_dot368); if (state.failed) return retval;
+					if (state.backtracking == 0) {
 					ID31_tree = (CommonTree)adaptor.Create(ID31);
 					adaptor.AddChild(root_0, ID31_tree);
-
+					}
 
 					}
 					break;
@@ -1411,16 +1436,17 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				// Chunky.g:54:4: '=' expr
 				{
 				DebugLocation(54, 7);
-				char_literal32=(IToken)Match(input,ASSIGN,Follow._ASSIGN_in_dot376); 
+				char_literal32=(IToken)Match(input,ASSIGN,Follow._ASSIGN_in_dot376); if (state.failed) return retval;
+				if (state.backtracking == 0) {
 				char_literal32_tree = (CommonTree)adaptor.Create(char_literal32);
 				root_0 = (CommonTree)adaptor.BecomeRoot(char_literal32_tree, root_0);
-
+				}
 				DebugLocation(54, 9);
 				PushFollow(Follow._expr_in_dot379);
 				expr33=expr();
 				PopFollow();
-
-				adaptor.AddChild(root_0, expr33.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expr33.Tree);
 
 				}
 				break;
@@ -1433,9 +1459,10 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -1518,8 +1545,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				PushFollow(Follow._expr_in_args393);
 				b=expr();
 				PopFollow();
-
-				stream_expr.Add(b.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) stream_expr.Add(b.Tree);
 				DebugLocation(57, 15);
 				// Chunky.g:57:15: ( ',' b= expr )*
 				try { DebugEnterSubRule(12);
@@ -1543,15 +1570,15 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 						// Chunky.g:57:16: ',' b= expr
 						{
 						DebugLocation(57, 16);
-						char_literal34=(IToken)Match(input,COMMA,Follow._COMMA_in_args396);  
-						stream_COMMA.Add(char_literal34);
+						char_literal34=(IToken)Match(input,COMMA,Follow._COMMA_in_args396); if (state.failed) return retval; 
+						if (state.backtracking == 0) stream_COMMA.Add(char_literal34);
 
 						DebugLocation(57, 21);
 						PushFollow(Follow._expr_in_args400);
 						b=expr();
 						PopFollow();
-
-						stream_expr.Add(b.Tree);
+						if (state.failed) return retval;
+						if (state.backtracking == 0) stream_expr.Add(b.Tree);
 
 						}
 						break;
@@ -1583,6 +1610,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_b=new RewriteRuleSubtreeStream(adaptor,"rule b",b!=null?b.Tree:null);
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
@@ -1607,14 +1635,16 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -1649,7 +1679,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_call();
 
 	// $ANTLR start "call"
-	// Chunky.g:61:1: call : (t= dot -> $t) ( '(' args ')' -> ^( CALL $call args ) )* ;
+	// Chunky.g:61:1: call : (t= dot -> $t) ( ( '(' )=> '(' args ')' -> ^( CALL $call args ) )* ;
 	[GrammarRule("call")]
 	private ChunkyParser.call_return call()
 	{
@@ -1676,9 +1706,9 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		DebugLocation(61, 1);
 		try
 		{
-			// Chunky.g:61:5: ( (t= dot -> $t) ( '(' args ')' -> ^( CALL $call args ) )* )
+			// Chunky.g:61:5: ( (t= dot -> $t) ( ( '(' )=> '(' args ')' -> ^( CALL $call args ) )* )
 			DebugEnterAlt(1);
-			// Chunky.g:61:7: (t= dot -> $t) ( '(' args ')' -> ^( CALL $call args ) )*
+			// Chunky.g:61:7: (t= dot -> $t) ( ( '(' )=> '(' args ')' -> ^( CALL $call args ) )*
 			{
 			DebugLocation(61, 7);
 			// Chunky.g:61:7: (t= dot -> $t)
@@ -1689,8 +1719,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			PushFollow(Follow._dot_in_call427);
 			t=dot();
 			PopFollow();
-
-			stream_dot.Add(t.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_dot.Add(t.Tree);
 
 
 			{
@@ -1701,6 +1731,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_t=new RewriteRuleSubtreeStream(adaptor,"rule t",t!=null?t.Tree:null);
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
@@ -1715,11 +1746,12 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			DebugLocation(62, 3);
-			// Chunky.g:62:3: ( '(' args ')' -> ^( CALL $call args ) )*
+			// Chunky.g:62:3: ( ( '(' )=> '(' args ')' -> ^( CALL $call args ) )*
 			try { DebugEnterSubRule(14);
 			while (true)
 			{
@@ -1729,7 +1761,14 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 				if ((LA14_0==LPAREN))
 				{
-					alt14 = 1;
+					int LA14_2 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred1_Chunky_fragment)))
+					{
+						alt14 = 1;
+					}
+
+
 				}
 
 
@@ -1738,21 +1777,21 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Chunky.g:63:4: '(' args ')'
+					// Chunky.g:63:4: ( '(' )=> '(' args ')'
 					{
-					DebugLocation(63, 4);
-					char_literal35=(IToken)Match(input,LPAREN,Follow._LPAREN_in_call440);  
-					stream_LPAREN.Add(char_literal35);
+					DebugLocation(63, 13);
+					char_literal35=(IToken)Match(input,LPAREN,Follow._LPAREN_in_call446); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_LPAREN.Add(char_literal35);
 
-					DebugLocation(63, 8);
-					PushFollow(Follow._args_in_call442);
+					DebugLocation(63, 17);
+					PushFollow(Follow._args_in_call448);
 					args36=args();
 					PopFollow();
-
-					stream_args.Add(args36.Tree);
-					DebugLocation(63, 13);
-					char_literal37=(IToken)Match(input,RPAREN,Follow._RPAREN_in_call444);  
-					stream_RPAREN.Add(char_literal37);
+					if (state.failed) return retval;
+					if (state.backtracking == 0) stream_args.Add(args36.Tree);
+					DebugLocation(63, 22);
+					char_literal37=(IToken)Match(input,RPAREN,Follow._RPAREN_in_call450); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_RPAREN.Add(char_literal37);
 
 
 
@@ -1764,6 +1803,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					// token list labels: 
 					// rule list labels: 
 					// wildcard labels: 
+					if (state.backtracking == 0) {
 					retval.Tree = root_0;
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
@@ -1789,6 +1829,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 					retval.Tree = root_0;
 					}
+					}
 
 					}
 					break;
@@ -1808,9 +1849,10 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -1891,10 +1933,11 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				// Chunky.g:68:10: '!'
 				{
 				DebugLocation(68, 10);
-				char_literal38=(IToken)Match(input,42,Follow._42_in_not473); 
+				char_literal38=(IToken)Match(input,42,Follow._42_in_not479); if (state.failed) return retval;
+				if (state.backtracking == 0) {
 				char_literal38_tree = (CommonTree)adaptor.Create(char_literal38);
 				root_0 = (CommonTree)adaptor.BecomeRoot(char_literal38_tree, root_0);
-
+				}
 
 				}
 				break;
@@ -1903,19 +1946,20 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(15); }
 
 			DebugLocation(68, 13);
-			PushFollow(Follow._call_in_not477);
+			PushFollow(Follow._call_in_not483);
 			call39=call();
 			PopFollow();
-
-			adaptor.AddChild(root_0, call39.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, call39.Tree);
 
 			}
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -1950,7 +1994,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_mul();
 
 	// $ANTLR start "mul"
-	// Chunky.g:71:1: mul : not ( ( '*' | '/' | '%' ) not )* ;
+	// Chunky.g:71:1: mul : not ( ( '*' | '/' | '%' )=> ( '*' | '/' | '%' ) not )* ;
 	[GrammarRule("mul")]
 	private ChunkyParser.mul_return mul()
 	{
@@ -1972,20 +2016,20 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		DebugLocation(71, 1);
 		try
 		{
-			// Chunky.g:71:5: ( not ( ( '*' | '/' | '%' ) not )* )
+			// Chunky.g:71:5: ( not ( ( '*' | '/' | '%' )=> ( '*' | '/' | '%' ) not )* )
 			DebugEnterAlt(1);
-			// Chunky.g:71:7: not ( ( '*' | '/' | '%' ) not )*
+			// Chunky.g:71:7: not ( ( '*' | '/' | '%' )=> ( '*' | '/' | '%' ) not )*
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(71, 7);
-			PushFollow(Follow._not_in_mul487);
+			PushFollow(Follow._not_in_mul493);
 			not40=not();
 			PopFollow();
-
-			adaptor.AddChild(root_0, not40.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, not40.Tree);
 			DebugLocation(71, 11);
-			// Chunky.g:71:11: ( ( '*' | '/' | '%' ) not )*
+			// Chunky.g:71:11: ( ( '*' | '/' | '%' )=> ( '*' | '/' | '%' ) not )*
 			try { DebugEnterSubRule(16);
 			while (true)
 			{
@@ -1995,7 +2039,14 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 				if ((LA16_0==PERCENT||(LA16_0>=SLASH && LA16_0<=STAR)))
 				{
-					alt16 = 1;
+					int LA16_2 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred2_Chunky_fragment)))
+					{
+						alt16 = 1;
+					}
+
+
 				}
 
 
@@ -2004,30 +2055,31 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Chunky.g:71:12: ( '*' | '/' | '%' ) not
+					// Chunky.g:71:12: ( '*' | '/' | '%' )=> ( '*' | '/' | '%' ) not
 					{
-					DebugLocation(71, 29);
+					DebugLocation(71, 50);
 					set41=(IToken)input.LT(1);
 					set41=(IToken)input.LT(1);
 					if (input.LA(1)==PERCENT||(input.LA(1)>=SLASH && input.LA(1)<=STAR))
 					{
 						input.Consume();
-						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set41), root_0);
-						state.errorRecovery=false;
+						if (state.backtracking == 0) root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set41), root_0);
+						state.errorRecovery=false;state.failed=false;
 					}
 					else
 					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						DebugRecognitionException(mse);
 						throw mse;
 					}
 
-					DebugLocation(71, 31);
-					PushFollow(Follow._not_in_mul503);
+					DebugLocation(71, 52);
+					PushFollow(Follow._not_in_mul523);
 					not42=not();
 					PopFollow();
-
-					adaptor.AddChild(root_0, not42.Tree);
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, not42.Tree);
 
 					}
 					break;
@@ -2047,9 +2099,10 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2084,7 +2137,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_add();
 
 	// $ANTLR start "add"
-	// Chunky.g:74:1: add : mul ( ( '+' | '-' ) mul )* ;
+	// Chunky.g:74:1: add : mul ( ( '+' | '-' )=> ( '+' | '-' ) mul )* ;
 	[GrammarRule("add")]
 	private ChunkyParser.add_return add()
 	{
@@ -2106,20 +2159,20 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		DebugLocation(74, 1);
 		try
 		{
-			// Chunky.g:74:5: ( mul ( ( '+' | '-' ) mul )* )
+			// Chunky.g:74:5: ( mul ( ( '+' | '-' )=> ( '+' | '-' ) mul )* )
 			DebugEnterAlt(1);
-			// Chunky.g:74:7: mul ( ( '+' | '-' ) mul )*
+			// Chunky.g:74:7: mul ( ( '+' | '-' )=> ( '+' | '-' ) mul )*
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(74, 7);
-			PushFollow(Follow._mul_in_add515);
+			PushFollow(Follow._mul_in_add535);
 			mul43=mul();
 			PopFollow();
-
-			adaptor.AddChild(root_0, mul43.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, mul43.Tree);
 			DebugLocation(74, 11);
-			// Chunky.g:74:11: ( ( '+' | '-' ) mul )*
+			// Chunky.g:74:11: ( ( '+' | '-' )=> ( '+' | '-' ) mul )*
 			try { DebugEnterSubRule(17);
 			while (true)
 			{
@@ -2129,7 +2182,14 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 				if ((LA17_0==MINUS||LA17_0==PLUS))
 				{
-					alt17 = 1;
+					int LA17_2 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred3_Chunky_fragment)))
+					{
+						alt17 = 1;
+					}
+
+
 				}
 
 
@@ -2138,30 +2198,31 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Chunky.g:74:12: ( '+' | '-' ) mul
+					// Chunky.g:74:12: ( '+' | '-' )=> ( '+' | '-' ) mul
 					{
-					DebugLocation(74, 23);
+					DebugLocation(74, 38);
 					set44=(IToken)input.LT(1);
 					set44=(IToken)input.LT(1);
 					if (input.LA(1)==MINUS||input.LA(1)==PLUS)
 					{
 						input.Consume();
-						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set44), root_0);
-						state.errorRecovery=false;
+						if (state.backtracking == 0) root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set44), root_0);
+						state.errorRecovery=false;state.failed=false;
 					}
 					else
 					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						DebugRecognitionException(mse);
 						throw mse;
 					}
 
-					DebugLocation(74, 25);
-					PushFollow(Follow._mul_in_add527);
+					DebugLocation(74, 40);
+					PushFollow(Follow._mul_in_add557);
 					mul45=mul();
 					PopFollow();
-
-					adaptor.AddChild(root_0, mul45.Tree);
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, mul45.Tree);
 
 					}
 					break;
@@ -2181,9 +2242,10 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2218,7 +2280,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_comp();
 
 	// $ANTLR start "comp"
-	// Chunky.g:77:1: comp : add ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )* ;
+	// Chunky.g:77:1: comp : add ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' )=> ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )* ;
 	[GrammarRule("comp")]
 	private ChunkyParser.comp_return comp()
 	{
@@ -2240,20 +2302,20 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		DebugLocation(77, 1);
 		try
 		{
-			// Chunky.g:77:5: ( add ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )* )
+			// Chunky.g:77:5: ( add ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' )=> ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )* )
 			DebugEnterAlt(1);
-			// Chunky.g:77:7: add ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )*
+			// Chunky.g:77:7: add ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' )=> ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )*
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(77, 7);
-			PushFollow(Follow._add_in_comp538);
+			PushFollow(Follow._add_in_comp568);
 			add46=add();
 			PopFollow();
-
-			adaptor.AddChild(root_0, add46.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, add46.Tree);
 			DebugLocation(77, 11);
-			// Chunky.g:77:11: ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )*
+			// Chunky.g:77:11: ( ( '==' | '<' | '<=' | '>=' | '>' | '!=' )=> ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add )*
 			try { DebugEnterSubRule(18);
 			while (true)
 			{
@@ -2263,7 +2325,14 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 				if ((LA18_0==EQUAL||(LA18_0>=GREATER && LA18_0<=GREATEREQUAL)||(LA18_0>=LESS && LA18_0<=LESSEQUAL)||LA18_0==NOTEQUAL))
 				{
-					alt18 = 1;
+					int LA18_2 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred4_Chunky_fragment)))
+					{
+						alt18 = 1;
+					}
+
+
 				}
 
 
@@ -2272,30 +2341,31 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Chunky.g:77:12: ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add
+					// Chunky.g:77:12: ( '==' | '<' | '<=' | '>=' | '>' | '!=' )=> ( '==' | '<' | '<=' | '>=' | '>' | '!=' ) add
 					{
-					DebugLocation(77, 51);
+					DebugLocation(77, 94);
 					set47=(IToken)input.LT(1);
 					set47=(IToken)input.LT(1);
 					if (input.LA(1)==EQUAL||(input.LA(1)>=GREATER && input.LA(1)<=GREATEREQUAL)||(input.LA(1)>=LESS && input.LA(1)<=LESSEQUAL)||input.LA(1)==NOTEQUAL)
 					{
 						input.Consume();
-						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set47), root_0);
-						state.errorRecovery=false;
+						if (state.backtracking == 0) root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set47), root_0);
+						state.errorRecovery=false;state.failed=false;
 					}
 					else
 					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						DebugRecognitionException(mse);
 						throw mse;
 					}
 
-					DebugLocation(77, 53);
-					PushFollow(Follow._add_in_comp566);
+					DebugLocation(77, 96);
+					PushFollow(Follow._add_in_comp622);
 					add48=add();
 					PopFollow();
-
-					adaptor.AddChild(root_0, add48.Tree);
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, add48.Tree);
 
 					}
 					break;
@@ -2315,9 +2385,10 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2352,7 +2423,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_bool();
 
 	// $ANTLR start "bool"
-	// Chunky.g:80:1: bool : comp ( ( '&' | '&&' | '|' | '||' ) comp )* ;
+	// Chunky.g:80:1: bool : comp ( ( '&' | '&&' | '|' | '||' )=> ( '&' | '&&' | '|' | '||' ) comp )* ;
 	[GrammarRule("bool")]
 	private ChunkyParser.bool_return @bool()
 	{
@@ -2374,20 +2445,20 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		DebugLocation(80, 1);
 		try
 		{
-			// Chunky.g:80:5: ( comp ( ( '&' | '&&' | '|' | '||' ) comp )* )
+			// Chunky.g:80:5: ( comp ( ( '&' | '&&' | '|' | '||' )=> ( '&' | '&&' | '|' | '||' ) comp )* )
 			DebugEnterAlt(1);
-			// Chunky.g:80:7: comp ( ( '&' | '&&' | '|' | '||' ) comp )*
+			// Chunky.g:80:7: comp ( ( '&' | '&&' | '|' | '||' )=> ( '&' | '&&' | '|' | '||' ) comp )*
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(80, 7);
-			PushFollow(Follow._comp_in_bool577);
+			PushFollow(Follow._comp_in_bool633);
 			comp49=comp();
 			PopFollow();
-
-			adaptor.AddChild(root_0, comp49.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, comp49.Tree);
 			DebugLocation(80, 12);
-			// Chunky.g:80:12: ( ( '&' | '&&' | '|' | '||' ) comp )*
+			// Chunky.g:80:12: ( ( '&' | '&&' | '|' | '||' )=> ( '&' | '&&' | '|' | '||' ) comp )*
 			try { DebugEnterSubRule(19);
 			while (true)
 			{
@@ -2397,7 +2468,14 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 				if ((LA19_0==AMPER||LA19_0==DAMPER||LA19_0==DPIPE||LA19_0==PIPE))
 				{
-					alt19 = 1;
+					int LA19_2 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred5_Chunky_fragment)))
+					{
+						alt19 = 1;
+					}
+
+
 				}
 
 
@@ -2406,30 +2484,31 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Chunky.g:80:13: ( '&' | '&&' | '|' | '||' ) comp
+					// Chunky.g:80:13: ( '&' | '&&' | '|' | '||' )=> ( '&' | '&&' | '|' | '||' ) comp
 					{
-					DebugLocation(80, 38);
+					DebugLocation(80, 67);
 					set50=(IToken)input.LT(1);
 					set50=(IToken)input.LT(1);
 					if (input.LA(1)==AMPER||input.LA(1)==DAMPER||input.LA(1)==DPIPE||input.LA(1)==PIPE)
 					{
 						input.Consume();
-						root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set50), root_0);
-						state.errorRecovery=false;
+						if (state.backtracking == 0) root_0 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(set50), root_0);
+						state.errorRecovery=false;state.failed=false;
 					}
 					else
 					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						DebugRecognitionException(mse);
 						throw mse;
 					}
 
-					DebugLocation(80, 40);
-					PushFollow(Follow._comp_in_bool597);
+					DebugLocation(80, 69);
+					PushFollow(Follow._comp_in_bool671);
 					comp51=comp();
 					PopFollow();
-
-					adaptor.AddChild(root_0, comp51.Tree);
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, comp51.Tree);
 
 					}
 					break;
@@ -2449,9 +2528,10 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2512,19 +2592,20 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(83, 7);
-			PushFollow(Follow._bool_in_expr608);
+			PushFollow(Follow._bool_in_expr682);
 			bool52=@bool();
 			PopFollow();
-
-			adaptor.AddChild(root_0, bool52.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, bool52.Tree);
 
 			}
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2627,11 +2708,11 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 						// Chunky.g:87:6: e+= expr
 						{
 						DebugLocation(87, 6);
-						PushFollow(Follow._expr_in_exprs622);
+						PushFollow(Follow._expr_in_exprs696);
 						e=expr();
 						PopFollow();
-
-						stream_expr.Add(e.Tree);
+						if (state.failed) return retval;
+						if (state.backtracking == 0) stream_expr.Add(e.Tree);
 						if (list_e==null) list_e=new List<CommonTree>();
 						list_e.Add(e.Tree);
 
@@ -2643,8 +2724,8 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					} finally { DebugExitSubRule(20); }
 
 					DebugLocation(87, 14);
-					char_literal53=(IToken)Match(input,SEMI,Follow._SEMI_in_exprs625);  
-					stream_SEMI.Add(char_literal53);
+					char_literal53=(IToken)Match(input,SEMI,Follow._SEMI_in_exprs699); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_SEMI.Add(char_literal53);
 
 
 					}
@@ -2654,6 +2735,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 					if (cnt21 >= 1)
 						goto loop21;
 
+					if (state.backtracking>0) {state.failed=true; return retval;}
 					EarlyExitException eee21 = new EarlyExitException( 21, input );
 					DebugRecognitionException(eee21);
 					throw eee21;
@@ -2675,6 +2757,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: e
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 			RewriteRuleSubtreeStream stream_e=new RewriteRuleSubtreeStream(adaptor,"token e",list_e);
@@ -2705,14 +2788,16 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2777,7 +2862,7 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			root_0 = (CommonTree)adaptor.Nil();
 
 			DebugLocation(92, 7);
-			char_literal54=(IToken)Match(input,LCURLY,Follow._LCURLY_in_block651); 
+			char_literal54=(IToken)Match(input,LCURLY,Follow._LCURLY_in_block725); if (state.failed) return retval;
 			DebugLocation(92, 9);
 			// Chunky.g:92:9: ( exprs )?
 			int alt22=2;
@@ -2797,11 +2882,11 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 				// Chunky.g:92:9: exprs
 				{
 				DebugLocation(92, 9);
-				PushFollow(Follow._exprs_in_block654);
+				PushFollow(Follow._exprs_in_block728);
 				exprs55=exprs();
 				PopFollow();
-
-				adaptor.AddChild(root_0, exprs55.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exprs55.Tree);
 
 				}
 				break;
@@ -2810,15 +2895,16 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(22); }
 
 			DebugLocation(92, 19);
-			char_literal56=(IToken)Match(input,RCURLY,Follow._RCURLY_in_block657); 
+			char_literal56=(IToken)Match(input,RCURLY,Follow._RCURLY_in_block731); if (state.failed) return retval;
 
 			}
 
 			retval.Stop = (IToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2839,7 +2925,229 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 
 	}
 	// $ANTLR end "block"
+
+	partial void EnterRule_synpred1_Chunky_fragment();
+	partial void LeaveRule_synpred1_Chunky_fragment();
+
+	// $ANTLR start synpred1_Chunky
+	public void synpred1_Chunky_fragment()
+	{
+		EnterRule_synpred1_Chunky_fragment();
+		EnterRule("synpred1_Chunky_fragment", 17);
+		TraceIn("synpred1_Chunky_fragment", 17);
+		try
+		{
+			// Chunky.g:63:4: ( '(' )
+			DebugEnterAlt(1);
+			// Chunky.g:63:5: '('
+			{
+			DebugLocation(63, 5);
+			Match(input,LPAREN,Follow._LPAREN_in_synpred1_Chunky441); if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred1_Chunky_fragment", 17);
+			LeaveRule("synpred1_Chunky_fragment", 17);
+			LeaveRule_synpred1_Chunky_fragment();
+		}
+	}
+	// $ANTLR end synpred1_Chunky
+
+	partial void EnterRule_synpred2_Chunky_fragment();
+	partial void LeaveRule_synpred2_Chunky_fragment();
+
+	// $ANTLR start synpred2_Chunky
+	public void synpred2_Chunky_fragment()
+	{
+		EnterRule_synpred2_Chunky_fragment();
+		EnterRule("synpred2_Chunky_fragment", 18);
+		TraceIn("synpred2_Chunky_fragment", 18);
+		try
+		{
+			// Chunky.g:71:12: ( '*' | '/' | '%' )
+			DebugEnterAlt(1);
+			// Chunky.g:
+			{
+			DebugLocation(71, 12);
+			if (input.LA(1)==PERCENT||(input.LA(1)>=SLASH && input.LA(1)<=STAR))
+			{
+				input.Consume();
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
+
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred2_Chunky_fragment", 18);
+			LeaveRule("synpred2_Chunky_fragment", 18);
+			LeaveRule_synpred2_Chunky_fragment();
+		}
+	}
+	// $ANTLR end synpred2_Chunky
+
+	partial void EnterRule_synpred3_Chunky_fragment();
+	partial void LeaveRule_synpred3_Chunky_fragment();
+
+	// $ANTLR start synpred3_Chunky
+	public void synpred3_Chunky_fragment()
+	{
+		EnterRule_synpred3_Chunky_fragment();
+		EnterRule("synpred3_Chunky_fragment", 19);
+		TraceIn("synpred3_Chunky_fragment", 19);
+		try
+		{
+			// Chunky.g:74:12: ( '+' | '-' )
+			DebugEnterAlt(1);
+			// Chunky.g:
+			{
+			DebugLocation(74, 12);
+			if (input.LA(1)==MINUS||input.LA(1)==PLUS)
+			{
+				input.Consume();
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
+
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred3_Chunky_fragment", 19);
+			LeaveRule("synpred3_Chunky_fragment", 19);
+			LeaveRule_synpred3_Chunky_fragment();
+		}
+	}
+	// $ANTLR end synpred3_Chunky
+
+	partial void EnterRule_synpred4_Chunky_fragment();
+	partial void LeaveRule_synpred4_Chunky_fragment();
+
+	// $ANTLR start synpred4_Chunky
+	public void synpred4_Chunky_fragment()
+	{
+		EnterRule_synpred4_Chunky_fragment();
+		EnterRule("synpred4_Chunky_fragment", 20);
+		TraceIn("synpred4_Chunky_fragment", 20);
+		try
+		{
+			// Chunky.g:77:12: ( '==' | '<' | '<=' | '>=' | '>' | '!=' )
+			DebugEnterAlt(1);
+			// Chunky.g:
+			{
+			DebugLocation(77, 12);
+			if (input.LA(1)==EQUAL||(input.LA(1)>=GREATER && input.LA(1)<=GREATEREQUAL)||(input.LA(1)>=LESS && input.LA(1)<=LESSEQUAL)||input.LA(1)==NOTEQUAL)
+			{
+				input.Consume();
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
+
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred4_Chunky_fragment", 20);
+			LeaveRule("synpred4_Chunky_fragment", 20);
+			LeaveRule_synpred4_Chunky_fragment();
+		}
+	}
+	// $ANTLR end synpred4_Chunky
+
+	partial void EnterRule_synpred5_Chunky_fragment();
+	partial void LeaveRule_synpred5_Chunky_fragment();
+
+	// $ANTLR start synpred5_Chunky
+	public void synpred5_Chunky_fragment()
+	{
+		EnterRule_synpred5_Chunky_fragment();
+		EnterRule("synpred5_Chunky_fragment", 21);
+		TraceIn("synpred5_Chunky_fragment", 21);
+		try
+		{
+			// Chunky.g:80:13: ( '&' | '&&' | '|' | '||' )
+			DebugEnterAlt(1);
+			// Chunky.g:
+			{
+			DebugLocation(80, 13);
+			if (input.LA(1)==AMPER||input.LA(1)==DAMPER||input.LA(1)==DPIPE||input.LA(1)==PIPE)
+			{
+				input.Consume();
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
+
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred5_Chunky_fragment", 21);
+			LeaveRule("synpred5_Chunky_fragment", 21);
+			LeaveRule_synpred5_Chunky_fragment();
+		}
+	}
+	// $ANTLR end synpred5_Chunky
 	#endregion Rules
+
+	#region Synpreds
+	private bool EvaluatePredicate(System.Action fragment)
+	{
+		bool success = false;
+		state.backtracking++;
+		try { DebugBeginBacktrack(state.backtracking);
+		int start = input.Mark();
+		try
+		{
+			fragment();
+		}
+		catch ( RecognitionException re )
+		{
+			System.Console.Error.WriteLine("impossible: "+re);
+		}
+		success = !state.failed;
+		input.Rewind(start);
+		} finally { DebugEndBacktrack(state.backtracking, success); }
+		state.backtracking--;
+		state.failed=false;
+		return success;
+	}
+	#endregion Synpreds
 
 
 	#region Follow sets
@@ -2888,29 +3196,34 @@ public partial class ChunkyParser : Antlr.Runtime.Parser
 		public static readonly BitSet _COMMA_in_args396 = new BitSet(new ulong[]{0x58008738000UL});
 		public static readonly BitSet _expr_in_args400 = new BitSet(new ulong[]{0x202UL});
 		public static readonly BitSet _dot_in_call427 = new BitSet(new ulong[]{0x8000002UL});
-		public static readonly BitSet _LPAREN_in_call440 = new BitSet(new ulong[]{0x58808738000UL});
-		public static readonly BitSet _args_in_call442 = new BitSet(new ulong[]{0x800000000UL});
-		public static readonly BitSet _RPAREN_in_call444 = new BitSet(new ulong[]{0x8000002UL});
-		public static readonly BitSet _42_in_not473 = new BitSet(new ulong[]{0x58008738000UL});
-		public static readonly BitSet _call_in_not477 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _not_in_mul487 = new BitSet(new ulong[]{0x6080000002UL});
-		public static readonly BitSet _set_in_mul490 = new BitSet(new ulong[]{0x58008738000UL});
-		public static readonly BitSet _not_in_mul503 = new BitSet(new ulong[]{0x6080000002UL});
-		public static readonly BitSet _mul_in_add515 = new BitSet(new ulong[]{0x210000002UL});
-		public static readonly BitSet _set_in_add518 = new BitSet(new ulong[]{0x58008738000UL});
-		public static readonly BitSet _mul_in_add527 = new BitSet(new ulong[]{0x210000002UL});
-		public static readonly BitSet _add_in_comp538 = new BitSet(new ulong[]{0x230C4002UL});
-		public static readonly BitSet _set_in_comp541 = new BitSet(new ulong[]{0x58008738000UL});
-		public static readonly BitSet _add_in_comp566 = new BitSet(new ulong[]{0x230C4002UL});
-		public static readonly BitSet _comp_in_bool577 = new BitSet(new ulong[]{0x100002412UL});
-		public static readonly BitSet _set_in_bool580 = new BitSet(new ulong[]{0x58008738000UL});
-		public static readonly BitSet _comp_in_bool597 = new BitSet(new ulong[]{0x100002412UL});
-		public static readonly BitSet _bool_in_expr608 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expr_in_exprs622 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _SEMI_in_exprs625 = new BitSet(new ulong[]{0x59008738002UL});
-		public static readonly BitSet _LCURLY_in_block651 = new BitSet(new ulong[]{0x59408738000UL});
-		public static readonly BitSet _exprs_in_block654 = new BitSet(new ulong[]{0x400000000UL});
-		public static readonly BitSet _RCURLY_in_block657 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_call446 = new BitSet(new ulong[]{0x58808738000UL});
+		public static readonly BitSet _args_in_call448 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _RPAREN_in_call450 = new BitSet(new ulong[]{0x8000002UL});
+		public static readonly BitSet _42_in_not479 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _call_in_not483 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _not_in_mul493 = new BitSet(new ulong[]{0x6080000002UL});
+		public static readonly BitSet _set_in_mul510 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _not_in_mul523 = new BitSet(new ulong[]{0x6080000002UL});
+		public static readonly BitSet _mul_in_add535 = new BitSet(new ulong[]{0x210000002UL});
+		public static readonly BitSet _set_in_add548 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _mul_in_add557 = new BitSet(new ulong[]{0x210000002UL});
+		public static readonly BitSet _add_in_comp568 = new BitSet(new ulong[]{0x230C4002UL});
+		public static readonly BitSet _set_in_comp597 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _add_in_comp622 = new BitSet(new ulong[]{0x230C4002UL});
+		public static readonly BitSet _comp_in_bool633 = new BitSet(new ulong[]{0x100002412UL});
+		public static readonly BitSet _set_in_bool654 = new BitSet(new ulong[]{0x58008738000UL});
+		public static readonly BitSet _comp_in_bool671 = new BitSet(new ulong[]{0x100002412UL});
+		public static readonly BitSet _bool_in_expr682 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expr_in_exprs696 = new BitSet(new ulong[]{0x1000000000UL});
+		public static readonly BitSet _SEMI_in_exprs699 = new BitSet(new ulong[]{0x59008738002UL});
+		public static readonly BitSet _LCURLY_in_block725 = new BitSet(new ulong[]{0x59408738000UL});
+		public static readonly BitSet _exprs_in_block728 = new BitSet(new ulong[]{0x400000000UL});
+		public static readonly BitSet _RCURLY_in_block731 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_synpred1_Chunky441 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _set_in_synpred2_Chunky496 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _set_in_synpred3_Chunky538 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _set_in_synpred4_Chunky571 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _set_in_synpred5_Chunky636 = new BitSet(new ulong[]{0x2UL});
 
 	}
 	#endregion Follow sets
